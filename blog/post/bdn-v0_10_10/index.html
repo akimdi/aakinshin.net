@@ -144,7 +144,8 @@ public static IEnumerable&lt;int&gt; ValuesForB() =&gt; new[] { 10, 20 }; // pub
 </code></pre>
 <p>See also:
 <a href="https://github.com/dotnet/BenchmarkDotNet/issues/350">#350</a>,
-<a href="https://github.com/dotnet/BenchmarkDotNet/issues/571">#571</a>.</p>
+<a href="https://github.com/dotnet/BenchmarkDotNet/issues/571">#571</a>
+and <a href="http://benchmarkdotnet.org/Advanced/Params.htm">docs</a>.</p>
 <h4 id="net-core-x86-support">.NET Core x86 support</h4>
 <p>Since .NET Core 2.0, we can run it not only on x64, but also on x86.
 If we have both versions of runtime installed, we can try the same code on both platforms at the same time.
@@ -168,7 +169,8 @@ Here is a config for you:</p>
 </code></pre>
 <p>See also:
 <a href="https://github.com/dotnet/BenchmarkDotNet/issues/310">#310</a>,
-<a href="https://github.com/dotnet/BenchmarkDotNet/issues/534">#534</a>.</p>
+<a href="https://github.com/dotnet/BenchmarkDotNet/issues/534">#534</a>
+and <a href="http://benchmarkdotnet.org/Configs/Toolchains.htm">docs</a>.</p>
 <h4 id="environment-variables-and-mono-args">Environment variables and Mono args</h4>
 <p>One of the keys features of BenchmarkDotNet is comparing different environments.
 And we add more and more options for you in each release.
@@ -200,7 +202,7 @@ Now you can specify Mono arguments:</p>
 </code></pre>
 <p>You can find hundreds of runtime knobs <a href="https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/clr-configuration-knobs.md">here</a>.
 Now it's so easy to compare performance between different knobs values!</p>
-<p>See also: <a href="https://github.com/dotnet/BenchmarkDotNet/issues/262">#262</a>.</p>
+<p>See also: <a href="https://github.com/dotnet/BenchmarkDotNet/issues/262">#262</a> and <a href="http://benchmarkdotnet.org/Advanced/CustomizingMono.htm">docs</a>.</p>
 <h4 id="better-environment-description">Better environment description</h4>
 <p>When BenchmarkDotNet prints the summary about benchmarks, it always shows brief information about our environment.
 Now we can detect situation when you run a benchmark on a virtual machine (at least, in some cases)

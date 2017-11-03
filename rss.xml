@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Thu, 02 Nov 2017 17:54:28 GMT</pubDate>
-    <lastBuildDate>Thu, 02 Nov 2017 17:54:28 GMT</lastBuildDate>
+    <pubDate>Fri, 03 Nov 2017 00:19:19 GMT</pubDate>
+    <lastBuildDate>Fri, 03 Nov 2017 00:19:19 GMT</lastBuildDate>
 
         <item>
             <title>BenchmarkDotNet v0.10.10</title>
@@ -70,7 +70,8 @@ public static IEnumerable&amp;lt;int&amp;gt; ValuesForB() =&amp;gt; new[] { 10, 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See also:
 &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/350&quot;&gt;#350&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/571&quot;&gt;#571&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/571&quot;&gt;#571&lt;/a&gt;
+and &lt;a href=&quot;http://benchmarkdotnet.org/Advanced/Params.htm&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&quot;net-core-x86-support&quot;&gt;.NET Core x86 support&lt;/h4&gt;
 &lt;p&gt;Since .NET Core 2.0, we can run it not only on x64, but also on x86.
 If we have both versions of runtime installed, we can try the same code on both platforms at the same time.
@@ -94,7 +95,8 @@ Here is a config for you:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;See also:
 &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/310&quot;&gt;#310&lt;/a&gt;,
-&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/534&quot;&gt;#534&lt;/a&gt;.&lt;/p&gt;
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/534&quot;&gt;#534&lt;/a&gt;
+and &lt;a href=&quot;http://benchmarkdotnet.org/Configs/Toolchains.htm&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&quot;environment-variables-and-mono-args&quot;&gt;Environment variables and Mono args&lt;/h4&gt;
 &lt;p&gt;One of the keys features of BenchmarkDotNet is comparing different environments.
 And we add more and more options for you in each release.
@@ -126,7 +128,7 @@ Now you can specify Mono arguments:&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;You can find hundreds of runtime knobs &lt;a href=&quot;https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/clr-configuration-knobs.md&quot;&gt;here&lt;/a&gt;.
 Now it&#39;s so easy to compare performance between different knobs values!&lt;/p&gt;
-&lt;p&gt;See also: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/262&quot;&gt;#262&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;See also: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/262&quot;&gt;#262&lt;/a&gt; and &lt;a href=&quot;http://benchmarkdotnet.org/Advanced/CustomizingMono.htm&quot;&gt;docs&lt;/a&gt;.&lt;/p&gt;
 &lt;h4 id=&quot;better-environment-description&quot;&gt;Better environment description&lt;/h4&gt;
 &lt;p&gt;When BenchmarkDotNet prints the summary about benchmarks, it always shows brief information about our environment.
 Now we can detect situation when you run a benchmark on a virtual machine (at least, in some cases)
