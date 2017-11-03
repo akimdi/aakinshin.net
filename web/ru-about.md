@@ -43,7 +43,7 @@ permalink: /ru/about/
 <section>
   <h3 id="enterprise">Программирование</h3>
 
-  *Software Developer в JetBrains, [Microsoft .NET MVP (2015–2016)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
+  *Software Developer в JetBrains, [Microsoft .NET MVP (2015–2017)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
   **Основные навыки:** .NET/C\#, R, Kotlin, Производительность, Алгоритмы, Математика, Проектирование архитектуры
   <br /><br />
 
@@ -241,6 +241,16 @@ permalink: /ru/about/
 
   <h4>2017</h4>
 
+  * [«DotNext 2017 SPb»](https://dotnext-piter.ru/),<br />
+    [«Поговорим про память»](https://dotnext-piter.ru/talks/lets-talk-about-memory/)
+        [[SlideShare]](https://www.slideshare.net/AndreyAkinshin/ss-76401745)
+        ,<br />
+    <i>г.&nbsp;Санкт-Петербург, 19–20 мая 2017</i>
+  * [«Dump»](http://dump-conf.ru/),<br />
+    «Кроссплатформенный .NET и как там дела с Mono и CoreCLR»
+        [[SlideShare]](https://www.slideshare.net/AndreyAkinshin/net-mono-coreclr)
+        ,<br />
+    <i>г.&nbsp;Екатеринбург, 14 апреля 2017</i>
   * Встреча [Msk .NET Community](http://mskdotnet.org/) #6,<br />
     [«Теория и практика .NET-бенчмаркинга»](https://mskdotnet.timepad.ru/event/430756/)
         ,<br />
@@ -342,7 +352,7 @@ permalink: /ru/about/
   * [IT NONSTOP 2015 Spb](http://it-nonstop.net/city/saint-petersburg),<br />
     [«.NET 2015 и производительность»](https://www.youtube.com/watch?list=PLU6_HdJGVDx8vCM2vsQQr6y4cB82NB8mD&v=3EcQXGPXWMA),<br />
     <i>г.&nbsp;Санкт-Петербург, 23 октября 2015</i>
-  * [«Microsoft Build Tour 2015»](https://berlin.build15.com/),<br />
+  * «Microsoft Build Tour 2015»,<br />
     <i>Германия, г.&nbsp;Берлин, 22 мая 2015</i>
   * Седьмая Международная Школа молодых ученых [«Системная биология и биоинформатика»](http://conf.nsc.ru/SBB2015/) (SBB'2015),
     <i>г.&nbsp;Новосибирск, 22–25 июня 2015</i>

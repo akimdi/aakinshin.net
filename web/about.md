@@ -45,7 +45,7 @@ In his free time, he likes to study science
 <section>
   <h3 id="enterprise">Enterprise programming</h3>
 
-  **Current:** *Software Developer at JetBrains, [Microsoft .NET MVP (2015–2016)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
+  **Current:** *Software Developer at JetBrains, [Microsoft .NET MVP (2015–2017)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
   **Main skills:** .NET/C\#, R, Kotlin, Performance, Algorithms, Mathematics, Architecture design
   <br /><br />
 
@@ -185,7 +185,7 @@ In his free time, he likes to study science
   <h3 id="education">Education</h3>
 
   ![](/img/icons/astu.png)
-  <a href="http://www.en.altstu.ru/">I.I. Polzunov Altai state technical university</a>, <a href="http://www.en.altstu.ru/structure/faculty/fit/">Faculty of Information Technologies</a> (Barnaul, Russia)<br />
+  <a href="http://www.en.altstu.ru/">I.I. Polzunov Altai state technical university</a>, <a href="http://www.altstu.ru/structure/faculty/fit/">Faculty of Information Technologies</a> (Barnaul, Russia)<br />
   
   * *09/2006–06/2011:* Student, specialty <a href="http://www.altstu.ru/entrant/speciality/0026/">230105</a> “Software for Computers and Automated System”.<br />
   Honours degree, 5.0 GPA, AltSTU student of the year 2009, head of the group.
@@ -245,6 +245,16 @@ In his free time, he likes to study science
 
   <h4>2017</h4>
 
+  * [“DotNext 2017 SPb”](https://dotnext-piter.ru/en/),<br />
+    [“Let's talk about memory”](https://dotnext-piter.ru/en/talks/lets-talk-about-memory/)
+        [[SlideShare]](https://www.slideshare.net/AndreyAkinshin/ss-76401745)
+        ,<br />
+    <i>May 19–20, 2017, St. Petersburg, Russia</i>
+  * [“Dump”](http://dump-conf.ru/),<br />
+    “Xplat .NET and how it's going with Mono and CoreCLR”
+        [[SlideShare]](https://www.slideshare.net/AndreyAkinshin/net-mono-coreclr)
+        ,<br />
+    <i>April 14, 2017, Yekaterinburg, Russia</i>
   * [Msk .NET Community](http://mskdotnet.org/) Meetup #6,<br />
     [“Theory and practice of .NET benchmarking”](https://mskdotnet.timepad.ru/event/430756/)
         ,<br />
@@ -346,7 +356,7 @@ In his free time, he likes to study science
   * [IT NONSTOP 2015 Spb](http://it-nonstop.net/city/saint-petersburg),<br />
     [“.NET 2015 and performance”](https://www.youtube.com/watch?list=PLU6_HdJGVDx8vCM2vsQQr6y4cB82NB8mD&v=3EcQXGPXWMA),<br />
     <i>October 23, 2015, St. Petersburg, Russia</i>
-  * [“Microsoft Build Tour 2015”](https://berlin.build15.com/),<br />
+  * “Microsoft Build Tour 2015”,<br />
     <i>May 22, 2015, Berlin, Germany</i>
   * 7th International Young Scientists School [“Systems Biology and Bioinformatics”](http://conf.nsc.ru/SBB2015/en/info_letter) (SBB'2015),<br />
     <i>June 22–25, 2015, Novosibirsk, Russia</i>
