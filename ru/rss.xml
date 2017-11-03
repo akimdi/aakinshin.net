@@ -6,9 +6,225 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Sat, 26 Aug 2017 03:22:50 GMT</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2017 03:22:50 GMT</lastBuildDate>
+    <pubDate>Thu, 02 Nov 2017 17:51:47 GMT</pubDate>
+    <lastBuildDate>Thu, 02 Nov 2017 17:51:47 GMT</lastBuildDate>
 
+        <item>
+            <title>BenchmarkDotNet v0.10.10</title>
+            <link>http://aakinshin.net/blog/post/bdn-v0_10_10/</link> 
+            <pubDate>Fri, 03 Nov 2017 00:00:00 GMT</pubDate>
+            <author>Андрей Акиньшин</author>
+            <guid>http://aakinshin.net/blog/post/bdn-v0_10_10/</guid>
+            <description>&lt;p&gt;BenchmarkDotNet v0.10.10 has been released!
+This release includes many new features like Disassembly Diagnoser, ParamsSources, .NET Core x86 support, Environment variables, and more!&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;highlights&quot;&gt;Highlights&lt;/h3&gt;
+&lt;p&gt;There are so many changes in this version!
+In this post, I&#39;m going to tell you about the most useful features.&lt;/p&gt;
+&lt;h4 id=&quot;disassembly-diagnoser&quot;&gt;Disassembly Diagnoser&lt;/h4&gt;
+&lt;p&gt;This feature by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt; allows looking at the assembly code of your methods.
+It really helps when you investigate some CPU-bound benchmarks.
+BenchmarkDotNet not only shows naive disasm, but it also prettify the listing can work with hardware counters:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/bdn-v0_10_10/branchpredictor.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;You can find the full info in the &lt;a href=&quot;http://adamsitnik.com/Disassembly-Diagnoser/&quot;&gt;Disassembling .NET Code with BenchmarkDotNet&lt;/a&gt; blog post by Adam Sitnik.&lt;/p&gt;
+&lt;p&gt;It turned out that this feature is useful for comparing assembly for different versions of .NET JIT-compilers.
+Check out a recent post from Microsoft .NET Blog by Joseph Tremoulet:
+&lt;a href=&quot;https://blogs.msdn.microsoft.com/dotnet/2017/10/16/ryujit-just-in-time-compiler-optimization-enhancements/&quot;&gt;RyuJIT Just-in-Time Compiler Optimization Enhancements&lt;/a&gt;.
+In this post, Joseph compares RyuJIT assembly code for .NET Core 2.0 RTM and .NET Core 2.1.0-preview1-25719-04.&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/bdn-v0_10_10/ryujit.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;It&#39;s really great to see that BenchmarkDotNet helps to develop such products like .NET Core.
+By the way, the development process is also useful for BenchmarkDotNet.
+Here are some great bug reports by Joseph which were fixed by Adam:
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/535&quot;&gt;#535&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/536&quot;&gt;#536&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/559&quot;&gt;#559&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/562&quot;&gt;#562&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Now BenchmarkDotNet can produce assembly for .NET Framework and .NET Core; Mono support is coming soon.
+Of course, we have also many additional feature requests:
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/543&quot;&gt;#543&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/544&quot;&gt;#544&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/545&quot;&gt;#545&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/546&quot;&gt;#546&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/560&quot;&gt;#560&lt;/a&gt;
+(any help will be highly appreciated).&lt;/p&gt;
+&lt;h4 id=&quot;paramssources&quot;&gt;ParamsSources&lt;/h4&gt;
+&lt;p&gt;BenchmarkDotNet allows to parametrize your benchmark and run it against several parameter values.
+v0.10.9 supported only a constant set of parameters which should be declared inside the attribute;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;[Params(100, 200)]
+public int A { get; set; }
+
+[Params(10, 20)]
+public int B { get; set; }
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It&#39;s not always convenient, sometimes we need a way to define parameter values dynamically.
+Now you can do it!&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;[ParamsSource(nameof(ValuesForA))]
+public int A { get; set; } // property with public setter
+
+[ParamsSource(nameof(ValuesForB))]
+public int B; // public field
+
+public IEnumerable&amp;lt;int&amp;gt; ValuesForA =&amp;gt; new[] { 100, 200 }; // public property
+
+public static IEnumerable&amp;lt;int&amp;gt; ValuesForB() =&amp;gt; new[] { 10, 20 }; // public static method
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See also:
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/350&quot;&gt;#350&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/571&quot;&gt;#571&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;net-core-x86-support&quot;&gt;.NET Core x86 support&lt;/h4&gt;
+&lt;p&gt;Since .NET Core 2.0, we can run it not only on x64, but also on x86.
+If we have both versions of runtime installed, we can try the same code on both platforms at the same time.
+Here is a config for you:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public class CustomPathsConfig : ManualConfig
+{
+    public CustomPathsConfig() 
+    {
+        var dotnetCli32bit = NetCoreAppSettings
+            .NetCoreApp20
+            .WithCustomDotNetCliPath(@&amp;quot;C:\Program Files (x86)\dotnet\dotnet.exe&amp;quot;, &amp;quot;32 bit cli&amp;quot;);
+
+        var dotnetCli64bit = NetCoreAppSettings
+            .NetCoreApp20
+            .WithCustomDotNetCliPath(@&amp;quot;C:\Program Files\dotnet\dotnet.exe&amp;quot;, &amp;quot;64 bit cli&amp;quot;);
+
+        Add(Job.RyuJitX86.With(CsProjCoreToolchain.From(dotnetCli32bit)).WithId(&amp;quot;32 bit cli&amp;quot;));
+        Add(Job.RyuJitX64.With(CsProjCoreToolchain.From(dotnetCli64bit)).WithId(&amp;quot;64 bit cli&amp;quot;));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See also:
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/310&quot;&gt;#310&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/534&quot;&gt;#534&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;environment-variables-and-mono-args&quot;&gt;Environment variables and Mono args&lt;/h4&gt;
+&lt;p&gt;One of the keys features of BenchmarkDotNet is comparing different environments.
+And we add more and more options for you in each release.
+Now you can specify Mono arguments:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public class ConfigWithCustomArguments : ManualConfig
+{
+    public ConfigWithCustomArguments()
+    {
+        // --optimize=MODE , -O=mode
+        // MODE is a comma separated list of optimizations. They also allow
+        // optimizations to be turned off by prefixing the optimization name with a minus sign.
+
+        Add(Job.Mono.With(new[] { new MonoArgument(&amp;quot;--optimize=inline&amp;quot;) }).WithId(&amp;quot;Inlining enabled&amp;quot;));
+        Add(Job.Mono.With(new[] { new MonoArgument(&amp;quot;--optimize=-inline&amp;quot;) }).WithId(&amp;quot;Inlining disabled&amp;quot;));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And environment variables:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public class ConfigWithCustomEnvVars : ManualConfig
+{
+    public ConfigWithCustomEnvVars()
+    {
+        Add(Job.Core.WithId(&amp;quot;Inlining enabled&amp;quot;));
+        Add(Job.Core.With(
+            new[] { new EnvironmentVariable(&amp;quot;COMPlus_JitNoInline&amp;quot;, &amp;quot;1&amp;quot;) })
+            .WithId(&amp;quot;Inlining disabled&amp;quot;));
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can find hundreds of runtime knobs &lt;a href=&quot;https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/clr-configuration-knobs.md&quot;&gt;here&lt;/a&gt;.
+Now it&#39;s so easy to compare performance between different knobs values!&lt;/p&gt;
+&lt;p&gt;See also: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/262&quot;&gt;#262&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&quot;better-environment-description&quot;&gt;Better environment description&lt;/h4&gt;
+&lt;p&gt;When BenchmarkDotNet prints the summary about benchmarks, it always shows brief information about our environment.
+Now we can detect situation when you run a benchmark on a virtual machine (at least, in some cases)
+and print a warning about it
+(thanks &lt;a href=&quot;https://github.com/lukasz-pyrzyk&quot;&gt;@lukasz-pyrzyk&lt;/a&gt;;
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/167&quot;&gt;#167&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/527&quot;&gt;#527&lt;/a&gt;).
+We support detecting &lt;code&gt;HyperV&lt;/code&gt;, &lt;code&gt;VirtualBox&lt;/code&gt;, &lt;code&gt;VMware&lt;/code&gt; (Windows only for now).&lt;/p&gt;
+&lt;p&gt;Also now we support Windows 10 [1709, Fall Creators Update] and always print the revision number of Windows 10 version
+(like &lt;code&gt;10.0.15063.674&lt;/code&gt; instead of &lt;code&gt;10.0.15063&lt;/code&gt;).&lt;/p&gt;
+&lt;h4 id=&quot;more&quot;&gt;More&lt;/h4&gt;
+&lt;p&gt;Of course, v0.10.10 includes not only new features but also additional sections in the documentation, bug fixes, build script improvements, internal refactoring.
+It&#39;s not so exciting to write about such stuff in the release notes, but it&#39;s also very important changes which improve the overall quality of the library.&lt;/p&gt;
+&lt;h3 id=&quot;issues-and-pull-requests&quot;&gt;Issues and Pull Requests&lt;/h3&gt;
+&lt;p&gt;In the v0.10.10 scope, &lt;strong&gt;34&lt;/strong&gt; issues were resolved and &lt;strong&gt;18&lt;/strong&gt; pull requests were merged.
+This release includes &lt;strong&gt;95&lt;/strong&gt; commits by &lt;strong&gt;12&lt;/strong&gt; contributors:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/aidmsu&quot;&gt;@aidmsu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ig-sinicyn&quot;&gt;@ig-sinicyn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/ipjohnson&quot;&gt;@ipjohnson&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/jawn&quot;&gt;@jawn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Jiri Cincura&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/lukasz-pyrzyk&quot;&gt;@lukasz-pyrzyk&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/pentp&quot;&gt;@pentp&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/rolshevsky&quot;&gt;@rolshevsky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Teknikaali&quot;&gt;@Teknikaali&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you very much!&lt;/p&gt;
+&lt;h4 id=&quot;resolved-issues&quot;&gt;Resolved Issues&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/160&quot;&gt;#160&lt;/a&gt; Make ClrMd Source diagnoser working with new ClrMD api&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/167&quot;&gt;#167&lt;/a&gt; Detect virtual machine environment&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/262&quot;&gt;#262&lt;/a&gt; Runtime knobs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/310&quot;&gt;#310&lt;/a&gt; Support 32bit benchmarks for .NET Core&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/350&quot;&gt;#350&lt;/a&gt; ParamsSource&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/437&quot;&gt;#437&lt;/a&gt; Add DisassemblyDiagnoser for outputting disassembled JITed code&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/466&quot;&gt;#466&lt;/a&gt; MSBuild parameters are not passed to generated benchmark project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/495&quot;&gt;#495&lt;/a&gt; Attributes put on base methods are not considered in derived class&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/500&quot;&gt;#500&lt;/a&gt; Borken compilation for net46 projects when .NET Framework 4.7 is installed&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/505&quot;&gt;#505&lt;/a&gt; JsonExporterBase doesn&#39;t include MemoryDiagnoser stats in output&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/511&quot;&gt;#511&lt;/a&gt; [bug] Bug in GetTargetedMatchingMethod() logic&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/513&quot;&gt;#513&lt;/a&gt; IterationSetup not run in Job.InProcess&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/516&quot;&gt;#516&lt;/a&gt; Get a compilation error &amp;quot;CS1009: Unrecognized escape sequence&amp;quot; when using verbatim strings&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/519&quot;&gt;#519&lt;/a&gt; BenchmarkSwitcher.RunAllJoined throws InvalidOperationException&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/526&quot;&gt;#526&lt;/a&gt; Remove project.json support&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/529&quot;&gt;#529&lt;/a&gt; No namespace in export filenames can lead to data loss&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/530&quot;&gt;#530&lt;/a&gt; Build error on Appveyor with recent changes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/533&quot;&gt;#533&lt;/a&gt; When I clone, build, and run BenchmarkDotNet.Samples I get an error&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/534&quot;&gt;#534&lt;/a&gt; Allow the users to compare 32 vs 64 RyuJit for .NET Core&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/535&quot;&gt;#535&lt;/a&gt; No way to set RuntimeFrameworkVersion in multiple-version config&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/536&quot;&gt;#536&lt;/a&gt; Strange disassembly ordering/truncation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/537&quot;&gt;#537&lt;/a&gt; Can&#39;t benchmark a netstandard2.0 project&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/538&quot;&gt;#538&lt;/a&gt; Duplicate using causing benchmark not to work&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/539&quot;&gt;#539&lt;/a&gt; Target .NET Core 2.0 to take advantage of the new APIs&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/540&quot;&gt;#540&lt;/a&gt; Artifacts for disassembler projects&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/542&quot;&gt;#542&lt;/a&gt; Problems with Disassembler + Job.Dry&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/555&quot;&gt;#555&lt;/a&gt; Test &amp;quot;CanDisassembleAllMethodCalls&amp;quot; fails on Ubuntu&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/556&quot;&gt;#556&lt;/a&gt; Table in report is broken in VSCode markdown viewer&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/558&quot;&gt;#558&lt;/a&gt; Warn the users when running Benchmarks from xUnit with shadow copy enabled&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/559&quot;&gt;#559&lt;/a&gt; DissassemblyDiagnoser jit/arch info seems to be wrong&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/561&quot;&gt;#561&lt;/a&gt; Strange behaviour when benchmark project is build in debug mode&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/562&quot;&gt;#562&lt;/a&gt; DisassemblyDiagnoser crashes on overloaded benchmark&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/564&quot;&gt;#564&lt;/a&gt; [Bug] Benchmarking a method doesn&#39;t run global setup when filter is applied&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/571&quot;&gt;#571&lt;/a&gt; Allow users to use non compile-time constants as Parameters&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;merged-pull-requests&quot;&gt;Merged Pull Requests&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/507&quot;&gt;#507&lt;/a&gt; Fix a typo in Jobs.md&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/508&quot;&gt;#508&lt;/a&gt; Fixed some typos and grammar&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/512&quot;&gt;#512&lt;/a&gt; Warning about antivirus software after benchmark failure&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/514&quot;&gt;#514&lt;/a&gt; #495 - Unit test for reading attributes from the base class&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/515&quot;&gt;#515&lt;/a&gt; Fix #513 - IterationSetup not run in Job.InProcess&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/518&quot;&gt;#518&lt;/a&gt; Fixed information about MemoryDiagnoser&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/520&quot;&gt;#520&lt;/a&gt; XML Exporter documentation and samples&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/525&quot;&gt;#525&lt;/a&gt; adding validator for setup cleanup attributes&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/527&quot;&gt;#527&lt;/a&gt; Detecting virtual machine hypervisor, #167&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/531&quot;&gt;#531&lt;/a&gt; Remove --no-build argument for dotnet test &amp;amp; pack commands&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/532&quot;&gt;#532&lt;/a&gt; Fix type of local in EmitInvokeMultipleBody&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/547&quot;&gt;#547&lt;/a&gt; Fix markdown headers&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/548&quot;&gt;#548&lt;/a&gt; Fix condition in package reference list and update dotnet cli version from 1.0.4 to 2.0.0 for non-Windows system&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/549&quot;&gt;#549&lt;/a&gt; Project files cleanup&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/552&quot;&gt;#552&lt;/a&gt; Fix exporters to use fully qualified filenames&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/563&quot;&gt;#563&lt;/a&gt; Remove leading space character in a MD table row, #556&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/565&quot;&gt;#565&lt;/a&gt; Single point of full config creation&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/569&quot;&gt;#569&lt;/a&gt; Update cakebuild scripts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;BenchmarkDotNet on GitHub: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet&quot;&gt;https://github.com/dotnet/BenchmarkDotNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Official documentation: &lt;a href=&quot;http://benchmarkdotnet.org/&quot;&gt;http://benchmarkdotnet.org/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;ChangeLog: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/wiki/ChangeLog&quot;&gt;https://github.com/dotnet/BenchmarkDotNet/wiki/ChangeLog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;v0.10.10 milestone: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues?q=milestone:v0.10.9&quot;&gt;https://github.com/dotnet/BenchmarkDotNet/issues?q=milestone:v0.10.9&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;v0.10.10 commits: &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/compare/v0.10.9...v0.10.10&quot;&gt;https://github.com/dotnet/BenchmarkDotNet/compare/v0.10.9...v0.10.10&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         <item>
             <title>Reflecting on performance testing</title>
             <link>http://aakinshin.net/blog/post/reflecting-on-performance-testing/</link> 
