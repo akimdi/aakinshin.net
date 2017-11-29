@@ -204,7 +204,7 @@ a[0] = new object[1];
 </code></pre>
 <p>В этом дампе можно увидеть нечто странное: поле, которое должно определять тип элементов массива <code>a</code> (по адресу <code>0x03012418</code>) не ведёт на <code>System.Object[]</code>
 MethodTable — ведь адрес этой таблицы можно найти по адресу (<code>0x03012424</code>) при описании MethodTable для <code>a[0]</code> — и они различаются. Давайте убедимся, что значение
-<code>0x65854d7a</code> не определяет MehtodTable:</p>
+<code>0x65854d7a</code> не определяет MethodTable:</p>
 <pre><code>!DumpMT 65854d7a
 65854d7a is not a MethodTable
 </code></pre>

@@ -115,11 +115,11 @@ public static bool IsMonospace(Font font)
 <p><strong>Q:</strong> Я создал шрифт, используя его строковое название, никаких исключений не вылетело. А этот шрифт точно есть в системе?</p>
 <p><strong>A:</strong> Не обязательно. Конструктор класса Font попытается подобрать самый подходящий (по его мнению) шрифт для данного названия. Лучше проверить, что создался правильный шрифт:</p>
 <pre><code class="language-cs">var font = new Font(fontName, 12);
-vat isExist = font.Name == fontName;
+vat exists = font.Name == fontName;
 </code></pre>
 <p>А ещё не помешает проверить, поддерживает ли используемое вами семейство шрифтов ваш <a href="http://msdn.microsoft.com/en-us/library/system.drawing.fontstyle.aspx">FontStyle</a>:</p>
 <pre><code class="language-cs">var fontFamily = new FontFamily(fontName);
-isExist &amp;= fontFamily.IsStyleAvailable(fontStyle);
+exists &amp;= fontFamily.IsStyleAvailable(fontStyle);
 </code></pre>
 
 <!-- Share -->

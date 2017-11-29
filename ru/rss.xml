@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Fri, 03 Nov 2017 00:19:19 GMT</pubDate>
-    <lastBuildDate>Fri, 03 Nov 2017 00:19:19 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2017 02:35:47 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2017 02:35:47 GMT</lastBuildDate>
 
         <item>
             <title>BenchmarkDotNet v0.10.10</title>
@@ -11115,7 +11115,7 @@ Console.WriteLine(redName == redArgb);
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;Console.WriteLine(redName.Name); // Red
 Console.WriteLine(redArgb.Name); // ffff0000
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Хм, имена-то разные. Таким образом, выражение &lt;code&gt;redName == redArgb&lt;/code&gt; вернёт нам &lt;code&gt;False&lt;/code&gt;. Неприятная ситуация может получится, если, например, исходный &lt;code&gt;Color.Red&lt;/code&gt; был сериализован в ARGB, затем десериализрован обратно, после чего вы вздумали сравнить итоговый цвет с оригиналом. Давайте почитаем, что &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx&quot;&gt;пишут&lt;/a&gt; про оператор &lt;code&gt;==&lt;/code&gt; в &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx&quot;&gt;MSDN&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;Хм, имена-то разные. Таким образом, выражение &lt;code&gt;redName == redArgb&lt;/code&gt; вернёт нам &lt;code&gt;False&lt;/code&gt;. Неприятная ситуация может получиться, если, например, исходный &lt;code&gt;Color.Red&lt;/code&gt; был сериализован в ARGB, затем десериализрован обратно, после чего вы вздумали сравнить итоговый цвет с оригиналом. Давайте почитаем, что &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx&quot;&gt;пишут&lt;/a&gt; про оператор &lt;code&gt;==&lt;/code&gt; в &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx&quot;&gt;MSDN&lt;/a&gt;:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;This method compares more than the ARGB values of the	&lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color(v=vs.110).aspx&quot;&gt;Color&lt;/a&gt; structures. It also does a comparison of some state flags. If you want to compare just the ARGB values of two Color structures, compare them using the &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.color.toargb(v=vs.110).aspx&quot;&gt;ToArgb&lt;/a&gt; method.&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -12248,7 +12248,7 @@ for (int i = 4; i &amp;lt; 6; i++)
 &lt;p&gt;Дамп памяти:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;0x03022588           0  // SyncBlockIndex
 0x0302258C  1639311672  // *MethodTable
-0x03022590           6  // a.Legnth
+0x03022590           6  // a.Length
 0x03022594           2  // a.GetLength(0)
 0x03022598           3  // a.GetLength(1)
 0x0302259C           4  // a.GetLowerBound(0)
@@ -12497,7 +12497,7 @@ a[0] = new object[1];
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;В этом дампе можно увидеть нечто странное: поле, которое должно определять тип элементов массива &lt;code&gt;a&lt;/code&gt; (по адресу &lt;code&gt;0x03012418&lt;/code&gt;) не ведёт на &lt;code&gt;System.Object[]&lt;/code&gt;
 MethodTable — ведь адрес этой таблицы можно найти по адресу (&lt;code&gt;0x03012424&lt;/code&gt;) при описании MethodTable для &lt;code&gt;a[0]&lt;/code&gt; — и они различаются. Давайте убедимся, что значение
-&lt;code&gt;0x65854d7a&lt;/code&gt; не определяет MehtodTable:&lt;/p&gt;
+&lt;code&gt;0x65854d7a&lt;/code&gt; не определяет MethodTable:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!DumpMT 65854d7a
 65854d7a is not a MethodTable
 &lt;/code&gt;&lt;/pre&gt;
@@ -15263,11 +15263,11 @@ public static bool IsMonospace(Font font)
 &lt;p&gt;&lt;strong&gt;Q:&lt;/strong&gt; Я создал шрифт, используя его строковое название, никаких исключений не вылетело. А этот шрифт точно есть в системе?&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;A:&lt;/strong&gt; Не обязательно. Конструктор класса Font попытается подобрать самый подходящий (по его мнению) шрифт для данного названия. Лучше проверить, что создался правильный шрифт:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;var font = new Font(fontName, 12);
-vat isExist = font.Name == fontName;
+vat exists = font.Name == fontName;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;А ещё не помешает проверить, поддерживает ли используемое вами семейство шрифтов ваш &lt;a href=&quot;http://msdn.microsoft.com/en-us/library/system.drawing.fontstyle.aspx&quot;&gt;FontStyle&lt;/a&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;var fontFamily = new FontFamily(fontName);
-isExist &amp;amp;= fontFamily.IsStyleAvailable(fontStyle);
+exists &amp;amp;= fontFamily.IsStyleAvailable(fontStyle);
 &lt;/code&gt;&lt;/pre&gt;</description>
         </item>
         <item>
