@@ -282,7 +282,7 @@ for (int i = 4; i < 6; i++)
 ```cs
 0x03022588           0  // SyncBlockIndex
 0x0302258C  1639311672  // *MethodTable
-0x03022590           6  // a.Legnth
+0x03022590           6  // a.Length
 0x03022594           2  // a.GetLength(0)
 0x03022598           3  // a.GetLength(1)
 0x0302259C           4  // a.GetLowerBound(0)

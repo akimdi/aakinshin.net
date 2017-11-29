@@ -60,12 +60,12 @@ public static bool IsMonospace(Font font)
 
 ```cs
 var font = new Font(fontName, 12);
-vat isExist = font.Name == fontName;
+vat exists = font.Name == fontName;
 ```
 
 А ещё не помешает проверить, поддерживает ли используемое вами семейство шрифтов ваш [FontStyle](http://msdn.microsoft.com/en-us/library/system.drawing.fontstyle.aspx):
 
 ```cs
 var fontFamily = new FontFamily(fontName);
-isExist &= fontFamily.IsStyleAvailable(fontStyle);
+exists &= fontFamily.IsStyleAvailable(fontStyle);
 ```

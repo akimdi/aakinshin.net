@@ -52,7 +52,7 @@ Console.WriteLine(redName.Name); // Red
 Console.WriteLine(redArgb.Name); // ffff0000
 ```
 
-Хм, имена-то разные. Таким образом, выражение `redName == redArgb` вернёт нам `False`. Неприятная ситуация может получится, если, например, исходный `Color.Red` был сериализован в ARGB, затем десериализрован обратно, после чего вы вздумали сравнить итоговый цвет с оригиналом. Давайте почитаем, что [пишут](http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx) про оператор `==` в [MSDN](http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx):
+Хм, имена-то разные. Таким образом, выражение `redName == redArgb` вернёт нам `False`. Неприятная ситуация может получиться, если, например, исходный `Color.Red` был сериализован в ARGB, затем десериализрован обратно, после чего вы вздумали сравнить итоговый цвет с оригиналом. Давайте почитаем, что [пишут](http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx) про оператор `==` в [MSDN](http://msdn.microsoft.com/en-us/library/system.drawing.color.op_equality(v=vs.110).aspx):
 
 > This method compares more than the ARGB values of the	[Color](http://msdn.microsoft.com/en-us/library/system.drawing.color(v=vs.110).aspx) structures. It also does a comparison of some state flags. If you want to compare just the ARGB values of two Color structures, compare them using the [ToArgb](http://msdn.microsoft.com/en-us/library/system.drawing.color.toargb(v=vs.110).aspx) method.
 
