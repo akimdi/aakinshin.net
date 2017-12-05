@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,12 +8,17 @@ namespace BibTeXImporter
 {
     internal enum EntryType
     {
-        Inproceedings, TechReport, Book, Article, PhdThesis
+        Inproceedings,
+        TechReport,
+        Book,
+        Article,
+        PhdThesis
     }
 
     internal enum Language
     {
-        Russian, English
+        Russian,
+        English
     }
 
     internal class Entry
@@ -37,7 +42,7 @@ namespace BibTeXImporter
             if (string.IsNullOrWhiteSpace(firstLine))
                 return null;
             var firstLineSplit = firstLine.Substring(1, firstLine.Length - 2).Split('{');
-            var type = (EntryType)Enum.Parse(typeof(EntryType), firstLineSplit[0], true);
+            var type = (EntryType) Enum.Parse(typeof(EntryType), firstLineSplit[0], true);
             var key = firstLineSplit[1];
             var properties = new Dictionary<string, string>();
             while (true)
@@ -49,11 +54,8 @@ namespace BibTeXImporter
                 if (equalIndex == -1)
                     continue;
                 var propertyName = line.Substring(0, equalIndex).Trim();
-                var properyValue = line.Substring(equalIndex + 1).
-                    Trim(' ', '{', '}', ',').
-                    Replace("{\\_}", "_").
-                    Replace("{\\%}", "%").
-                    Replace("{\\&}", "&");
+                var properyValue = line.Substring(equalIndex + 1).Trim(' ', '{', '}', ',').Replace("{\\_}", "_")
+                    .Replace("{\\%}", "%").Replace("{\\&}", "&");
                 properties[propertyName] = properyValue;
             }
         }
@@ -72,6 +74,7 @@ namespace BibTeXImporter
                         break;
                 }
             }
+
             return entries;
         }
 
@@ -97,7 +100,7 @@ namespace BibTeXImporter
 
         public static EntryAuthor[] Parse(string line)
         {
-            var split = line.Split(new[] { " and " }, StringSplitOptions.RemoveEmptyEntries);
+            var split = line.Split(new[] {" and "}, StringSplitOptions.RemoveEmptyEntries);
             var authors = new List<EntryAuthor>();
             foreach (var item in split)
             {
@@ -114,13 +117,15 @@ namespace BibTeXImporter
                     firstName = firstName.Substring(0, 2) + ". " + firstName[3] + ".";
                 authors.Add(new EntryAuthor(firstName, lastName));
             }
+
             return authors.ToArray();
         }
     }
 
     internal static class EntryExtensions
     {
-        public static string GetProperty(this Entry entry, string name) => entry.Properties.ContainsKey(name) ? entry.Properties[name] : "";
+        public static string GetProperty(this Entry entry, string name) =>
+            entry.Properties.ContainsKey(name) ? entry.Properties[name] : "";
 
         public static int GetYear(this Entry entry) => int.Parse(entry.GetProperty("year"));
         public static string GetTitle(this Entry entry) => entry.GetProperty("title");
@@ -135,15 +140,26 @@ namespace BibTeXImporter
         public static string GetBookTitle(this Entry entry) => entry.GetProperty("booktitle");
         public static string GetIsbn(this Entry entry) => entry.GetProperty("isbn");
         public static string GetDoi(this Entry entry) => entry.GetProperty("doi");
-        public static Language GetLanguage(this Entry entry) => entry.GetProperty("language").StartsWith("ru") ? Language.Russian : Language.English;
-        public static string[] GetUrls(this Entry entry) => entry.GetProperty("url").Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
-        public static string[] GetKeywords(this Entry entry) => entry.GetProperty("keywords").Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+
+        public static Language GetLanguage(this Entry entry) =>
+            entry.GetProperty("language").StartsWith("ru") ? Language.Russian : Language.English;
+
+        public static string[] GetUrls(this Entry entry) =>
+            entry.GetProperty("url").Split(new[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+
+        public static string[] GetKeywords(this Entry entry) => entry.GetProperty("keywords")
+            .Split(new[] {','}, StringSplitOptions.RemoveEmptyEntries);
+
         public static EntryAuthor[] GetAuthors(this Entry entry) => EntryAuthor.Parse(entry.GetProperty("author"));
 
-        public static IList<Entry> WithYear(this IEnumerable<Entry> entries, int year) => entries.Where(it => it.GetYear() == year).ToList();
-        public static IList<Entry> WithType(this IEnumerable<Entry> entries, EntryType type) => entries.Where(it => it.Type == type).ToList();
+        public static IList<Entry> WithYear(this IEnumerable<Entry> entries, int year) =>
+            entries.Where(it => it.GetYear() == year).ToList();
 
-        public static string ToHtml(this IEnumerable<EntryAuthor> authors) => "<i>" + string.Join(", ", authors.Select(it => $"{it.FirstName} {it.LastName}")) + "</i>";
+        public static IList<Entry> WithType(this IEnumerable<Entry> entries, EntryType type) =>
+            entries.Where(it => it.Type == type).ToList();
+
+        public static string ToHtml(this IEnumerable<EntryAuthor> authors) =>
+            "<i>" + string.Join(", ", authors.Select(it => $"{it.FirstName} {it.LastName}")) + "</i>";
 
         public static string ToHtml(this Entry entry)
         {
@@ -201,7 +217,8 @@ namespace BibTeXImporter
                         title = "Springer";
                     else if (url.Contains("www.packtpub.com"))
                         title = "PacktPub";
-                    else if (url.Contains("conf.nsc.ru") || url.Contains("uni-bielefeld.de") || url.Contains("cmb.molgen.mpg.de") || url.Contains("sites.google.com"))
+                    else if (url.Contains("conf.nsc.ru") || url.Contains("uni-bielefeld.de") ||
+                             url.Contains("cmb.molgen.mpg.de") || url.Contains("sites.google.com"))
                         title = Resolve(lang, "Conference site", "Сайт конференции");
                     else if (url.Contains("authorea"))
                         title = url.Substring(url.IndexOf("authorea.com", StringComparison.Ordinal)).TrimEnd('/');
@@ -209,9 +226,11 @@ namespace BibTeXImporter
                         title = "Google Scholar";
                     builder.AppendLine($" <a href=\"{url}\">[{title}]</a>");
                 }
+
                 if (isVak)
                     builder.AppendLine(Resolve(lang, " [VAK]", " [ВАК]"));
             }
+
             return builder.ToString();
         }
 
@@ -223,12 +242,17 @@ namespace BibTeXImporter
             {
                 builder.AppendLine($"<h4>{year}</h4>");
                 var localEntries = entries.WithYear(year);
-                builder.Append(localEntries.WithType(EntryType.PhdThesis).ToHtmlSection(Resolve(lang, "Phd thesis", "Диссертационные работы")));
+                builder.Append(localEntries.WithType(EntryType.PhdThesis)
+                    .ToHtmlSection(Resolve(lang, "Phd thesis", "Диссертационные работы")));
                 builder.Append(localEntries.WithType(EntryType.Book).ToHtmlSection(Resolve(lang, "Books", "Книги")));
-                builder.Append(localEntries.WithType(EntryType.Article).ToHtmlSection(Resolve(lang, "Articles", "Статьи")));
-                builder.Append(localEntries.WithType(EntryType.Inproceedings).ToHtmlSection(Resolve(lang, "Inproceedings", "Тезисы")));
-                builder.Append(localEntries.WithType(EntryType.TechReport).ToHtmlSection(Resolve(lang, "Technical reports", "Технические отчёты")));
+                builder.Append(localEntries.WithType(EntryType.Article)
+                    .ToHtmlSection(Resolve(lang, "Articles", "Статьи")));
+                builder.Append(localEntries.WithType(EntryType.Inproceedings)
+                    .ToHtmlSection(Resolve(lang, "Inproceedings", "Тезисы")));
+                builder.Append(localEntries.WithType(EntryType.TechReport)
+                    .ToHtmlSection(Resolve(lang, "Technical reports", "Технические отчёты")));
             }
+
             return builder.ToString();
         }
 
@@ -254,9 +278,15 @@ namespace BibTeXImporter
 
         public static void Main()
         {
-            File.WriteAllText("bib-en.html", MetaEnconding + Entry.ReadAll("Akinshin.En.bib", "Akinshin.InRussian.bib", "Akinshin.Translation.bib").ToHtml());
-            File.WriteAllText("bib-ru.html", MetaEnconding + Entry.ReadAll("Akinshin.En.bib", "Akinshin.Ru.bib", "Akinshin.Translation.bib").ToHtml(Language.Russian));
-            Console.WriteLine("DONE");
+            var htmlEn = Entry.ReadAll("Akinshin.En.bib", "Akinshin.InRussian.bib", "Akinshin.Translation.bib").ToHtml();
+            var htmlRu = Entry.ReadAll("Akinshin.En.bib", "Akinshin.Ru.bib", "Akinshin.Translation.bib")
+                .ToHtml(Language.Russian);
+                        
+            if (!Directory.Exists("_generated"))
+                Directory.CreateDirectory("_generated");
+
+            File.WriteAllText(Path.Combine("_generated", "publications.html"), htmlEn);
+            File.WriteAllText(Path.Combine("_generated", "publications-ru.html"), htmlRu);
         }
     }
 }
