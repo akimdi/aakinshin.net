@@ -1,7 +1,9 @@
 # Main folders
 bin/
+obj/
 pretzel/
 web/_site/
+_generated/
 gh-pages/
 gh-pages-git/
 
