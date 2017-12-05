@@ -23,6 +23,8 @@ talks:
         url: https://dotnext-moscow.ru/en/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
       - key: talk_ru
         url: https://dotnext-moscow.ru/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
+      - key: youtube
+        url: https://www.youtube.com/watch?v=5Gozj_X2bZA
       - key: pdf
         url: https://assets.contentful.com/9n3x4rtjlya6/2hDW7Kf9gAy8Oay2Mq0wKo/30f6f48ae7630ab2b4aaad5f4eea16b5/Andrey_Akinshin_-_Let_s_talk_about_performance_testing.pdf
       - key: slideshare
