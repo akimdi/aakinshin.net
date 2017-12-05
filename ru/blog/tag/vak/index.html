@@ -13,7 +13,7 @@
     <title>Andrey Akinshin</title>
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
 
     <!-- Custom styles -->
     <link href="/css/about.css" rel="stylesheet" type="text/css" media="all">
@@ -34,33 +34,40 @@
       ga('send', 'pageview');
     </script>
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-    (function (d, w, c) {
-        (w[c] = w[c] || []).push(function() {
-            try {
-                w.yaCounter28700916 = new Ya.Metrika({id:28700916,
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter28700916 = new Ya.Metrika({
+                        id:28700916,
                         clickmap:true,
                         trackLinks:true,
-                        accurateTrackBounce:true});
-            } catch(e) { }
-        });
-        var n = d.getElementsByTagName("script")[0],
-            s = d.createElement("script"),
-            f = function () { n.parentNode.insertBefore(s, n); };
-        s.type = "text/javascript";
-        s.async = true;
-        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
-        if (w.opera == "[object Opera]") {
-            d.addEventListener("DOMContentLoaded", f, false);
-        } else { f(); }
-    })(document, window, "yandex_metrika_callbacks");
+                        accurateTrackBounce:true,
+                        webvisor:true,
+                        trackHash:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
     </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <!-- Disqus -->
     <script id="dsq-count-scr" src="//aakinshinnet-ru.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.2.1.slim.min.js"></script>
   </head>
 
   <body>
@@ -70,7 +77,7 @@
           <a class="nav-link" id="nav-link-blog" href="/ru/blog/">Блог</a>
           <a class="nav-link" id="nav-link-blog-content" href="/ru/blog/content/">Содержание</a>
           <a class="nav-link" id="nav-link-about" href="/ru/about/">Об авторе </a>
-          <a class="nav-link" href='/blog/tag/vak/''>English version</a>
+          <a class="nav-link" href='/blog/tag/vak/'>English version</a>
         </nav>
       </div>
     </div>
@@ -104,9 +111,9 @@
       </div>
     </footer>
 
-    <!-- jQuery first (header), then Tether, then Bootstrap JS. -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- jQuery first (header), then popper, then Bootstrap JS. -->
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- Other scripts -->
     <script src="/js/highlight.pack.js"></script>
     <script src="/js/anchor.min.js"></script>
