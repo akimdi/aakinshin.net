@@ -829,8 +829,8 @@ talks:
         url: http://www.techfak.uni-bielefeld.de/ags/bi/staff/headofdepartment/index.shtml
   - date: 2013-04-25
     date2: 2013-04-30
-    event_en: Наука и молодёжь
-    event_ru: Science and Youth
+    event_en: Science and Youth
+    event_ru: Наука и молодёжь
     event-hint_ru: Всероссийская научно-техническая конференция студентов, аспирантов и молодых учёных
     location_en: Barnaul, Russia
     location_ru: г. Барнаул
@@ -990,8 +990,8 @@ talks:
       - key: event
         url: http://conf.nsc.ru/sct2012/en
   - date: 2012-04-27
-    event_en: Наука и молодёжь
-    event_ru: Science and Youth
+    event_en: Science and Youth
+    event_ru: Наука и молодёжь
     event-hint_ru: Всероссийская научно-техническая конференция студентов, аспирантов и молодых учёных
     location_en: Barnaul, Russia
     location_ru: г. Барнаул
@@ -1050,8 +1050,8 @@ talks:
       - key: event
         url: http://issc.nsu.ru/
   - year: 2011
-    event_en: Наука и молодёжь
-    event_ru: Science and Youth
+    event_en: Science and Youth
+    event_ru: Наука и молодёжь
     event-hint_ru: Всероссийская научно-техническая конференция студентов, аспирантов и молодых учёных
     location_en: Barnaul, Russia
     location_ru: г. Барнаул
