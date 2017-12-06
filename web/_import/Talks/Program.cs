@@ -234,6 +234,8 @@ namespace MyTalks
 
             File.WriteAllText(Path.Combine("_generated", "talks.html"), htmlEn);
             File.WriteAllText(Path.Combine("_generated", "talks-ru.html"), htmlRu);
+            File.WriteAllText(Path.Combine("_generated", "talks-count.txt"), talkListEn.Count.ToString());
+            File.WriteAllText(Path.Combine("_generated", "talks-ru-count.txt"), talkListRu.Count.ToString());
             
             // Console.WriteLine(htmlEn);
             // Console.WriteLine("-------------");

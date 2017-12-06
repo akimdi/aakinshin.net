@@ -33,18 +33,95 @@ permalink: /ru/about/
   председатель программного комитета конференции [DotNext](https://dotnext.ru/).
 Он также 
   к.ф.-м.н.,
-  Microsoft .NET [MVP](https://mvp.microsoft.com/),
+  Microsoft .NET [MVP](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin),
   серебрянный медалист [ACM ICPC](https://en.wikipedia.org/wiki/ACM_International_Collegiate_Programming_Contest).
 В свободное время любит заниматься наукой,
   основные научные интересы — математическая биология и теория бифуркаций.
+Раньше он работал
+  постдоком в [Институте Вейцмана](http://www.weizmann.ac.il/) и
+  научным сотрудником в [Институте математики СО РАН](http://www.math.nsc.ru/).
 
 <div id="about">
+
+<hr />
+<section>
+  <h3>Содержание</h3>
+
+  Активности:
+  [Публичные выступления (@Raw(Model.GeneratedFile("talks-ru-count.txt")))](#talks) **|**
+  [Публикации (@Raw(Model.GeneratedFile("publications-ru-count.txt")))](#publications) **|**
+  [Посты (@Model.Site.EnPosts.Count())](#posts) **|**
+  [Open source](#open-source) <br />
+  Опыт:
+  [Программирование](#enterprise) **|**
+  [Научная деятельность](#science) **|**
+  [Олимпиады](#competitive) **|**
+  [Преподавание](#teaching) <br />
+  Квалификация:
+  [Образование](#education) **|**
+  [Сертификаты](#certificates)
+  
+</sections>
+
+<hr />
+<section>
+  <h3 id="talks">Публичные выступления</h3>
+
+  @Raw(Model.GeneratedFile("talks-ru.html"))
+</section>
+
+<hr />
+<section>
+  <h3 id="publications">Публикации</h3>
+
+  @Raw(Model.GeneratedFile("publications-ru.html"))
+</section>
+
+<hr />
+<section>
+  <h3 id="posts">Посты</h3>
+  <p><a href="/blog/content/">Последние посты доступны только в английской версии блога</a></p>
+  @foreach(var year in Model.Site.RuPosts.Select(p => p.Date.Year).Distinct().OrderByDescending(y => y))
+  {
+      var posts = Model.Site.RuPosts.Where(p => p.Date.Year == year).OrderByDescending(p => p.Date).ToList();
+      if (posts.Count() > 0)
+      {
+          <h3 id="@year">@year</h3>
+          <ul>
+          @foreach(var post in posts)
+          {
+              <li><a href='@post.Url.Replace("index.html", "")'>@post.Title</a> <i>(@post.Date.ToString("dd MMMM", new System.Globalization.CultureInfo("ru-RU")))</i></li>
+          }
+          </ul>
+      }
+  }
+</section>
+
+<hr />
+<section>
+  <h3 id="open-source">Open source проекты</h3>
+
+  ![](/img/icons/github.png)
+  [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
+
+  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(мейнтейнер)*:
+    Библиотека для создания .NET-бенчмарков *(поддержано [.NET Foundation](https://dotnetfoundation.org/))*
+  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
+    LaTeX-шаблон для русской кандидатской диссертации
+  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
+    Бесплатная книга с подборкой задач по .NET/C#
+  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
+    Реализация кроссплатформенного AnyCPU P/Invoke под .NET
+  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
+    WPF-обозреватель различных CultureInfo в .NET
+</section>
+
 <hr />
 <section>
   <h3 id="enterprise">Программирование</h3>
 
-  *Software Developer в JetBrains, [Microsoft .NET MVP (2015–2017)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
-  **Основные навыки:** .NET/C\#, R, Kotlin, Производительность, Алгоритмы, Математика, Проектирование архитектуры
+  *Software Developer в JetBrains, [Microsoft .NET MVP (2015–2018)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
+  **Основные навыки:** .NET/C\#, R, Kotlin, Производительность, Бенчмаркинг, Алгоритмы, Математика
   <br /><br />
 
   ![](/img/icons/jetbrains.png)
@@ -55,7 +132,7 @@ permalink: /ru/about/
   **Проекты**
   * ![](/img/icons/rider.png)
     [Rider](https://www.jetbrains.com/rider/):
-    Кроссплатформенная C# IDE
+    Кроссплатформенная .NET IDE
   <br /><br />
 
   ![](/img/icons/perpetuum.png)
@@ -125,26 +202,6 @@ permalink: /ru/about/
   **Интересы:** цифровая обработка сигналов, преобразование Фурье, эффект Гиббса, системы Прони.
 </section>
 
-
-<hr />
-<section>
-  <h3 id="open-source">Open source проекты</h3>
-
-  ![](/img/icons/github.png)
-  [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
-
-  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(мейнтейнер)*:
-    Библиотека для создания .NET-бенчмарков *(поддержано [.NET Foundation](https://dotnetfoundation.org/))*
-  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
-    LaTeX-шаблон для русской кандидатской диссертации
-  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
-    Бесплатная книга с подборкой задач по .NET/C#
-  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
-    Реализация кроссплатформенного AnyCPU P/Invoke под .NET
-  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
-    WPF-обозреватель различных CultureInfo в .NET
-</section>
-
 <hr />
 <section>
   <h3 id="competitive">Олимпиады</h3>
@@ -192,28 +249,25 @@ permalink: /ru/about/
 
 <hr />
 <section>
-  <h3 id="fips">Свидетельства о регистрации программ для ЭВМ</h3>
+  <h3 id="certificates">Сертификаты</h3>
 
+  **Свидетельства о регистрации программ для ЭВМ**
   * ![](/img/icons/ministry.png)
-    **Phase Portrait Analyzer**
+    Phase Portrait Analyzer
     (Свидетельство о государственной регистрации программы для ЭВМ [№2013660415](http://www1.fips.ru/fips_servl/fips_servlet?DB=EVM&rn=673&DocNumber=2013660415&TypeFile=html))<br />
     *Программа предназначена для выполнения анализа нелинейных систем дифференциальных уравнений специального вида.*
   * ![](/img/icons/ministry.png)
-    **Neuro Biomarker Analyzer**
+    Neuro Biomarker Analyzer
     (Свидетельство о государственной регистрации программы для ЭВМ [№2015612396](http://www1.fips.ru/Archive/EVM/2015/2015.03.20/DOC/RUNW/000/002/015/612/396/document.pdf))<br />
     *Программа позволяет оценить диагностическую и прогностическую значимость биохимических параметров (концентраций) биомаркеров сыворотки периферической крови для дифференциальной диагностики неврологических синдромов поясничного остеохондроза.*
-</section>
-
-<hr />
-<section>
-  <h3 id="certificates">Сертификаты</h3>
+  <br /><br />
 
   **Microsoft**
   * <a href="https://www.microsoft.com/learning/en-us/microsoft-certified-professional.aspx">Microsoft Certified Professional (MCP)</a>: <a href="/data/certificates/mcp.pdf">сертификат</a>
   * <a href="https://www.microsoft.com/learning/en-us/exam-70-483.aspx">Programming in C# Specialist (70-483)</a>: <a href="/data/certificates/ms-70-483.pdf">сертификат</a>
-  <br />
+  <br /><br />
   
-  <b><a href="https://www.coursera.org/specialization/jhudatascience/1">The Data Science Specialization</a></b>: <a href="https://www.coursera.org/account/accomplishments/specialization/44Y2uInkEe">сертификат (верифицируемый)</a><br />
+  <b><a href="https://www.coursera.org/specialization/jhudatascience/1">Coursera: The Data Science Specialization</a></b>: <a href="https://www.coursera.org/account/accomplishments/specialization/44Y2uInkEe">сертификат (верифицируемый)</a><br />
   1. <a href="https://www.coursera.org/course/datascitoolbox">The Data Scientist’s Toolbox</a>: <a href="https://www.coursera.org/records/DjNvsvmPV9xCbVp8">сертификат (верифицируемый)</a>
   2. <a href="https://www.coursera.org/course/rprog">R Programming</a>: <a href="https://www.coursera.org/records/HYm8MNbAKs4VF2n6">сертификат (верифицируемый)</a>
   3. <a href="https://www.coursera.org/course/getdata">Getting and Cleaning Data</a>: <a href="https://www.coursera.org/records/mdbQY6K5KGT2YLnu">сертификат (верифицируемый)</a>
@@ -235,39 +289,6 @@ permalink: /ru/about/
   * <a href="https://www.coursera.org/course/latex">Документы и презентации в LaTeX</a>: <a href="https://www.coursera.org/records/t8gYgHqbtKs3pygc">сертификат (верифицируемый)</a>
 </section>
 
-<hr />
-<section>
-  <h3 id="talks">Публичные выступления</h3>
-
-  @Raw(Model.GeneratedFile("talks-ru.html"))
-</section>
-
-<hr />
-<section>
-  <h3 id="publications">Публикации</h3>
-
-  @Raw(Model.GeneratedFile("publications-ru.html"))
-</section>
-
-<hr />
-<section>
-  <h3 id="posts">Посты</h3>
-  <p><a href="/blog/content/">Последние посты доступны только в английской версии блога</a></p>
-  @foreach(var year in Model.Site.RuPosts.Select(p => p.Date.Year).Distinct().OrderByDescending(y => y))
-  {
-      var posts = Model.Site.RuPosts.Where(p => p.Date.Year == year).OrderByDescending(p => p.Date).ToList();
-      if (posts.Count() > 0)
-      {
-          <h3 id="@year">@year</h3>
-          <ul>
-          @foreach(var post in posts)
-          {
-              <li><a href='@post.Url.Replace("index.html", "")'>@post.Title</a> <i>(@post.Date.ToString("dd MMMM", new System.Globalization.CultureInfo("ru-RU")))</i></li>
-          }
-          </ul>
-      }
-  }
-</section>
 
 <hr />
 </div>

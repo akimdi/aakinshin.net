@@ -278,15 +278,19 @@ namespace BibTeXImporter
 
         public static void Main()
         {
-            var htmlEn = Entry.ReadAll("Akinshin.En.bib", "Akinshin.InRussian.bib", "Akinshin.Translation.bib").ToHtml();
-            var htmlRu = Entry.ReadAll("Akinshin.En.bib", "Akinshin.Ru.bib", "Akinshin.Translation.bib")
-                .ToHtml(Language.Russian);
+            var listEn = Entry.ReadAll("Akinshin.En.bib", "Akinshin.InRussian.bib", "Akinshin.Translation.bib");
+            var listRu = Entry.ReadAll("Akinshin.En.bib", "Akinshin.Ru.bib", "Akinshin.Translation.bib");
+            
+            var htmlEn = listEn.ToHtml();            
+            var htmlRu = listRu.ToHtml(Language.Russian);
                         
             if (!Directory.Exists("_generated"))
                 Directory.CreateDirectory("_generated");
 
             File.WriteAllText(Path.Combine("_generated", "publications.html"), htmlEn);
             File.WriteAllText(Path.Combine("_generated", "publications-ru.html"), htmlRu);
+            File.WriteAllText(Path.Combine("_generated", "publications-count.txt"), listEn.Count.ToString());
+            File.WriteAllText(Path.Combine("_generated", "publications-ru-count.txt"), listRu.Count.ToString());
         }
     }
 }

@@ -35,18 +35,96 @@ Andrey is a frequent [speaker](#talks) at various events for developers, and
   he is the program director of the [DotNext](https://dotnext.ru/) conference.
 Andrey is also
   a PhD in computer science,
-  a Microsoft .NET [MVP](https://mvp.microsoft.com/),
+  a Microsoft .NET [MVP](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin),
   a silver medalist of [ACM ICPC](https://en.wikipedia.org/wiki/ACM_International_Collegiate_Programming_Contest).
 In his free time, he likes to study science
   (his primary research interests are mathematical biology and bifurcation theory).
+Previously, he worked
+  as a postdoctoral research fellow in the [Weizmann Institute of Science](http://www.weizmann.ac.il/) and
+  as a research scientist in the [Sobolev Institute of Mathematics of SB RAS](http://math.nsc.ru/english.html).
 
 <div id="about">
+
+<hr />
+<section>
+  <h3>Content</h3>
+
+  Activities:
+  [Public talks (@Raw(Model.GeneratedFile("talks-count.txt")))](#talks) **|**
+  [Publications (@Raw(Model.GeneratedFile("publications-count.txt")))](#publications) **|**
+  [Posts (@Model.Site.RuPosts.Count())](#posts) **|**
+  [Open source](#open-source) <br />
+  Experience:
+  [Enterprise programming](#enterprise) **|**
+  [Science](#science) **|**
+  [Competitive programming](#competitive) **|**
+  [Teaching](#teaching) <br />
+  Background:
+  [Education](#education) **|**
+  [Certificates](#certificates)
+
+</sections>
+
+<hr />
+<section>
+  <h3 id="talks">Public talks</h3>
+
+  @Raw(Model.GeneratedFile("talks.html"))
+</section>
+
+<hr />
+<section>
+  <h3 id="publications">Selected publications</h3>
+
+  @Raw(Model.GeneratedFile("publications.html"))
+</section>
+
+<hr />
+<section>
+  <h3 id="posts">Posts</h3>
+    @foreach(var year in Model.Site.EnPosts.Select(p => p.Date.Year).Distinct().OrderByDescending(y => y))
+    {
+        var posts = Model.Site.EnPosts.Where(p => p.Date.Year == year).OrderByDescending(p => p.Date).ToList();
+        if (posts.Count() > 0)
+        {
+            <h3 id="@year">@year</h3>
+            <ul>
+            @foreach(var post in posts)
+            {
+                <li><a href='@post.Url.Replace("index.html", "")'>@post.Title</a> <i>(@post.Date.ToString("MMMM dd", new System.Globalization.CultureInfo("en-US")))</i></li>
+            }
+            </ul>
+        }
+    }
+  <br />
+  <p style="font-size:150%"><a href="/ru/blog/content/">More posts in Russian</a></p>
+</section>
+
+<hr />
+<section>
+  <h3 id="open-source">Open source projects</h3>
+
+  ![](/img/icons/github.png)
+  [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
+
+  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(maintainer)*:
+    Powerful .NET library for benchmarking *(supported by the [.NET Foundation](https://dotnetfoundation.org/))*
+  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
+    LaTeX-template for Russian PhD thesis
+  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
+    Free book with compilation of .NET and C# problems
+  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
+    Cross-platform AnyCPU P/Invoke for .NET
+  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
+    WPF-explorer of CultureInfo instances in .NET
+</section>
+
 <hr />
 <section>
   <h3 id="enterprise">Enterprise programming</h3>
 
-  **Current:** *Software Developer at JetBrains, [Microsoft .NET MVP (2015–2017)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
-  **Main skills:** .NET/C\#, R, Kotlin, Performance, Algorithms, Mathematics, Architecture design
+  **Current:** *Software Developer at JetBrains, [Microsoft .NET MVP (2015–2018)](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin)*<br />
+  **Main skills:** .NET/C\#, R, Kotlin, Performance, Benchmarking, Algorithms, Mathematics
   <br /><br />
 
   ![](/img/icons/jetbrains.png)
@@ -57,7 +135,7 @@ In his free time, he likes to study science
   **Projects**
   * ![](/img/icons/rider.png)
     [Rider](https://www.jetbrains.com/rider/):
-    A cross-platform C# IDE based on the IntelliJ platform and ReSharper
+    A cross-platform .NET IDE based on the IntelliJ platform and ReSharper
   <br /><br />
 
   ![](/img/icons/perpetuum.png)
@@ -107,7 +185,7 @@ In his free time, he likes to study science
   <br /><br />
 
   ![](/img/icons/math-nsc.png)
-  [Sobolev Institute of Mathematics SB RAS](http://math.nsc.ru/english.html), [Laboratory of Inverse Problems of Mathematical Physics](http://a-server.math.nsc.ru/IM/lbrt.asp?CodLB=59) (Novosibirsk, Russia)<br />
+  [Sobolev Institute of Mathematics of SB RAS](http://math.nsc.ru/english.html), [Laboratory of Inverse Problems of Mathematical Physics](http://a-server.math.nsc.ru/IM/lbrt.asp?CodLB=59) (Novosibirsk, Russia)<br />
 
   * *08/2012–06/2014:* Engineer
   * *07/2014–12/2016:* [Research scientist](http://a-server.math.nsc.ru/IM/sotrudl.asp?CodID=1573)
@@ -125,25 +203,6 @@ In his free time, he likes to study science
   * *10/2014–09/2016:* Postdoctoral Research Fellow
 
   **Areas of expertise:** digital signal processing, Fourier transform, Gibbs phenomenon, Prony systems.
-</section>
-
-<hr />
-<section>
-  <h3 id="open-source">Open source projects</h3>
-
-  ![](/img/icons/github.png)
-  [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
-
-  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(maintainer)*:
-    Powerful .NET library for benchmarking *(supported by the [.NET Foundation](https://dotnetfoundation.org/))*
-  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
-    LaTeX-template for Russian PhD thesis
-  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
-    Free book with compilation of .NET and C# problems
-  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
-    Cross-platform AnyCPU P/Invoke for .NET
-  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
-    WPF-explorer of CultureInfo instances in .NET
 </section>
 
 <hr />
@@ -196,28 +255,25 @@ In his free time, he likes to study science
 
 <hr />
 <section>
-  <h3 id="fips">Russian state registration certificates of Computer Programs</h3>
+  <h3 id="certificates">Certificates</h3>
 
+  **Russian state registration certificates of Computer Programs**
   * ![](/img/icons/ministry.png)
-    **Phase Portrait Analyzer**
+    Phase Portrait Analyzer
     (Russian state registration certificate of Computer Programs [№2013660415](http://www1.fips.ru/fips_servl/fips_servlet?DB=EVM&rn=673&DocNumber=2013660415&TypeFile=html))<br />
     *Software for analyzing of some nonlinear differential equation system*
   * ![](/img/icons/ministry.png)
-    **Neuro Biomarker Analyzer**
+    Neuro Biomarker Analyzer
     (Russian state registration certificate of Computer Programs [№2015612396](http://www1.fips.ru/Archive/EVM/2015/2015.03.20/DOC/RUNW/000/002/015/612/396/document.pdf))<br />
     *Software for the diagnostic and prognostic values evaluation of biochemical parameters of serum biomarkers in peripheral blood for the differential diagnosis of neurological syndromes of lumbar degenerative disc disease*
-</section>
-
-<hr />
-<section>
-  <h3 id="certificates">Certificates</h3>
+  <br /><br />
 
   **Microsoft**
   * <a href="https://www.microsoft.com/learning/en-us/microsoft-certified-professional.aspx">Microsoft Certified Professional (MCP)</a>: <a href="/data/certificates/mcp.pdf">certificate</a>
   * <a href="https://www.microsoft.com/learning/en-us/exam-70-483.aspx">Programming in C# Specialist (70-483)</a>: <a href="/data/certificates/ms-70-483.pdf">certificate</a>
-  <br />
+  <br /><br />
   
-  <b><a href="https://www.coursera.org/specialization/jhudatascience/1">The Data Science Specialization</a></b>: <a href="https://www.coursera.org/account/accomplishments/specialization/44Y2uInkEe">certificate (verifiable)</a><br />
+  <b><a href="https://www.coursera.org/specialization/jhudatascience/1">Coursera: The Data Science Specialization</a></b>: <a href="https://www.coursera.org/account/accomplishments/specialization/44Y2uInkEe">certificate (verifiable)</a><br />
   1. <a href="https://www.coursera.org/course/datascitoolbox">The Data Scientist’s Toolbox</a>: <a href="https://www.coursera.org/records/DjNvsvmPV9xCbVp8">certificate (verifiable)</a>
   2. <a href="https://www.coursera.org/course/rprog">R Programming</a>: <a href="https://www.coursera.org/records/HYm8MNbAKs4VF2n6">certificate (verifiable)</a>
   3. <a href="https://www.coursera.org/course/getdata">Getting and Cleaning Data</a>: <a href="https://www.coursera.org/records/mdbQY6K5KGT2YLnu">certificate (verifiable)</a>
@@ -239,40 +295,6 @@ In his free time, he likes to study science
   * <a href="https://www.coursera.org/course/latex">Introduction to LaTeX</a>: <a href="https://www.coursera.org/records/t8gYgHqbtKs3pygc">certificate (verifiable)</a>
 </section>
 
-<hr />
-<section>
-  <h3 id="talks">Public talks</h3>
-
-  @Raw(Model.GeneratedFile("talks.html"))
-</section>
-
-<hr />
-<section>
-  <h3 id="publications">Selected publications</h3>
-
-  @Raw(Model.GeneratedFile("publications.html"))
-</section>
-
-<hr />
-<section>
-  <h3 id="posts">Posts</h3>
-    @foreach(var year in Model.Site.EnPosts.Select(p => p.Date.Year).Distinct().OrderByDescending(y => y))
-    {
-        var posts = Model.Site.EnPosts.Where(p => p.Date.Year == year).OrderByDescending(p => p.Date).ToList();
-        if (posts.Count() > 0)
-        {
-            <h3 id="@year">@year</h3>
-            <ul>
-            @foreach(var post in posts)
-            {
-                <li><a href='@post.Url.Replace("index.html", "")'>@post.Title</a> <i>(@post.Date.ToString("MMMM dd", new System.Globalization.CultureInfo("en-US")))</i></li>
-            }
-            </ul>
-        }
-    }
-  <br />
-  <p style="font-size:150%"><a href="/ru/blog/content/">More posts in Russian</a></p>
-</section>
 
 <hr />
 </div>
