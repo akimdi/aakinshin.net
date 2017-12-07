@@ -26,10 +26,6 @@ gh-pages-git/
 *.blg
 *.bbl
 
-# .NET
-*.sln
-
 # IDEA
 .idea/workspace.xml
-.idea.Publications
-.idea.Talks
+.idea.Generator

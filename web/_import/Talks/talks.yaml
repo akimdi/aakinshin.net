@@ -65,6 +65,8 @@ talks:
         url: https://gdg-siberia.com/ru/
       - key: talk
         url: https://gdg-siberia.com/schedule/#session-157 
+      - key: youtube
+        url: https://www.youtube.com/watch?v=G3kkteuAtCI
       - key: slideshare
         url: https://www.slideshare.net/AndreyAkinshin/ss-80289346
   - date: 2017-09-14
@@ -200,6 +202,8 @@ talks:
     location_en: St. Petersburg, Russia
     location_ru: г. Санкт-Петербург
     links:
+      - key: youtube
+        url: https://www.youtube.com/watch?v=Eb4ZgRQAaqI
       - key: org
         url: http://spbdotnet.org
   - date: 2016-11-02
@@ -222,7 +226,7 @@ talks:
     event_ru: Встреча барнаульского сообщества .NET разработчиков
     event-type: meetup
     title_en: Let's continue to talk about arithmetics
-    title_ru: Продолжаем говорить про арифметик
+    title_ru: Продолжаем говорить про арифметику
     location_en: Enterra office, Barnaul, Russia
     location_ru: г. Барнаул, офис компании «Энтерра Софт»
   - date: 2016-06-03
@@ -274,6 +278,8 @@ talks:
     links:
       - key: event
         url: http://www.msdevcon.ru/2016/
+      - key: youtube
+        url: https://www.youtube.com/watch?v=whZm6sTiMaA
   - date: 2016-05-23
     event_en: Barnaul .NET user group meetup
     event_ru: Встреча барнаульского сообщества .NET разработчиков
@@ -285,6 +291,8 @@ talks:
     links:
       - key: event
         url: https://dotnetbarnaul.timepad.ru/event/329573/
+      - key: youtube
+        url: https://www.youtube.com/watch?v=PDGKOqyfaTg
   - date: 2016-05-20
     event_en: "CLRium #3 (Novosibirsk)"
     event_ru: "CLRium #3 (Новосибирск)"
@@ -337,6 +345,8 @@ talks:
         url: http://2016.codefest.ru/
       - key: talk
         url: http://2016.codefest.ru/lecture/1069
+      - key: youtube
+        url: https://www.youtube.com/watch?v=TQRGEpEVsvI
       - key: slideshare
         url: http://www.slideshare.net/AndreyAkinshin/clr-jvm-project-rider
     location_en: Novosibirsk, Russia
@@ -434,10 +444,10 @@ talks:
     location_en: St. Petersburg, Russia
     location_ru: г. Санкт-Петербург
     links:
-      - key: org
-        url: http://spbdotnet.org
       - key: slideshare
         url: http://www.slideshare.net/AndreyAkinshin/net-55728672
+      - key: org
+        url: http://spbdotnet.org
   - date: 2015-10-23
     event: IT NONSTOP 2015 Spb
     event-type: conference

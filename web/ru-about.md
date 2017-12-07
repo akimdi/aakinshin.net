@@ -7,13 +7,13 @@ permalink: /ru/about/
 
 <h1>Андрей Акиньшин</h1>
 <div id="profiles">
-  <a href="https://github.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/github.png" alt="GitHub" /></a>
-  <a href="https://twitter.com/andrey_akinshin"><img class="profile-image" src="/img/icons/twitter.png" alt="Twitter" /></a>
+  <a href="https://github.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/github.svg" alt="GitHub" /></a>
+  <a href="https://twitter.com/andrey_akinshin"><img class="profile-image" src="/img/icons/twitter.svg" alt="Twitter" /></a>
   <a href="http://stackoverflow.com/users/184842/AndreyAkinshin"><img class="profile-image" src="/img/icons/stackoverflow.png" alt="StackOverflow" /></a>
   <a href="http://habrahabr.ru/users/dreamwalker"><img class="profile-image" src="/img/icons/habr.png" alt="Habrahabr" /></a>
-  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><img class="profile-image" src="/img/icons/youtube.png" alt="YouTube" /></a>
+  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><img class="profile-image" src="/img/icons/youtube.svg" alt="YouTube" /></a>
   <a href="http://www.linkedin.com/in/AndreyAkinshin"><img class="profile-image" src="/img/icons/linkedin.png" alt="LinkedIn" /></a>
-  <a href="http://www.slideshare.net/AndreyAkinshin"><img class="profile-image" src="/img/icons/slideshare.png" alt="SlideShare" /></a>
+  <a href="http://www.slideshare.net/AndreyAkinshin"><img class="profile-image" src="/img/icons/slideshare.svg" alt="SlideShare" /></a>
   <a href="http://www.goodreads.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/goodreads.png" alt="GoodReads" /></a>
   <a href="http://scholar.google.ru/citations?user=rYVl83IAAAAJ"><img class="profile-image" src="/img/icons/google-scholar.png" alt="Google Scholar" /></a>
   <a href="http://elibrary.ru/author_items.asp?authorid=676806"><img class="profile-image" src="/img/icons/elibrary.png" alt="ELibrary" /></a>
@@ -99,21 +99,14 @@ permalink: /ru/about/
 
 <hr />
 <section>
-  <h3 id="open-source">Open source проекты</h3>
+  <h3 id="open-source">Open source</h3>
 
-  ![](/img/icons/github.png)
+  ![](/img/icons/github.svg)
+  **GitHub:**
   [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
+  <br /><br />
 
-  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(мейнтейнер)*:
-    Библиотека для создания .NET-бенчмарков *(поддержано [.NET Foundation](https://dotnetfoundation.org/))*
-  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
-    LaTeX-шаблон для русской кандидатской диссертации
-  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
-    Бесплатная книга с подборкой задач по .NET/C#
-  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
-    Реализация кроссплатформенного AnyCPU P/Invoke под .NET
-  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
-    WPF-обозреватель различных CultureInfo в .NET
+  @Raw(Model.GeneratedFile("opensource-ru.html"))
 </section>
 
 <hr />
@@ -190,7 +183,7 @@ permalink: /ru/about/
   **Интересы:** математическая биология, генные сети, диф. уравнения с запаздывающим аргументом, теория бифуркаций.<br />
   **Избранные стипендии и гранты**
   * *01/2012–12/2014:* Грант [РФФИ 12-01-00074](http://www.rfbr.ru/rffi/portal/project_search/o_387745) «Прямые и обратные задачи математического моделирования генных сетей»<br />
-  * *07/2012–07/2014:* Стипендия [СП-561.2012.5](https://grants.extech.ru/grants/res/winners.php?OZ=5&TZ=U&year=2012) «Компьютерные методы моделирования и анализа моделей генных сетей»<br />
+  * *07/2012–07/2014:* Стипендия президента РФ для молодых учёных и аспирантов [СП-561.2012.5](https://grants.extech.ru/grants/res/winners.php?OZ=5&TZ=U&year=2012) по направлению «Стратегические информационные технологии, включая вопросы создания суперкомпьютеров и разработки программного обеспечения» («Компьютерные методы моделирования и анализа моделей генных сетей»)<br />
   * *01/2015–12/2017:* Грант [РФФИ 15-01-00745 A](http://www.rfbr.ru/rffi/getimage/?objectId=1922396) «Динамические характеристики моделей генных сетей»
   <br /><br />
 
@@ -227,13 +220,13 @@ permalink: /ru/about/
 
   * *09/2006–05/2012:*
     ![](/img/icons/s42.png)
-    Тренер сборной по программированию и математике в <a href="http://s42.asu.ru/">МБОУ «Гимназия №42»</a> г.&nbsp;Барнаула.
+    Тренер сборной по программированию и математике в <a href="http://gymnasium42.ru/">МБОУ «Гимназия №42»</a> г.&nbsp;Барнаула.
   * *09/2009–09/2016:*
     ![](/img/icons/aeli.png)
-    Старший преподаватель информатики и математики в Алтайском Экономико-Юридическом Институте.
+     Старший преподаватель информатики и математики в Алтайском Экономико-Юридическом Институте, кафедра общих математических и естественнонаучных дисциплин.
   * *09/2011–11/2011:*
     ![](/img/icons/ministry.png)
-    Преподаватель в рамках федеральной программы <a href="http://miptic.ru/nir/podgotovka.html">Ф-263 №4</a>.
+     Преподаватель в рамках федеральной программы Ф-263 №4 «Подготовка и переподготовка профильных специалистов на базе центров образования и разработок в сфере информационных технологий».
 </section>
 
 <hr />

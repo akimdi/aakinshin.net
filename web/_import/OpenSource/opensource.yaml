@@ -1,0 +1,60 @@
+github:
+  - role: Project Lead
+    repos:
+      - url: github.com/dotnet/BenchmarkDotNet
+        title: Powerful .NET library for benchmarking 
+  - role: Owner
+    repos:
+      - url: github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template
+        title: LaTeX-template for russian PhD thesis
+      - url: github.com/AndreyAkinshin/ProblemBook.NET
+        title: Free book with .NET/C# problems 
+      - url: github.com/AndreyAkinshin/CultureInfoExplorer
+        title: Explorer of CultureInfo instances in .NET 
+      - url: github.com/AndreyAkinshin/InteropDotNet
+        title: Cross-platform AnyCPU P/Invoke for .NET
+      - url: github.com/AndreyAkinshin/aakinshin.net
+        title: aakinshin.net (Source code)
+      - url: github.com/AndreyAkinshin/knockout-mvc
+        title: Knockout.js wrapper for ASP.NET
+      - url: github.com/AndreyAkinshin/CourseraDspWorkbook
+        title: Workbook for Coursera Dsp course
+  - role: Contributor
+    repos:
+      - url: github.com/dotnet/coreclr
+        title: This repo contains the .NET Core runtime, called CoreCLR, and the base library, called System.Private.Corelib (or mscorlib)
+      - url: github.com/dotnet/corefx
+        title: This repo contains the .NET Core foundational libraries, called CoreFX. It includes classes for collections, file systems, console, XML, async and many others
+      - url: github.com/JetBrains/intellij-community
+        title: IntelliJ IDEA Community Edition
+      - url: github.com/mono/mono
+        title: Mono open source ECMA CLI, C# and .NET implementation
+      - url: github.com/NuGet/NuGet.Client
+        title: Core client libraries for NuGet Services
+      - url: github.com/nodatime/nodatime
+        title: A better date and time API for .NET
+      - url: github.com/charlesw/tesseract
+        title: A .NET wrapper for tesseract-ocr
+      - url: github.com/tmyroadctfig/twaindotnet
+        title: .NET API for TWAIN
+      - url: github.com/Code52/pretzel
+        title: A site generation tool (and then some) for .NET platforms
+      - url: github.com/chocolatey/chocolatey.org
+        title: Chocolatey.org
+      - url: github.com/jjrdk/ArchiMetrics
+        title: Various code analysis tools for C#
+      - url: github.com/finagle/finch
+        title: Scala combinator library for building Finagle HTTP services
+      - url: github.com/knorthfield/remote-include
+        title: A remote include plugin for Jekyll
+      - url: github.com/GitbookIO/gitbook
+        title:  Modern documentation format and toolchain using Git and Markdown
+      - url: github.com/overthecs/overthecs.github.io
+        title: Source code of OverAPI
+      - url: github.com/yihui/knitr-examples
+        title: A collection of knitr examples
+  - role: Gists
+    repos:
+      - url: gist.github.com/AndreyAkinshin/37f3e68a1576f9ea1e5c01f2fd64fe5e
+        alias: Elowitz.R
+        title: A simulation of the Elowitz's repressilator

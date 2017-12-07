@@ -4,6 +4,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Utils;
 using YamlDotNet.RepresentationModel;
 
 namespace MyTalks
@@ -28,43 +29,13 @@ namespace MyTalks
         public Link GetLink(string key) => Links.FirstOrDefault(l => l.Key == key);
     }
 
-    public class Parser
+    public class Parser : YamlParser
     {
-        private readonly string lang;
-
         public static readonly Parser En = new Parser("en");
         public static readonly Parser Ru = new Parser("ru");
 
-        private Parser(string lang)
+        private Parser(string lang) : base(lang)
         {
-            this.lang = lang;
-        }
-
-        private YamlNode Get(YamlMappingNode yaml, string name)
-        {
-            var generalKey = new YamlScalarNode(name);
-            var langKey = new YamlScalarNode($"{name}_{lang}");
-            if (yaml.Children.ContainsKey(generalKey))
-                return yaml.Children[generalKey];
-            if (yaml.Children.ContainsKey(langKey))
-                return yaml.Children[langKey];
-            return null;
-        }
-
-        private string GetStr(YamlMappingNode yaml, string name)
-        {
-            return Get(yaml, name)?.ToString() ?? string.Empty;
-        }
-
-        private int GetInt(YamlMappingNode yaml, string name)
-        {
-            return int.Parse(GetStr(yaml, name));
-        }
-
-        private DateTime? GetDate(YamlMappingNode yaml, string name)
-        {
-            var str = GetStr(yaml, name);
-            return string.IsNullOrEmpty(str) ? (DateTime?) null : DateTime.Parse(str);
         }
 
         private Link ParseLink(YamlMappingNode yaml)
@@ -77,8 +48,8 @@ namespace MyTalks
             };
             if (link.Key.Contains("_"))
             {
-                if (link.Key.EndsWith("_" + lang))
-                    link.Key = link.Key.Replace("_" + lang, "");
+                if (link.Key.EndsWith("_" + Lang))
+                    link.Key = link.Key.Replace("_" + Lang, "");
                 else
                     link = null;
             }
@@ -166,7 +137,7 @@ namespace MyTalks
                 {
                     if (link.Key != "event" && link.Key != "talk")
                         builder.AppendLine(
-                            $"    <a href=\"{link.Url}\"><img src=\"/img/icons/talk_{link.Key}.svg\" width=\"18\" height=\"32\" alt=\"[{link.Key}]\" title=\"{link.Key}\" /></a>");
+                            $"    <a href=\"{link.Url}\"><img src=\"/img/icons/{link.Key}.svg\" width=\"18\" height=\"32\" alt=\"[{link.Key}]\" title=\"{link.Key}\" /></a>");
                 }
 
                 builder.AppendLine("  ,<br />");
@@ -181,7 +152,7 @@ namespace MyTalks
                 details.Add(dateStr);
             }
             else
-                details.Add(talk.Year.ToString());            
+                details.Add(talk.Year.ToString());
 
             if (talk.Location != null)
                 details.Add(talk.Location.Replace("г. ", "г.&nbsp;"));
@@ -236,7 +207,7 @@ namespace MyTalks
             File.WriteAllText(Path.Combine("_generated", "talks-ru.html"), htmlRu);
             File.WriteAllText(Path.Combine("_generated", "talks-count.txt"), talkListEn.Count.ToString());
             File.WriteAllText(Path.Combine("_generated", "talks-ru-count.txt"), talkListRu.Count.ToString());
-            
+
             // Console.WriteLine(htmlEn);
             // Console.WriteLine("-------------");
             // Console.WriteLine(htmlRu);

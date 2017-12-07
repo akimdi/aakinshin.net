@@ -9,13 +9,13 @@ redirect_from:
 
 <h1>Andrey Akinshin</h1>
 <div id="profiles">
-  <a href="https://github.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/github.png" alt="GitHub" /></a>
-  <a href="https://twitter.com/andrey_akinshin"><img class="profile-image" src="/img/icons/twitter.png" alt="Twitter" /></a>
+  <a href="https://github.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/github.svg" alt="GitHub" /></a>
+  <a href="https://twitter.com/andrey_akinshin"><img class="profile-image" src="/img/icons/twitter.svg" alt="Twitter" /></a>
   <a href="http://stackoverflow.com/users/184842/AndreyAkinshin"><img class="profile-image" src="/img/icons/stackoverflow.png" alt="StackOverflow" /></a>
   <a href="http://habrahabr.ru/users/dreamwalker"><img class="profile-image" src="/img/icons/habr.png" alt="Habrahabr" /></a>
-  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><img class="profile-image" src="/img/icons/youtube.png" alt="YouTube" /></a>
+  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><img class="profile-image" src="/img/icons/youtube.svg" alt="YouTube" /></a>
   <a href="http://www.linkedin.com/in/AndreyAkinshin"><img class="profile-image" src="/img/icons/linkedin.png" alt="LinkedIn" /></a>
-  <a href="http://www.slideshare.net/AndreyAkinshin"><img class="profile-image" src="/img/icons/slideshare.png" alt="SlideShare" /></a>
+  <a href="http://www.slideshare.net/AndreyAkinshin"><img class="profile-image" src="/img/icons/slideshare.svg" alt="SlideShare" /></a>
   <a href="http://www.goodreads.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/goodreads.png" alt="GoodReads" /></a>
   <a href="http://scholar.google.ru/citations?user=rYVl83IAAAAJ"><img class="profile-image" src="/img/icons/google-scholar.png" alt="Google Scholar" /></a>
   <a href="http://elibrary.ru/author_items.asp?authorid=676806"><img class="profile-image" src="/img/icons/elibrary.png" alt="ELibrary" /></a>
@@ -32,7 +32,7 @@ His favorite topics are performance and micro-optimizations,
   and he is the maintainer of [BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet)
   (a powerful .NET library for benchmarking supported by the [.NET Foundation](https://dotnetfoundation.org/)).
 Andrey is a frequent [speaker](#talks) at various events for developers, and
-  he is the program director of the [DotNext](https://dotnext.ru/) conference.
+  he is the program director of the [DotNext](https://dotnext.ru/en/) conference.
 Andrey is also
   a PhD in computer science,
   a Microsoft .NET [MVP](https://mvp.microsoft.com/en-us/PublicProfile/5001348?fullName=Andrey%20%20Akinshin),
@@ -41,7 +41,7 @@ In his free time, he likes to study science
   (his primary research interests are mathematical biology and bifurcation theory).
 Previously, he worked
   as a postdoctoral research fellow in the [Weizmann Institute of Science](http://www.weizmann.ac.il/) and
-  as a research scientist in the [Sobolev Institute of Mathematics of SB RAS](http://math.nsc.ru/english.html).
+  as a research scientist in the [Sobolev Institute of Mathematics SB RAS](http://math.nsc.ru/english.html).
 
 <div id="about">
 
@@ -67,7 +67,7 @@ Previously, he worked
 
 <hr />
 <section>
-  <h3 id="talks">Public talks</h3>
+  <h3 id="talks">Public talks (In Russian)</h3>
 
   @Raw(Model.GeneratedFile("talks.html"))
 </section>
@@ -102,21 +102,14 @@ Previously, he worked
 
 <hr />
 <section>
-  <h3 id="open-source">Open source projects</h3>
+  <h3 id="open-source">Open source</h3>
 
-  ![](/img/icons/github.png)
+  ![](/img/icons/github.svg)
+  **GitHub:**
   [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
+  <br /><br />
 
-  * [dotnet/BenchmarkDotNet](https://github.com/dotnet/BenchmarkDotNet) *(maintainer)*:
-    Powerful .NET library for benchmarking *(supported by the [.NET Foundation](https://dotnetfoundation.org/))*
-  * [Russian-Phd-LaTeX-Dissertation-Template](https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template):
-    LaTeX-template for Russian PhD thesis
-  * [ProblemBook.NET](https://github.com/AndreyAkinshin/ProblemBook.NET):
-    Free book with compilation of .NET and C# problems
-  * [InteropDotNet](https://github.com/AndreyAkinshin/InteropDotNet):
-    Cross-platform AnyCPU P/Invoke for .NET
-  * [CultureInfoExplorer](https://github.com/AndreyAkinshin/CultureInfoExplorer):
-    WPF-explorer of CultureInfo instances in .NET
+  @Raw(Model.GeneratedFile("opensource.html"))
 </section>
 
 <hr />
@@ -185,7 +178,7 @@ Previously, he worked
   <br /><br />
 
   ![](/img/icons/math-nsc.png)
-  [Sobolev Institute of Mathematics of SB RAS](http://math.nsc.ru/english.html), [Laboratory of Inverse Problems of Mathematical Physics](http://a-server.math.nsc.ru/IM/lbrt.asp?CodLB=59) (Novosibirsk, Russia)<br />
+  [Sobolev Institute of Mathematics SB RAS](http://math.nsc.ru/english.html), [Laboratory of Inverse Problems of Mathematical Physics](http://a-server.math.nsc.ru/IM/lbrt.asp?CodLB=59) (Novosibirsk, Russia)<br />
 
   * *08/2012–06/2014:* Engineer
   * *07/2014–12/2016:* [Research scientist](http://a-server.math.nsc.ru/IM/sotrudl.asp?CodID=1573)
@@ -193,7 +186,7 @@ Previously, he worked
   **Areas of expertise:** mathematical biology, gene networks, differential equations with delayed argument, bifurcation theory.<br />
   **Selected scholarships and grants**
   * *01/2012–12/2014:* The grant [RFBR 12-01-00074](http://www.rfbr.ru/rffi/portal/project_search/o_387745) “Direct and inverse problems of gene networks mathematical modeling”<br />
-  * *07/2012–07/2014:* The scholarships [SP-561.2012.5](https://grants.extech.ru/grants/res/winners.php?OZ=5&TZ=U&year=2012) “Numerical methods for modeling and analyzing of gene networks”<br />
+  * *07/2012–07/2014:* The scholarships [SP-561.2012.5](https://grants.extech.ru/grants/res/winners.php?OZ=5&TZ=U&year=2012) of the President of Russian Federation, direction: “Strategic information technology, including the creation of supercomputers and software development” (“Numerical methods for modeling and analyzing of gene networks”)<br />
   * *01/2015–12/2017:* The grants [RFBR 15-01-00745 A](http://www.rfbr.ru/rffi/getimage/?objectId=1922396) “Dynamic characteristics of gene networks models”
   <br /><br />
 
@@ -230,13 +223,13 @@ Previously, he worked
 
   * *09/2006–05/2012:*
     ![](/img/icons/s42.png)
-    Coach of competitive programming and mathematics teams in Barnaul <a href="http://s42.asu.ru/">Gymnasium&nbsp;№42</a>.
+    Coach of competitive programming and mathematics teams in Barnaul <a href="http://gymnasium42.ru/">Gymnasium&nbsp;№42</a>.
   * *09/2009–09/2016:*
     ![](/img/icons/aeli.png)
-    Senior lecturer (computer science and mathematics) in Altai Economics and Law Institute.
+    Senior lecturer of computer science and mathematics in Altai Economics and Law Institute, Department of general mathematical and scientific disciplines.
   * *09/2011–11/2011:*
     ![](/img/icons/ministry.png)
-    Lecturer under the Russian federal program <a href="http://miptic.ru/nir/podgotovka.html">F-263 №4</a>.
+    Lecturer under the Russian federal program F-263 №4 “Specialized training and retraining of specialists at the centers of education and development in information technology”.
 </section>
 
 <hr />
