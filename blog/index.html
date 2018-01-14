@@ -85,6 +85,42 @@
     <div class="container">
       <div class="blog-main">
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_12/'>BenchmarkDotNet v0.10.12</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> January 15, 2018.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/benchmarkdotnet"><span class="badge badge-pill badge-info">BenchmarkDotNet</span></a>
+                <a href="/blog/tag/benchmarking"><span class="badge badge-pill badge-info">benchmarking</span></a>
+        </span><br /><br />
+        <p>BenchmarkDotNet v0.10.12 has been released! This release includes:</p>
+<ul>
+<li><strong>Improved DisassemblyDiagnoser:</strong>
+BenchmarkDotNet contains an embedded disassembler so that it can print assembly code for all benchmarks;
+it's not easy, but the disassembler evolves in every release.</li>
+<li><strong>Improved MemoryDiagnoser:</strong>
+it has a better precision level, and it takes less time to evaluate memory allocations in a benchmark.</li>
+<li><strong>New TailCallDiagnoser:</strong>
+now you get notifications when JIT applies the tail call optimizations to your methods.</li>
+<li><strong>Better environment info:</strong>
+when your share performance results, it's very important to share information about your environment.
+The library generates the environment summary for you by default.
+Now it contains information about the amount of physical CPU, physical cores, and logic cores.
+If you run a benchmark on a virtual machine, you will get the name of the hypervisor
+(e.g., Hyper-V, VMware, or VirtualBox).</li>
+<li><strong>Better summary table:</strong>
+one of the greatest features of BenchmarkDotNet is the summary table.
+It shows all important information about results in a compact and understandable form.
+Now it has better customization options: you can display relative performance of different environments
+(e.g., compare .NET Framework and .NET Core) and group benchmarks by categories.</li>
+<li>Other minor improvements and bug fixes</li>
+</ul>
+</p>
+        <a href='/blog/post/bdn-v0_10_12/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/bdn-v0_10_12/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_10/'>BenchmarkDotNet v0.10.10</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> November 03, 2017.
@@ -356,37 +392,6 @@ Of course, it works super fast on small and projects.</p>
 </ul>
 </p>
         <a href='/blog/post/nuget2-and-directoryseparatorchar/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/nuget2-and-directoryseparatorchar/#disqus_thread">Comments</a><br /><br />
-        <hr />
-    </div>
-<div class="blog-post">
-        <h2 class="blog-post-title"><a href='/blog/post/perfex-div/'>Performance exercise: Division</a></h2>
-        <span class="blog-post-meta">
-          <b>Date:</b> December 26, 2016.
-          <b>Tags:</b>
-                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
-                <a href="/blog/tag/performanceexercise"><span class="badge badge-pill badge-info">PerformanceExercise</span></a>
-                <a href="/blog/tag/benchmarking"><span class="badge badge-pill badge-info">Benchmarking</span></a>
-                <a href="/blog/tag/math"><span class="badge badge-pill badge-info">Math</span></a>
-        </span><br /><br />
-        <p>In the previous post, we <a href="/en/blog/dotnet/perfex-min/">discussed</a> the performance space of the minimum function
-which was implemented via a simple ternary operator and with the help of bit magic.
-Now we continue to talk about performance and bit hacks.
-In particular, we will divide a positive number by three:</p>
-<pre><code class="language-cs">uint Div3Simple(uint n)   =&gt; n / 3;
-uint Div3BitHacks(uint n) =&gt; (uint)((n * (ulong)0xAAAAAAAB) &gt;&gt; 33);
-</code></pre>
-<p>As usual, it's hard to say which method is faster in advanced because the performance depends on the environment.
-Here are some interesting results:</p>
-<table class="table table-sm">
-  <tr> <th></th>              <th>Simple</th>              <th>BitHacks</th>             </tr>
-  <tr> <th>LegacyJIT-x86</th> <td class="norm">≈8.3ns</td> <td class="fast">≈2.6ns</td>  </tr>
-  <tr> <th>LegacyJIT-x64</th> <td class="fast">≈2.6ns</td> <td class="fast">≈1.7ns</td>  </tr>
-  <tr> <th>RyuJIT-x64   </th> <td class="norm">≈6.9ns</td> <td class="fast">≈1.5ns</td>  </tr>
-  <tr> <th>Mono4.6.2-x86</th> <td class="norm">≈8.5ns</td> <td class="slow">≈14.4ns</td> </tr>
-  <tr> <th>Mono4.6.2-x64</th> <td class="norm">≈8.3ns</td> <td class="fast">≈2.8ns</td>  </tr>
-</table>
-</p>
-        <a href='/blog/post/perfex-div/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/perfex-div/#disqus_thread">Comments</a><br /><br />
         <hr />
     </div>
 </div>

@@ -85,6 +85,26 @@
     <div class="container">
       <div class="blog-main">
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/jit-version-determining-in-runtime/'>JIT version determining in runtime</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> February 28, 2015.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/jit"><span class="badge badge-pill badge-info">JIT</span></a>
+        </span><br /><br />
+        <p>Sometimes I want to know used JIT compiler version in my little C# experiments. It is clear that it is possible to determine the version in advance based on the environment. However, sometimes I want to know it in runtime to perform specific code for the current JIT compiler. More formally, I want to get the value from the following enum:</p>
+<pre><code class="language-cs">public enum JitVersion
+{
+    Mono, MsX86, MsX64, RyuJit
+}
+</code></pre>
+<p>It is easy to detect Mono by existing of the <code>Mono.Runtime</code> class. Otherwise, we can assume that we work with Microsoft JIT implementation. It is easy to detect JIT-x86 with help of <code>IntPtr.Size == 4</code>. The challenge is to distinguish JIT-x64 and RyuJIT. Next, I will show how you can do it with help of the bug from my <a href="http://aakinshin.net/en/blog/dotnet/subexpression-elimination-bug-in-jit-x64/">previous post</a>.</p>
+</p>
+        <a href='/blog/post/jit-version-determining-in-runtime/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/jit-version-determining-in-runtime/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/subexpression-elimination-bug-in-jit-x64/'>A bug story about JIT-x64</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> February 27, 2015.
@@ -299,24 +319,6 @@ Type type = x.GetType(); // Bang!
 </code></pre>
 <p>These questions seemed interesting to me, that is why I decided to discuss the solutions.</p>
         <a href='/blog/post/jon-skeet-quiz/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/jon-skeet-quiz/#disqus_thread">Comments</a><br /><br />
-        <hr />
-    </div>
-<div class="blog-post">
-        <h2 class="blog-post-title"><a href='/blog/post/comments/'>To Add Comments or Not to Add?</a></h2>
-        <span class="blog-post-meta">
-          <b>Date:</b> August 28, 2013.
-          <b>Tags:</b>
-                <a href="/blog/tag/perfectcode"><span class="badge badge-pill badge-info">PerfectCode</span></a>
-        </span><br /><br />
-        <p><em>A really good comment is the one you managed to avoid. (c) Uncle Bob</em></p>
-<p>Lately, I’ve been feeling really tired of hot discussions on if it’s necessary to add comments in the code. As a rule, there are self-confident juniors with the indisputable statement as: “Why not to comment it, it will be unreadable without the comments!” on one side. And experienced seniors are on the other side. They understand that if it’s possible to go without the comments than “You better, damn it, do it in this way!” Probably, many developers got comment cravings since they’ve been students when professors made them comment every code line, “to make the student better understand it”. Real projects shouldn’t contain a lot of comments that only spoil the code. I don’t agitate for avoiding comments at all, but if you managed to write the code that doesn’t need comments, you can consider it your small victory. I would like to refer you to some good books that helped form my position. I like and respect these authors and completely share their opinion.</p>
-<ul>
-<li><a href="http://www.amazon.com/Code-Complete-Practical-Handbook-Construction/dp/0735619670">Steven C. McConnell, Code Complete</a></li>
-<li><a href="http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882">Robert Martin, Clean Code: A Handbook of Agile Software Craftsmanship</a></li>
-<li><a href="http://www.amazon.com/The-Readable-Code-Theory-Practice/dp/0596802293">Dustin Boswell, Trevor Foucher, The Art of Readable Code (Theory in Practice)</a></li>
-</ul>
-</p>
-        <a href='/blog/post/comments/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/comments/#disqus_thread">Comments</a><br /><br />
         <hr />
     </div>
 </div>

@@ -87,6 +87,42 @@
 
 <h1 id="dotnet">Posts about .NET</h1>
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_12/'>BenchmarkDotNet v0.10.12</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> January 15, 2018.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/benchmarkdotnet"><span class="badge badge-pill badge-info">BenchmarkDotNet</span></a>
+                <a href="/blog/tag/benchmarking"><span class="badge badge-pill badge-info">benchmarking</span></a>
+        </span><br /><br />
+        <p>BenchmarkDotNet v0.10.12 has been released! This release includes:</p>
+<ul>
+<li><strong>Improved DisassemblyDiagnoser:</strong>
+BenchmarkDotNet contains an embedded disassembler so that it can print assembly code for all benchmarks;
+it's not easy, but the disassembler evolves in every release.</li>
+<li><strong>Improved MemoryDiagnoser:</strong>
+it has a better precision level, and it takes less time to evaluate memory allocations in a benchmark.</li>
+<li><strong>New TailCallDiagnoser:</strong>
+now you get notifications when JIT applies the tail call optimizations to your methods.</li>
+<li><strong>Better environment info:</strong>
+when your share performance results, it's very important to share information about your environment.
+The library generates the environment summary for you by default.
+Now it contains information about the amount of physical CPU, physical cores, and logic cores.
+If you run a benchmark on a virtual machine, you will get the name of the hypervisor
+(e.g., Hyper-V, VMware, or VirtualBox).</li>
+<li><strong>Better summary table:</strong>
+one of the greatest features of BenchmarkDotNet is the summary table.
+It shows all important information about results in a compact and understandable form.
+Now it has better customization options: you can display relative performance of different environments
+(e.g., compare .NET Framework and .NET Core) and group benchmarks by categories.</li>
+<li>Other minor improvements and bug fixes</li>
+</ul>
+</p>
+        <a href='/blog/post/bdn-v0_10_12/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/bdn-v0_10_12/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_10/'>BenchmarkDotNet v0.10.10</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> November 03, 2017.
