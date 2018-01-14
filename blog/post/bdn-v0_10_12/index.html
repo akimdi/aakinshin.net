@@ -120,11 +120,11 @@ Now it has better customization options: you can display relative performance of
 </ul>
 <!--more-->
 <h3 id="diagnosers">Diagnosers</h3>
-<p>Diagnosers are helpers which prints additional information about your benchmarks.</p>
+<p>Diagnosers are helpers which print additional information about your benchmarks.</p>
 <h4 id="improved-disassemblydiagnoser">Improved DisassemblyDiagnoser</h4>
-<p><code>DisassemblyDiagnoser</code> prints an assembly listing for you source code.
+<p><code>DisassemblyDiagnoser</code> prints an assembly listing for your source code.
 We already had this feature, but we continue to improve it.
-Our goal is not just provide a raw info about your code, but provide a comfortable way to explore the program internals.
+Our goal is not just to provide a raw info about your code, but provide a comfortable way to explore the program internals.
 In v0.10.12, Adam Sitnik (<a href="https://github.com/adamsitnik">@adamsitnik</a>) <a href="https://github.com/dotnet/BenchmarkDotNet/issues/546">implemented</a>
 advanced support of labels for jump targets.</p>
 <ul>
@@ -136,13 +136,13 @@ advanced support of labels for jump targets.</p>
 <div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/bdn-v0_10_12/disasm.gif" /></div>
 <h4 id="improved-memorydiagnoser">Improved MemoryDiagnoser</h4>
 <p><code>MemoryDiagnoser</code> show the memory traffic for each benchmark and the GC collection count for each generation.
-In this relase, we <a href="https://github.com/dotnet/BenchmarkDotNet/issues/606">improved</a> accuracy and
+In this release, we <a href="https://github.com/dotnet/BenchmarkDotNet/issues/606">improved</a> accuracy and
 reduce the total time which you should spend to get the results.</p>
 <h4 id="new-tailcalldiagnoser">New TailCallDiagnoser</h4>
 <p><a href="https://github.com/GeorgePlotnikov">@GeorgePlotnikov</a> implemented <code>TailCallDiagnoser</code> which
 detects <a href="https://en.wikipedia.org/wiki/Tail_call">tail call</a> optimizations and prints information about it.
 This feature should be useful for F# developers.
-Currently it has some restrictions: it works only for x64 programs and it's Windows-only.</p>
+Currently, it has some restrictions: it works only for x64 programs, and it's Windows-only.</p>
 <p>Demo:</p>
 <pre><code class="language-cs">[Diagnostics.Windows.Configs.TailCallDiagnoser]
 [LegacyJitX86Job, LegacyJitX64Job, RyuJitX64Job]
@@ -184,10 +184,10 @@ Tail call type: RecursiveLoop
 -------------------
 </code></pre>
 <h3 id="better-environment-info">Better environment info</h3>
-<p>One of the most important part in any performance report is the environment information.
+<p>One of the most important parts of any performance report is the environment information.
 People should understand what kind of machine did you use for your benchmarks.</p>
 <p>Irina Ananyeva (<a href="https://github.com/morgan-kn">@morgan-kn</a>) <a href="https://github.com/dotnet/BenchmarkDotNet/issues/582">implemented</a> a cool feature
-which displays amount of physical CPU, logical cores, and physical cores (an example: <code>1 CPU, 8 logical cores and 4 physical cores</code>).
+which displays the amount of physical CPU, logical cores, and physical cores (an example: <code>1 CPU, 8 logical cores and 4 physical cores</code>).
 Now the environment info section looks like this (it works on Windows/Linux/macOS; .NET Framework/.NET Core/Mono):</p>
 <pre><code class="language-md">BenchmarkDotNet=v0.10.12, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.192)
 Intel Core i7-6700HQ CPU 2.60GHz (Skylake), 1 CPU, 8 logical cores and 4 physical cores
@@ -201,13 +201,13 @@ Frequency=2531249 Hz, Resolution=395.0619 ns, Timer=TSC
 <p>Some people run benchmarks on virtual machines instead of real hardware,
 and it's also an important fact.
 With a new feature by Łukasz Pyrzyk (<a href="https://github.com/lukasz-pyrzyk">@lukasz-pyrzyk</a>),
-a special label (like <code>VM=VirtualBox</code>) will be automatically added in the result.</p>
+a special label (like <code>VM=VirtualBox</code>) will be automatically added to the result.</p>
 <h3 id="better-summary-table">Better summary table</h3>
 <p>The summary table tries to help you understand performance data in a quick way.
 In the old versions of BenchmarkDotNet, you can mark a method as a baseline and get &quot;scaled&quot; performance values for all other methods.
 In v0.10.12 (thanks Marc Gravell (<a href="https://github.com/mgravell">@mgravell</a>) for the <a href="https://github.com/mgravell">idea</a>)),
 you can introduce several baselines in a class (if you are using the benchmark categories) or
-mark a job as a baseline (it allows evaluating relative performance of different environments).</p>
+mark a job as a baseline (it allows evaluating the relative performance of different environments).</p>
 <p>Let's look at a few examples.</p>
 <p><strong>Example 1: Methods</strong></p>
 <p>You can mark a method as a baseline with the help of <code>[Benchmark(Baseline = true)]</code>.</p>
@@ -231,7 +231,7 @@ mark a job as a baseline (it allows evaluating relative performance of different
 | Time150 | 150.48 ms | 0.0986 ms | 0.0922 ms |   1.50 |
 </code></pre>
 <p><strong>Example 2: Methods with categories</strong></p>
-<p>The only way to have several baselines in the same class is to separate them by categories
+<p>The only way to have several baselines in the same class is to separate them by categories.
 and mark the class with <code>[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]</code>.</p>
 <pre><code class="language-cs">[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
 [CategoriesColumn]
@@ -260,7 +260,7 @@ public class Sleeps
 | Time600 |       Slow | 600.45 ms | 0.0396 ms | 0.0331 ms |   1.09 |
 </code></pre>
 <p><strong>Example 3: Jobs</strong></p>
-<p>If you want to compare several runtime configuration,
+<p>If you want to compare several runtime configurations,
 you can mark one of your jobs with <code>isBaseline = true</code>.</p>
 <pre><code class="language-cs">[ClrJob(isBaseline: true)]
 [MonoJob]

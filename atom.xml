@@ -3,7 +3,7 @@
     <title>Andrey Akinshin's blog</title>
     <link href="http://aakinshin.net"/>
     <link type="application/atom+xml" rel="self" href="http://aakinshin.net/en/atom.xml"/>
-    <updated>2018-01-14T21:43:31.0038051Z</updated>
+    <updated>2018-01-14T21:51:25.5036897Z</updated>
     <id>http://aakinshin.net/</id>
     <author>
         <name>Andrey Akinshin</name>
@@ -43,11 +43,11 @@ Now it has better customization options: you can display relative performance of
 &lt;/ul&gt;
 &lt;!--more--&gt;
 &lt;h3 id=&quot;diagnosers&quot;&gt;Diagnosers&lt;/h3&gt;
-&lt;p&gt;Diagnosers are helpers which prints additional information about your benchmarks.&lt;/p&gt;
+&lt;p&gt;Diagnosers are helpers which print additional information about your benchmarks.&lt;/p&gt;
 &lt;h4 id=&quot;improved-disassemblydiagnoser&quot;&gt;Improved DisassemblyDiagnoser&lt;/h4&gt;
-&lt;p&gt;&lt;code&gt;DisassemblyDiagnoser&lt;/code&gt; prints an assembly listing for you source code.
+&lt;p&gt;&lt;code&gt;DisassemblyDiagnoser&lt;/code&gt; prints an assembly listing for your source code.
 We already had this feature, but we continue to improve it.
-Our goal is not just provide a raw info about your code, but provide a comfortable way to explore the program internals.
+Our goal is not just to provide a raw info about your code, but provide a comfortable way to explore the program internals.
 In v0.10.12, Adam Sitnik (&lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;) &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/546&quot;&gt;implemented&lt;/a&gt;
 advanced support of labels for jump targets.&lt;/p&gt;
 &lt;ul&gt;
@@ -59,13 +59,13 @@ advanced support of labels for jump targets.&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/bdn-v0_10_12/disasm.gif&quot; /&gt;&lt;/div&gt;
 &lt;h4 id=&quot;improved-memorydiagnoser&quot;&gt;Improved MemoryDiagnoser&lt;/h4&gt;
 &lt;p&gt;&lt;code&gt;MemoryDiagnoser&lt;/code&gt; show the memory traffic for each benchmark and the GC collection count for each generation.
-In this relase, we &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/606&quot;&gt;improved&lt;/a&gt; accuracy and
+In this release, we &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/606&quot;&gt;improved&lt;/a&gt; accuracy and
 reduce the total time which you should spend to get the results.&lt;/p&gt;
 &lt;h4 id=&quot;new-tailcalldiagnoser&quot;&gt;New TailCallDiagnoser&lt;/h4&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/GeorgePlotnikov&quot;&gt;@GeorgePlotnikov&lt;/a&gt; implemented &lt;code&gt;TailCallDiagnoser&lt;/code&gt; which
 detects &lt;a href=&quot;https://en.wikipedia.org/wiki/Tail_call&quot;&gt;tail call&lt;/a&gt; optimizations and prints information about it.
 This feature should be useful for F# developers.
-Currently it has some restrictions: it works only for x64 programs and it&#39;s Windows-only.&lt;/p&gt;
+Currently, it has some restrictions: it works only for x64 programs, and it&#39;s Windows-only.&lt;/p&gt;
 &lt;p&gt;Demo:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;[Diagnostics.Windows.Configs.TailCallDiagnoser]
 [LegacyJitX86Job, LegacyJitX64Job, RyuJitX64Job]
@@ -107,10 +107,10 @@ Tail call type: RecursiveLoop
 -------------------
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;better-environment-info&quot;&gt;Better environment info&lt;/h3&gt;
-&lt;p&gt;One of the most important part in any performance report is the environment information.
+&lt;p&gt;One of the most important parts of any performance report is the environment information.
 People should understand what kind of machine did you use for your benchmarks.&lt;/p&gt;
 &lt;p&gt;Irina Ananyeva (&lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;) &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/582&quot;&gt;implemented&lt;/a&gt; a cool feature
-which displays amount of physical CPU, logical cores, and physical cores (an example: &lt;code&gt;1 CPU, 8 logical cores and 4 physical cores&lt;/code&gt;).
+which displays the amount of physical CPU, logical cores, and physical cores (an example: &lt;code&gt;1 CPU, 8 logical cores and 4 physical cores&lt;/code&gt;).
 Now the environment info section looks like this (it works on Windows/Linux/macOS; .NET Framework/.NET Core/Mono):&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-md&quot;&gt;BenchmarkDotNet=v0.10.12, OS=Windows 10 Redstone 3 [1709, Fall Creators Update] (10.0.16299.192)
 Intel Core i7-6700HQ CPU 2.60GHz (Skylake), 1 CPU, 8 logical cores and 4 physical cores
@@ -124,13 +124,13 @@ Frequency=2531249 Hz, Resolution=395.0619 ns, Timer=TSC
 &lt;p&gt;Some people run benchmarks on virtual machines instead of real hardware,
 and it&#39;s also an important fact.
 With a new feature by Łukasz Pyrzyk (&lt;a href=&quot;https://github.com/lukasz-pyrzyk&quot;&gt;@lukasz-pyrzyk&lt;/a&gt;),
-a special label (like &lt;code&gt;VM=VirtualBox&lt;/code&gt;) will be automatically added in the result.&lt;/p&gt;
+a special label (like &lt;code&gt;VM=VirtualBox&lt;/code&gt;) will be automatically added to the result.&lt;/p&gt;
 &lt;h3 id=&quot;better-summary-table&quot;&gt;Better summary table&lt;/h3&gt;
 &lt;p&gt;The summary table tries to help you understand performance data in a quick way.
 In the old versions of BenchmarkDotNet, you can mark a method as a baseline and get &amp;quot;scaled&amp;quot; performance values for all other methods.
 In v0.10.12 (thanks Marc Gravell (&lt;a href=&quot;https://github.com/mgravell&quot;&gt;@mgravell&lt;/a&gt;) for the &lt;a href=&quot;https://github.com/mgravell&quot;&gt;idea&lt;/a&gt;)),
 you can introduce several baselines in a class (if you are using the benchmark categories) or
-mark a job as a baseline (it allows evaluating relative performance of different environments).&lt;/p&gt;
+mark a job as a baseline (it allows evaluating the relative performance of different environments).&lt;/p&gt;
 &lt;p&gt;Let&#39;s look at a few examples.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Example 1: Methods&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;You can mark a method as a baseline with the help of &lt;code&gt;[Benchmark(Baseline = true)]&lt;/code&gt;.&lt;/p&gt;
@@ -154,7 +154,7 @@ mark a job as a baseline (it allows evaluating relative performance of different
 | Time150 | 150.48 ms | 0.0986 ms | 0.0922 ms |   1.50 |
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Example 2: Methods with categories&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The only way to have several baselines in the same class is to separate them by categories
+&lt;p&gt;The only way to have several baselines in the same class is to separate them by categories.
 and mark the class with &lt;code&gt;[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;[GroupBenchmarksBy(BenchmarkLogicalGroupRule.ByCategory)]
 [CategoriesColumn]
@@ -183,7 +183,7 @@ public class Sleeps
 | Time600 |       Slow | 600.45 ms | 0.0396 ms | 0.0331 ms |   1.09 |
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;Example 3: Jobs&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;If you want to compare several runtime configuration,
+&lt;p&gt;If you want to compare several runtime configurations,
 you can mark one of your jobs with &lt;code&gt;isBaseline = true&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;[ClrJob(isBaseline: true)]
 [MonoJob]
