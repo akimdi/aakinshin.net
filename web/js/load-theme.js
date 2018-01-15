@@ -25,7 +25,7 @@ function refreshTheme() {
     var theme = getCookie("theme")
     var themeHighlight = getCookie("themeHighlight")
     if (theme == "")
-        theme = "cosmo";
+        theme = "lumen";
     if (themeHighlight == "")
         themeHighlight = "github";
 
