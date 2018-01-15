@@ -3,7 +3,7 @@
     <title>Блог Андрея Акиньшина</title>
     <link href="http://aakinshin.net"/>
     <link type="application/atom+xml" rel="self" href="http://aakinshin.net/ru/atom.xml"/>
-    <updated>2018-01-14T21:51:25.5036897Z</updated>
+    <updated>2018-01-15T08:45:12.1444883Z</updated>
     <id>http://aakinshin.net/</id>
     <author>
         <name>Андрей Акиньшин</name>
@@ -39,6 +39,7 @@ one of the greatest features of BenchmarkDotNet is the summary table.
 It shows all important information about results in a compact and understandable form.
 Now it has better customization options: you can display relative performance of different environments
 (e.g., compare .NET Framework and .NET Core) and group benchmarks by categories.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;New GC settings:&lt;/strong&gt; now we support &lt;code&gt;NoAffinitize&lt;/code&gt;, &lt;code&gt;HeapAffinitizeMask&lt;/code&gt;, &lt;code&gt;HeapCount&lt;/code&gt;.&lt;/li&gt;
 &lt;li&gt;Other minor improvements and bug fixes&lt;/li&gt;
 &lt;/ul&gt;
 &lt;!--more--&gt;
@@ -203,11 +204,11 @@ public class RuntimeCompetition
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;new-gc-settings&quot;&gt;New GC Settings&lt;/h3&gt;
 &lt;p&gt;BenchmarkDotNet allows configuring GC Settings for each job.
-Now we &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/622&quot;&gt;support&lt;/a&gt; a few additional settings.
-If you set them, the library generates app.config like this:&lt;/p&gt;
+Now we &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/622&quot;&gt;support&lt;/a&gt; a few additional settings:
+&lt;code&gt;NoAffinitize&lt;/code&gt;, &lt;code&gt;HeapAffinitizeMask&lt;/code&gt;, &lt;code&gt;HeapCount&lt;/code&gt;.
+If you set them, the library generates &lt;code&gt;app.config&lt;/code&gt; like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-xml&quot;&gt;&amp;lt;configuration&amp;gt;
    &amp;lt;runtime&amp;gt;
-      &amp;lt;gcServer enabled=&amp;quot;true&amp;quot;/&amp;gt;
       &amp;lt;GCHeapCount enabled=&amp;quot;6&amp;quot;/&amp;gt;
       &amp;lt;GCNoAffinitize enabled=&amp;quot;true&amp;quot;/&amp;gt;
       &amp;lt;GCHeapAffinitizeMask enabled=&amp;quot;144&amp;quot;/&amp;gt;

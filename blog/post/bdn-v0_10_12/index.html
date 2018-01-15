@@ -116,6 +116,7 @@ one of the greatest features of BenchmarkDotNet is the summary table.
 It shows all important information about results in a compact and understandable form.
 Now it has better customization options: you can display relative performance of different environments
 (e.g., compare .NET Framework and .NET Core) and group benchmarks by categories.</li>
+<li><strong>New GC settings:</strong> now we support <code>NoAffinitize</code>, <code>HeapAffinitizeMask</code>, <code>HeapCount</code>.</li>
 <li>Other minor improvements and bug fixes</li>
 </ul>
 <!--more-->
@@ -280,11 +281,11 @@ public class RuntimeCompetition
 </code></pre>
 <h3 id="new-gc-settings">New GC Settings</h3>
 <p>BenchmarkDotNet allows configuring GC Settings for each job.
-Now we <a href="https://github.com/dotnet/BenchmarkDotNet/issues/622">support</a> a few additional settings.
-If you set them, the library generates app.config like this:</p>
+Now we <a href="https://github.com/dotnet/BenchmarkDotNet/issues/622">support</a> a few additional settings:
+<code>NoAffinitize</code>, <code>HeapAffinitizeMask</code>, <code>HeapCount</code>.
+If you set them, the library generates <code>app.config</code> like this:</p>
 <pre><code class="language-xml">&lt;configuration&gt;
    &lt;runtime&gt;
-      &lt;gcServer enabled=&quot;true&quot;/&gt;
       &lt;GCHeapCount enabled=&quot;6&quot;/&gt;
       &lt;GCNoAffinitize enabled=&quot;true&quot;/&gt;
       &lt;GCHeapAffinitizeMask enabled=&quot;144&quot;/&gt;
