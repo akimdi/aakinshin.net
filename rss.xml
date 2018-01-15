@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Mon, 15 Jan 2018 07:17:54 GMT</pubDate>
-    <lastBuildDate>Mon, 15 Jan 2018 07:17:54 GMT</lastBuildDate>
+    <pubDate>Mon, 15 Jan 2018 07:24:25 GMT</pubDate>
+    <lastBuildDate>Mon, 15 Jan 2018 07:24:25 GMT</lastBuildDate>
 
         <item>
             <title>BenchmarkDotNet v0.10.12</title>
