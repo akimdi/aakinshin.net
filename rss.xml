@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Wed, 17 Jan 2018 02:58:54 GMT</pubDate>
-    <lastBuildDate>Wed, 17 Jan 2018 02:58:54 GMT</lastBuildDate>
+    <pubDate>Fri, 19 Jan 2018 01:29:57 GMT</pubDate>
+    <lastBuildDate>Fri, 19 Jan 2018 01:29:57 GMT</lastBuildDate>
 
         <item>
             <title>BenchmarkDotNet v0.10.12</title>
@@ -4249,7 +4249,7 @@ here is &lt;a href=&quot;https://en.wikipedia.org/wiki/NTSC#History&quot;&gt;a n
 However, default HPET frequency is &lt;code&gt;14.31818 MHz&lt;/code&gt; or 4x the ACPI clock
 (it allows to use the same crystal oscillator in HPET and ACPI PM, see also &lt;a href=&quot;https://en.wikipedia.org/wiki/Colorburst#Crystals&quot;&gt;wiki/Colorburst#Crystals&lt;/a&gt;).&lt;/p&gt;
 &lt;p&gt;On Windows you can enable or disable HPET with the help of the following commands:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-dos&quot;&gt;:: Enable HPET (reboot is required): 
+&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;:: Enable HPET (reboot is required): 
 bcdedit /set useplatformclock true
 :: Disable HPET (reboot is required):
 bcdedit /deletevalue useplatformclock
