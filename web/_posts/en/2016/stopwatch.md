@@ -304,7 +304,7 @@ However, default HPET frequency is `14.31818 MHz` or 4x the ACPI clock
 
 On Windows you can enable or disable HPET with the help of the following commands:
 
-```dos
+```bash
 :: Enable HPET (reboot is required): 
 bcdedit /set useplatformclock true
 :: Disable HPET (reboot is required):
