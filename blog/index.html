@@ -122,6 +122,31 @@
     <div class="container">
       <div class="blog-main">
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/mono-gc-collects/'>Analyzing distribution of Mono GC collections</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> February 20, 2018.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/r"><span class="badge badge-pill badge-info">R</span></a>
+                <a href="/blog/tag/rider"><span class="badge badge-pill badge-info">Rider</span></a>
+                <a href="/blog/tag/mono"><span class="badge badge-pill badge-info">Mono</span></a>
+                <a href="/blog/tag/gc"><span class="badge badge-pill badge-info">GC</span></a>
+        </span><br /><br />
+        <p>Sometimes I want to understand the GC performance impact on an application quickly.
+I know that there are many powerful diagnostic tools and approaches,
+but I'm a fan of the &quot;right tool for the job&quot; idea.
+In simple cases, I prefer simple noninvasive approaches which provide a quick way
+to get an overview of the current situation
+(if everything is terrible, I always can switch to an advanced approach).
+Today I want to share with you my favorite way to quickly get statistics
+of GC pauses in Mono and generate nice plots like this:</p>
+<div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/mono-gc-collects/plot-64.png" /></div>
+</p>
+        <a href='/blog/post/mono-gc-collects/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/mono-gc-collects/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_12/'>BenchmarkDotNet v0.10.12</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> January 15, 2018.
@@ -400,36 +425,6 @@ The feature which I am most proud of is smart and fast search:</p>
 <p>Today I want to share with you some technical details about how it was implemented.</p>
 </p>
         <a href='/blog/post/rider-nuget-search/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/rider-nuget-search/#disqus_thread">Comments</a><br /><br />
-        <hr />
-    </div>
-<div class="blog-post">
-        <h2 class="blog-post-title"><a href='/blog/post/nuget2-and-directoryseparatorchar/'>NuGet2 and a DirectorySeparatorChar bug</a></h2>
-        <span class="blog-post-meta">
-          <b>Date:</b> February 06, 2017.
-          <b>Tags:</b>
-                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
-                <a href="/blog/tag/rider"><span class="badge badge-pill badge-info">Rider</span></a>
-                <a href="/blog/tag/bugs"><span class="badge badge-pill badge-info">Bugs</span></a>
-                <a href="/blog/tag/performance"><span class="badge badge-pill badge-info">Performance</span></a>
-                <a href="/blog/tag/nuget"><span class="badge badge-pill badge-info">NuGet</span></a>
-        </span><br /><br />
-        <p>In <a href="https://www.jetbrains.com/rider/">Rider</a>, we care a lot about performance.
-I like to improve the application responsiveness and do interesting optimizations all the time.
-Rider is already well-optimized, and it's often hard to make significant performance improvements, so usually I do micro-optimizations which do not have a very big impact on the whole application.
-However, sometimes it's possible to improve the speed of a feature 100 times with just a few lines of code.</p>
-<p>Rider is based on <a href="https://www.jetbrains.com/resharper/">ReSharper</a>, so we have a lot of cool features out of the box.
-One of these features is <a href="https://www.jetbrains.com/help/resharper/2016.3/Code_Analysis__Solution-Wide_Analysis.html">Solution-Wide Analysis</a>
-which lets you constantly keep track of issues in your solution.
-Sometimes, solution-wide analysis takes a lot of time to run because there are many files which should be analyzed.
-Of course, it works super fast on small and projects.</p>
-<p>Let's talk about a performance bug (<a href="https://youtrack.jetbrains.com/issue/RIDER-3742">#RIDER-3742</a>) that we recently had.</p>
-<ul>
-<li><em>Repro:</em> Open Rider, create a new &quot;ASP .NET MVC Application&quot;, enable solution wide-analysis.</li>
-<li><em>Expected:</em> The analysis should take 1 second.</li>
-<li><em>Actual:</em> The analysis takes 1 second on Windows and <strong>2 minutes</strong> on Linux and MacOS.</li>
-</ul>
-</p>
-        <a href='/blog/post/nuget2-and-directoryseparatorchar/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/nuget2-and-directoryseparatorchar/#disqus_thread">Comments</a><br /><br />
         <hr />
     </div>
 </div>
