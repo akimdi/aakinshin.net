@@ -122,6 +122,26 @@
     <div class="container">
       <div class="blog-main">
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/rider-nuget-search/'>Why is NuGet search in Rider so fast?</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> February 08, 2017.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/rider"><span class="badge badge-pill badge-info">Rider</span></a>
+                <a href="/blog/tag/nuget"><span class="badge badge-pill badge-info">NuGet</span></a>
+        </span><br /><br />
+        <p>I'm the guy who develops the NuGet manager in <a href="https://www.jetbrains.com/rider/">Rider</a>.
+It's not ready yet, there are some bugs here and there, but it already works pretty well.
+The feature which I am most proud of is smart and fast search:</p>
+<div class="mx-auto">
+  <img class="mx-auto d-block" width="400" src="/img/posts/dotnet/rider-nuget-search/front.gif" />
+</div>
+<p>Today I want to share with you some technical details about how it was implemented.</p>
+</p>
+        <a href='/blog/post/rider-nuget-search/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/rider-nuget-search/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/nuget2-and-directoryseparatorchar/'>NuGet2 and a DirectorySeparatorChar bug</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> February 06, 2017.
@@ -409,39 +429,6 @@ Sqrt14 |  1.43 ns | 0.0224 ns | 697125029.18 |
 </code></pre></p>
 <p>How so? If I add one more <code>Math.Sqrt</code> to the expression, the method starts work 40 times faster! Let's examine the situation..</p>
         <a href='/blog/post/ryujit-rc-and-constant-folding/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/ryujit-rc-and-constant-folding/#disqus_thread">Comments</a><br /><br />
-        <hr />
-    </div>
-<div class="blog-post">
-        <h2 class="blog-post-title"><a href='/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Unrolling of small loops in different JIT versions</a></h2>
-        <span class="blog-post-meta">
-          <b>Date:</b> March 02, 2015.
-          <b>Tags:</b>
-                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
-                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
-                <a href="/blog/tag/jit"><span class="badge badge-pill badge-info">JIT</span></a>
-                <a href="/blog/tag/bugs"><span class="badge badge-pill badge-info">Bugs</span></a>
-                <a href="/blog/tag/loopunrolling"><span class="badge badge-pill badge-info">LoopUnrolling</span></a>
-        </span><br /><br />
-        <p>Challenge of the day: what will the following code display?</p>
-<pre><code class="language-cs">struct Point
-{
-    public int X;
-    public int Y;
-}
-static void Print(Point p)
-{
-    Console.WriteLine(p.X + &quot; &quot; + p.Y);
-}
-static void Main()
-{
-    var p = new Point();
-    for (p.X = 0; p.X &lt; 2; p.X++)
-        Print(p);
-}
-</code></pre>
-<p>The right answer: it depends. There is a bug in CLR2 JIT-x86 which spoil this wonderful program. This story is about optimization that called unrolling of small loops. This is a very interesting theme, let's discuss it in detail.</p>
-</p>
-        <a href='/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/unrolling-of-small-loops-in-different-jit-versions/#disqus_thread">Comments</a><br /><br />
         <hr />
     </div>
 </div>
