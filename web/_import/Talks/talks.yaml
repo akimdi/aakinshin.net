@@ -30,15 +30,44 @@ talks:
     abstract_ru: "Если вас волнует производительность вашего приложения, то рано или поздно у вас могут появиться мысли о том, чтобы написать тесты на эту самую производительность. К сожалению, внедрить такие тесты в процесс разработки намного сложнее, чем может показаться на первый взгляд. В этом докладе мы будем разговаривать про типичные проблемы тестирования производительности и возможные подходы к их решению."
     links:
       - key: event_en
-        url: https://dotnext-moscow.ru/en/
+        url: http://2017.dotnext-moscow.ru/en/
       - key: event_ru
-        url: https://dotnext-moscow.ru/
+        url: http://2017.dotnext-moscow.ru/
       - key: talk_en
-        url: https://dotnext-moscow.ru/en/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
+        url: http://2017.dotnext-moscow.ru/en/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
       - key: talk_ru
-        url: https://dotnext-moscow.ru/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
+        url: http://2017.dotnext-moscow.ru/2017/msk/talks/6a4afxs2sqmwws0yuoc06s/
       - key: youtube
-        url: https://www.youtube.com/watch?v=5Gozj_X2bZA
+        url: https://www.youtube.com/watch?v=LEy3_2ZzWpk
+      - key: pdf
+        url: https://assets.contentful.com/9n3x4rtjlya6/2hDW7Kf9gAy8Oay2Mq0wKo/30f6f48ae7630ab2b4aaad5f4eea16b5/Andrey_Akinshin_-_Let_s_talk_about_performance_testing.pdf
+      - key: slideshare
+        url: https://www.slideshare.net/AndreyAkinshin/performance-83380772
+      - key: photos
+        url: https://vk.com/album-65845767_248961301
+      - key: org
+        url: https://jugru.org/
+  - date: 2017-11-12
+    date2: 2017-11-13
+    event: DotNext 2017 Moscow
+    event-type: conference
+    event-hint_ru: Конференция .NET-разработчиков
+    event-hint_en: Independent .NET conference
+    title: Panel Discussion - Profiling and optimization
+    location_en: Moscow, Russia
+    location_ru: г. Москва
+    abstract: "In this open panel, ask .NET performance experts anything you’d like about profiling, optimization, and the state of high-performance .NET applications today. Bringing together experts on microbenchmarking, distributed system architecture, GC optimization, and low-level CPU tricks, the discussion is guaranteed to be interesting. Among other things, we’ll talk about how to avoid performance regressions, how to choose which part of the system warrants investments in profiling and optimization, and how to build a system that consists of multiple disparate microservices while maintaining low latency and scalability."
+    links:
+      - key: event_en
+        url: http://2017.dotnext-moscow.ru/en/
+      - key: event_ru
+        url: http://2017.dotnext-moscow.ru/
+      - key: talk_en
+        url: http://2017.dotnext-moscow.ru/en/2017/msk/talks/1gpyg1244oo4o48uuk0ya4/
+      - key: talk_ru
+        url: http://2017.dotnext-moscow.ru/2017/msk/talks/1gpyg1244oo4o48uuk0ya4/
+      - key: youtube
+        url: https://www.youtube.com/watch?v=4iQVMMLuPlM
       - key: pdf
         url: https://assets.contentful.com/9n3x4rtjlya6/2hDW7Kf9gAy8Oay2Mq0wKo/30f6f48ae7630ab2b4aaad5f4eea16b5/Andrey_Akinshin_-_Let_s_talk_about_performance_testing.pdf
       - key: slideshare
@@ -536,6 +565,38 @@ talks:
         url: https://www.youtube.com/watch?v=mnPJZxm2yyw
       - key: slideshare
         url: http://www.slideshare.net/AndreyAkinshin/net-52218739
+      - key: photos
+        url: https://vk.com/album-65845767_217053120
+  - date: 2015-06-05
+    event: DotNext 2015 Piter
+    event-type: conference
+    event-hint_ru: Конференция .NET-разработчиков
+    event-hint_en: Independent .NET conference
+    title_en: "Panel discussion: .NET performance"
+    title_ru: Круглый стол .NET performance
+    location_en: St. Petersburg, Russia
+    location_ru: г. Санкт-Петербург
+    links:
+      - key: event
+        url: http://2015.dotnext-piter.ru/
+      - key: talk
+        url: http://2015.dotnext-piter.ru/#performance_talk
+      - key: photos
+        url: https://vk.com/album-65845767_217053120
+  - date: 2015-06-05
+    event: DotNext 2015 Piter
+    event-type: conference
+    event-hint_ru: Конференция .NET-разработчиков
+    event-hint_en: Independent .NET conference
+    title_en: "Panel discussion: .NET cross-platform developments"
+    title_ru: Круглый стол .NET cross-platform development
+    location_en: St. Petersburg, Russia
+    location_ru: г. Санкт-Петербург
+    links:
+      - key: event
+        url: http://2015.dotnext-piter.ru/
+      - key: talk
+        url: http://2015.dotnext-piter.ru/#cross_platform_talk
       - key: photos
         url: https://vk.com/album-65845767_217053120
   - date: 2015-05-29
