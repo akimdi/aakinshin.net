@@ -3,6 +3,19 @@ talks:
   # 2018
   ######################################################################################################################
   - date: 2018-01-29
+    event_en: CSC Nsk 2018 Open Days
+    event_ru: День открытых дверей CSC Nsk 2018
+    event-type: lecture
+    title_en: Let's talk about memory
+    title_ru: Поговорим про память
+    location_en: Novosibirsk State University, Novosibirsk, Russia
+    location_ru: г. Новосибирск, Новосибирский государственный университет
+    links:
+      - key: event
+        url: https://www.nsu.ru/n/media/events/sobytiya-obrazovaniya/den-otkrytykh-dverey-cs-tsentra-v-ngu/
+      - key: org
+        url: https://compscicenter.ru/
+  - date: 2018-01-29
     event_en: Lecture in Computer Science Center
     event_ru: Лекция в Computer Science Center
     event-type: lecture
