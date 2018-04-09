@@ -6,9 +6,123 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Sat, 07 Apr 2018 07:19:32 GMT</pubDate>
-    <lastBuildDate>Sat, 07 Apr 2018 07:19:32 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Apr 2018 03:43:26 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Apr 2018 03:43:26 GMT</lastBuildDate>
 
+        <item>
+            <title>BenchmarkDotNet v0.10.14</title>
+            <link>http://aakinshin.net/blog/post/bdn-v0_10_14/</link> 
+            <pubDate>Mon, 09 Apr 2018 00:00:00 GMT</pubDate>
+            <author>Андрей Акиньшин</author>
+            <guid>http://aakinshin.net/blog/post/bdn-v0_10_14/</guid>
+            <description>&lt;p&gt;BenchmarkDotNet v0.10.14 has been released! This release includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Per-method parameterization&lt;/strong&gt; (&lt;a href=&quot;http://benchmarkdotnet.org/Advanced/Arguments.htm&quot;&gt;Read more&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Console histograms and multimodal disribution detection&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Many improvements for Mono disassembly support on Windows&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Many bugfixes&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In the &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues?q=milestone:v0.10.14&quot;&gt;v0.10.14&lt;/a&gt; scope,
+8 issues were resolved and 11 pull requests where merged.
+This release includes 47 commits by 8 contributors.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h3 id=&quot;resolved-issues-8&quot;&gt;Resolved issues (8)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/256&quot;&gt;#256&lt;/a&gt; Per-method parameterization (assignee: &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/429&quot;&gt;#429&lt;/a&gt; Detect multimodal distributions (assignee: &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/496&quot;&gt;#496&lt;/a&gt; Integration with TravisCI (assignee: &lt;a href=&quot;https://github.com/jongalloway&quot;&gt;@jongalloway&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/684&quot;&gt;#684&lt;/a&gt; Horology.ClockTests.ChronometerTest fails on Travis CI (macOS) (assignee: &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/689&quot;&gt;#689&lt;/a&gt; DisassemblyDiagnoser for Mono does not work on Windows and Linux (assignee: &lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/691&quot;&gt;#691&lt;/a&gt; Cannot run F# benchmarks when benchmark returns F# generic (assignee: &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/697&quot;&gt;#697&lt;/a&gt; Copy custom setting from app.config in multitarget projects (assignee: &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues/706&quot;&gt;#706&lt;/a&gt; Support private builds of .NET Runtime (assignee: &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;merged-pull-requests-11&quot;&gt;Merged pull requests (11)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/577&quot;&gt;#577&lt;/a&gt; Arguments (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/647&quot;&gt;#647&lt;/a&gt; Histograms and multimodal distribution detection, fixes #429 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/674&quot;&gt;#674&lt;/a&gt; Cleanup suggested by VS2017 Code Analysis (plus one typo) (by &lt;a href=&quot;https://github.com/shoelzer&quot;&gt;@shoelzer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/675&quot;&gt;#675&lt;/a&gt; Fix IDE0034: &#39;default&#39; expression can be simplified (by &lt;a href=&quot;https://github.com/shoelzer&quot;&gt;@shoelzer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/676&quot;&gt;#676&lt;/a&gt; Correct NodeTime text which links to NodaTime api (by &lt;a href=&quot;https://github.com/MishaHusiuk&quot;&gt;@MishaHusiuk&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/681&quot;&gt;#681&lt;/a&gt; Fix typo (Perdictor -&amp;gt; Predictor) (by &lt;a href=&quot;https://github.com/dmitry-ra&quot;&gt;@dmitry-ra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/682&quot;&gt;#682&lt;/a&gt; Fix typo (Perdictor -&amp;gt; Predictor) (by &lt;a href=&quot;https://github.com/dmitry-ra&quot;&gt;@dmitry-ra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/683&quot;&gt;#683&lt;/a&gt; Integration with TravisCI (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/694&quot;&gt;#694&lt;/a&gt; Fix 689 (by &lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/695&quot;&gt;#695&lt;/a&gt; Rename Program to UniqueProgramName to avoid conflicts, fixes #691 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/pull/696&quot;&gt;#696&lt;/a&gt; Build system: Update dotnet SDK and dotnet runtime. Enable FastTests netcoreapp1.1 on non-Windows. (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;commits-47&quot;&gt;Commits (47)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/41aeea864dc474089cc12e365b9f90aaaf30bcd7&quot;&gt;41aeea&lt;/a&gt; Histograms and multimodal distribution detection, fixes #429 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/960e58ae4574d28eba7e077d12bcae5da5617433&quot;&gt;960e58&lt;/a&gt; Handle measurements with zero operations (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/19cdddef766eaf575a4bbbcd4902dfbd05841c99&quot;&gt;19cddd&lt;/a&gt; Fix typo in BaselineScaledColumn.cs (by &lt;a href=&quot;https://github.com/dfederm&quot;&gt;@dfederm&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/a99594845336557f684d77a2ecfb6e38398d25df&quot;&gt;a99594&lt;/a&gt; Merge pull request #673 from dfederm/dfederm/fix-typo (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/5b34257e3a9f86c113a3fcb9561ffc00c33009b0&quot;&gt;5b3425&lt;/a&gt; Cleanup suggested by VS2017 Code Analysis (plus one typo) (#674) (by &lt;a href=&quot;https://github.com/shoelzer&quot;&gt;@shoelzer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/16b6118bcda1acb92966957f90400d3a2c53e0a1&quot;&gt;16b611&lt;/a&gt; Fix IDE0034: &#39;default&#39; expression can be simplified (by &lt;a href=&quot;https://github.com/shoelzer&quot;&gt;@shoelzer&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/048b32a7f79c744614e497806fc761e7744f2e4f&quot;&gt;048b32&lt;/a&gt; Merge pull request #675 from shoelzer/master (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/9d5f718dd9e4ddaebc7b2d0a5ce55201a237bcca&quot;&gt;9d5f71&lt;/a&gt; Correct NodeTime text which links to NodaTime lib (by &lt;a href=&quot;https://github.com/MishaHusiuk&quot;&gt;@MishaHusiuk&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/c450c7cb24bfd26299ca515d84b63cb75d260113&quot;&gt;c450c7&lt;/a&gt; Merge pull request #676 from MishaHusiuk/patch-1 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/9fad526013e8e920abdb78d6eca80967d291144c&quot;&gt;9fad52&lt;/a&gt; Fix typo (Perdictor -&amp;gt; Predictor) (by &lt;a href=&quot;https://github.com/dmitry-ra&quot;&gt;@dmitry-ra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/3d906fcc7fcddbfa2868bd840dd1f1082993817a&quot;&gt;3d906f&lt;/a&gt; Fix typo (Perdictor -&amp;gt; Predictor) (by &lt;a href=&quot;https://github.com/dmitry-ra&quot;&gt;@dmitry-ra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/d1a48e7387992a91cb12b4a059cea55714d31bc4&quot;&gt;d1a48e&lt;/a&gt; Merge pull request #681 from dmitry-ra/master (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/4ccd352ef4863e4836d87fe40037d0432ef51b11&quot;&gt;4ccd35&lt;/a&gt; Merge pull request #682 from dmitry-ra/patch-1 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/f743a17cafa3a28899ae01f962c01b69a0d8c540&quot;&gt;f743a1&lt;/a&gt; CakeBuild 0.24.0 -&amp;gt; 0.26.1 (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/c5eb4054be58b67c7fd1b932da9f3a60af349028&quot;&gt;c5eb40&lt;/a&gt; Remove postProjects from solution file. (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/e60387eeceffbd9b3cb89fadba5185f16b8dce65&quot;&gt;e60387&lt;/a&gt; Pass correct configuration to test settings (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/224ab8edaed6c510a2b812fac36bc1b3a51fd230&quot;&gt;224ab8&lt;/a&gt; Disable public sign option for F# project (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/ee98f30366a14c31b0cb794c8382e4c7b950d7e1&quot;&gt;ee98f3&lt;/a&gt; Limit Max CPU count for msbuild workers (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/17031d42b5bc716e1d4c472027334da5d0bb157e&quot;&gt;17031d&lt;/a&gt; Fix readme file (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/6fbae80e5f300ee1d6fd24f1847ebaea369a6484&quot;&gt;6fbae8&lt;/a&gt; One more update to readme file (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/cb90f264df1b1251b071487e9e2e703b767cbeda&quot;&gt;cb90f2&lt;/a&gt; disable Travis failing test #684 to unblock #683 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/782ca71b701fcbaf558d948da0fec5fae44cd79d&quot;&gt;782ca7&lt;/a&gt; Merge pull request #683 from Ky7m/Integration-with-TravisCI (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/eebf923782161fe908d8aa48d5b5ea4764f32456&quot;&gt;eebf92&lt;/a&gt; Merge branch &#39;master&#39; into multimodal (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/10511b74d525d6705e901c8fb6b2307e95f2cf17&quot;&gt;10511b&lt;/a&gt; Merge pull request #647 from dotnet/multimodal (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/57bc17826f153a34032d256253fc77677fdc3d02&quot;&gt;57bc17&lt;/a&gt; Fix bug in ClockTests.ChronometerTest, fixes #684 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/7c4b14e4d68ad6dd595fa194be938245411d0e4f&quot;&gt;7c4b14&lt;/a&gt; Arguments (#577), fixes #256 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/40771c7ea54b1a2d8eda5492b953e3843eb2cac4&quot;&gt;40771c&lt;/a&gt; Update dotnet SDK (2.1.4 -&amp;gt; 2.1.101) and dotnet runtime (1.1.6 -&amp;gt; 1.1.7). (by &lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/88a9db59c473b75935240dd98fa5788d7816fab5&quot;&gt;88a9db&lt;/a&gt; Merge pull request #696 from Ky7m/build-runtime-update (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/4ac6ad6fec08ef8cf5a7edf6008f964a24b7e9a7&quot;&gt;4ac6ad&lt;/a&gt; we need different name than typical &amp;quot;Program&amp;quot; to avoid problems with referenc... (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/1178d6bb00746ba79681175bb9ca00f86086a499&quot;&gt;1178d6&lt;/a&gt; Update build badges (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/24ed1f45a8c69a6c1d0d6fa4e4c086acee4fc6ed&quot;&gt;24ed1f&lt;/a&gt; ProcessHelper: handle null Data values in OutputDataReceived, fix #689 (by &lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/7a3d2b523d18f00dbc0ebd5e1e4590458ca0f2c2&quot;&gt;7a3d2b&lt;/a&gt; MonoDisassembler improvements (by &lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/f1a0f5ba7acc35069d42f2a75bf976608f055b7d&quot;&gt;f1a0f5&lt;/a&gt; Merge pull request #694 from morgan-kn/Fix689 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/428905890bd88e341c83e8a8b68ba1d0841c1e01&quot;&gt;428905&lt;/a&gt; .NET Core apps are .dlls (not .exes), fixes #697 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/befbc8fb292689c6cca192fa5f6a125cde151bec&quot;&gt;befbc8&lt;/a&gt; Add FAQ notes about #692 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/b4504b925096dfe0887f6a5bf5a8aef6b439116e&quot;&gt;b4504b&lt;/a&gt; Support private builds of .NET Runtime, fixes #706 (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/c93e1e0502b620d00881713123659ded30ca9b32&quot;&gt;c93e1e&lt;/a&gt; Introduce separate logic for Windows10 brand strings (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/68576625d19bfbd3c02ab7a7c194536b01a370b2&quot;&gt;685766&lt;/a&gt; Shortify Windows 10 brand strings in the summary (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/9bdd0cc6052d1f108ec371540685775fcd19d347&quot;&gt;9bdd0c&lt;/a&gt; Shortify cpu info in summary (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/2288ad2756f109a127953ab8b72d37e9b4a42cce&quot;&gt;2288ad&lt;/a&gt; Prettify macOS brand string (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/8a0b484804e237f5b20af3e6e8bbe24ff9cb88a0&quot;&gt;8a0b48&lt;/a&gt; Handle tailed nop instructions in mono disasm output (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/d808343a137ff82e8f0a2dea4813c9c43895621d&quot;&gt;d80834&lt;/a&gt; Advanced DryJob attributes (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/9a37ad2c2ec7235a36539b101d5419c736a3298f&quot;&gt;9a37ad&lt;/a&gt; Handle invalid mono disasm outputs (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/21d6d785b18418e52c884da2a3341e8e37588ba9&quot;&gt;21d6d7&lt;/a&gt; Add IntroDisasm (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/5e37b515b26d5c95032df6acc13dd7e52ecc0d11&quot;&gt;5e37b5&lt;/a&gt; Add &amp;quot;Disassembly Diagnoser for Mono on Windows&amp;quot; in docs (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/c2c4e8cc5ff71c8974b528d692096c6de0f0eba4&quot;&gt;c2c4e8&lt;/a&gt; set COMPLUS_Version env var for private Clr builds even if no env vars were d... (by &lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/commit/88b088a6a1a6079a60e0f8847068939d2927559d&quot;&gt;88b088&lt;/a&gt; Set library version: 0.10.14 (by &lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;contributors-8&quot;&gt;Contributors (8)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Adam Sitnik (&lt;a href=&quot;https://github.com/adamsitnik&quot;&gt;@adamsitnik&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Andrey Akinshin (&lt;a href=&quot;https://github.com/AndreyAkinshin&quot;&gt;@AndreyAkinshin&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;David Federman (&lt;a href=&quot;https://github.com/dfederm&quot;&gt;@dfederm&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dmitry Razumikhin (&lt;a href=&quot;https://github.com/dmitry-ra&quot;&gt;@dmitry-ra&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Igor Fesenko (&lt;a href=&quot;https://github.com/Ky7m&quot;&gt;@Ky7m&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Irina Ananyeva (&lt;a href=&quot;https://github.com/morgan-kn&quot;&gt;@morgan-kn&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;MishaHusiuk (&lt;a href=&quot;https://github.com/MishaHusiuk&quot;&gt;@MishaHusiuk&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Steve Hoelzer (&lt;a href=&quot;https://github.com/shoelzer&quot;&gt;@shoelzer&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thank you very much!&lt;/p&gt;
+&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet&quot;&gt;BenchmarkDotNet on GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://benchmarkdotnet.org/&quot;&gt;Official documentation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/wiki/ChangeLog&quot;&gt;ChangeLog&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nuget.org/packages/BenchmarkDotNet/0.10.14&quot;&gt;NuGet package&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/issues?q=milestone:v0.10.14&quot;&gt;v0.10.14 milestone&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet/compare/v0.10.13...v0.10.14&quot;&gt;v0.10.14 commits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+        </item>
         <item>
             <title>BenchmarkDotNet v0.10.13</title>
             <link>http://aakinshin.net/blog/post/bdn-v0_10_13/</link> 

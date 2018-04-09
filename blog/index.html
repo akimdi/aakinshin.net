@@ -122,6 +122,30 @@
     <div class="container">
       <div class="blog-main">
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_14/'>BenchmarkDotNet v0.10.14</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> April 09, 2018.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/benchmarkdotnet"><span class="badge badge-pill badge-info">BenchmarkDotNet</span></a>
+                <a href="/blog/tag/benchmarking"><span class="badge badge-pill badge-info">benchmarking</span></a>
+        </span><br /><br />
+        <p>BenchmarkDotNet v0.10.14 has been released! This release includes:</p>
+<ul>
+<li><strong>Per-method parameterization</strong> (<a href="http://benchmarkdotnet.org/Advanced/Arguments.htm">Read more</a>)</li>
+<li><strong>Console histograms and multimodal disribution detection</strong> (A blog post is coming soon)</li>
+<li><strong>Many improvements for Mono disassembly support on Windows</strong> (A blog post is coming soon)</li>
+<li><strong>Many bugfixes</strong></li>
+</ul>
+<p>In the <a href="https://github.com/dotnet/BenchmarkDotNet/issues?q=milestone:v0.10.14">v0.10.14</a> scope,
+8 issues were resolved and 11 pull requests where merged.
+This release includes 47 commits by 8 contributors.</p>
+</p>
+        <a href='/blog/post/bdn-v0_10_14/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/bdn-v0_10_14/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_13/'>BenchmarkDotNet v0.10.13</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> March 02, 2018.
@@ -400,48 +424,6 @@ Of course, it does.
 Today I want to tell you a story about such bug in <a href="https://www.jetbrains.com/rider/">Rider</a> which was a headache for several weeks.</p>
 </p>
         <a href='/blog/post/namedmutex-on-mono/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/namedmutex-on-mono/#disqus_thread">Comments</a><br /><br />
-        <hr />
-    </div>
-<div class="blog-post">
-        <h2 class="blog-post-title"><a href='/blog/post/invaliddataexception-in-getprocesses/'>InvalidDataException in Process.GetProcesses</a></h2>
-        <span class="blog-post-meta">
-          <b>Date:</b> February 10, 2017.
-          <b>Tags:</b>
-                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
-                <a href="/blog/tag/rider"><span class="badge badge-pill badge-info">Rider</span></a>
-                <a href="/blog/tag/bugs"><span class="badge badge-pill badge-info">Bugs</span></a>
-                <a href="/blog/tag/xplat"><span class="badge badge-pill badge-info">Xplat</span></a>
-                <a href="/blog/tag/coreclr"><span class="badge badge-pill badge-info">CoreCLR</span></a>
-        </span><br /><br />
-        <p>Consider the following program:</p>
-<pre><code class="language-cs">public static void Main(string[] args)
-{
-    try
-    {
-        Process.GetProcesses();
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e);
-    }
-}
-</code></pre>
-<p>It seems that all exceptions should be caught.
-However, <em>sometimes</em>, I had the following exception on Linux with <code>dotnet cli-1.0.0-preview2</code>:</p>
-<pre><code>$ dotnet run
-System.IO.InvalidDataException: Found invalid data while decoding.
-   at System.IO.StringParser.ParseNextChar()
-   at Interop.procfs.TryParseStatFile(String statFilePath, ParsedStat&amp; result, ReusableTextReader reusableReader)
-   at System.Diagnostics.ProcessManager.CreateProcessInfo(ParsedStat procFsStat, ReusableTextReader reusableReader)
-   at System.Diagnostics.ProcessManager.CreateProcessInfo(Int32 pid, ReusableTextReader reusableReader)
-   at System.Diagnostics.ProcessManager.GetProcessInfos(String machineName)
-   at System.Diagnostics.Process.GetProcesses(String machineName)
-   at System.Diagnostics.Process.GetProcesses()
-   at DotNetCoreConsoleApplication.Program.Main(String[] args) in /home/akinshin/Program.cs:line 12
-</code></pre>
-<p>How is that possible?</p>
-</p>
-        <a href='/blog/post/invaliddataexception-in-getprocesses/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/invaliddataexception-in-getprocesses/#disqus_thread">Comments</a><br /><br />
         <hr />
     </div>
 </div>
