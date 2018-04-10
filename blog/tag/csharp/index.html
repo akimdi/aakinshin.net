@@ -124,6 +124,42 @@
 
 <h1 id="csharp">Posts about C#</h1>
 <div class="blog-post">
+        <h2 class="blog-post-title"><a href='/blog/post/dotnet-crossruntime-disasm/'>Cross-runtime .NET disassembly with BenchmarkDotNet</a></h2>
+        <span class="blog-post-meta">
+          <b>Date:</b> April 10, 2018.
+          <b>Tags:</b>
+                <a href="/blog/tag/dotnet"><span class="badge badge-pill badge-info">.NET</span></a>
+                <a href="/blog/tag/csharp"><span class="badge badge-pill badge-info">C#</span></a>
+                <a href="/blog/tag/benchmarkdotnet"><span class="badge badge-pill badge-info">BenchmarkDotNet</span></a>
+                <a href="/blog/tag/benchmarking"><span class="badge badge-pill badge-info">benchmarking</span></a>
+                <a href="/blog/tag/disassembly"><span class="badge badge-pill badge-info">disassembly</span></a>
+        </span><br /><br />
+        <p><a href="https://github.com/dotnet/BenchmarkDotNet">BenchmarkDotNet</a> is a cool tool for benchmarking.
+It has a lot of useful features that help you with performance investigations.
+However, you can use these features even if you are not actually going to benchmark something.
+One of these features is <code>DisassemblyDiagnoser</code>.
+It shows you a disassembly listing of your code for all required runtimes.
+In this post, I will show you how to get disassembly listing for .NET Framework, .NET Core, and Mono with one click!
+You can do it with a very small code snippet like this:</p>
+<pre><code class="language-cs">[DryCoreJob, DryMonoJob, DryClrJob(Platform.X86)]
+[DisassemblyDiagnoser]
+public class IntroDisasm
+{
+    [Benchmark]
+    public double Sum()
+    {
+        double res = 0;
+        for (int i = 0; i &lt; 64; i++)
+            res += i;
+        return res;
+    }
+}
+</code></pre>
+</p>
+        <a href='/blog/post/dotnet-crossruntime-disasm/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/dotnet-crossruntime-disasm/#disqus_thread">Comments</a><br /><br />
+        <hr />
+    </div>
+<div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/bdn-v0_10_14/'>BenchmarkDotNet v0.10.14</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> April 09, 2018.
