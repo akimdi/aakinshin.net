@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Sat, 14 Apr 2018 05:40:12 GMT</pubDate>
-    <lastBuildDate>Sat, 14 Apr 2018 05:40:12 GMT</lastBuildDate>
+    <pubDate>Sat, 14 Apr 2018 05:46:41 GMT</pubDate>
+    <lastBuildDate>Sat, 14 Apr 2018 05:46:41 GMT</lastBuildDate>
 
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
