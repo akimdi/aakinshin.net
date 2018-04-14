@@ -2,7 +2,13 @@ talks:
   ######################################################################################################################
   # 2018
   ######################################################################################################################
-  - date: 2018-01-29
+  - date: 2018-04-12
+    event: Internal JetBrains Conference
+    event-type: conference
+    title: Future of Performance Testing
+    location_en: St. Petersburg, Russia
+    location_ru: г. Санкт-Петербург
+  - date: 2018-03-30
     event_en: CSC Nsk 2018 Open Days
     event_ru: День открытых дверей CSC Nsk 2018
     event-type: lecture
