@@ -76,8 +76,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Disqus -->
-    <script id="dsq-count-scr" src="//aakinshinnet-ru.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -123,7 +121,7 @@
       <p style="font-size:150%"><a href="/blog/">Последние посты доступны только в английской версии блога</a></p>
 <hr />
 <div class="blog-main">
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/arrays-internal-structure/'>Внутреннее устройство массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 11 октября 2013.
@@ -133,10 +131,10 @@
                 <a href="/ru/blog/tag/arrays"><span class="badge badge-pill badge-info">Arrays</span></a>
         </span><br /><br />
         <p>Иногда бывает полезно понимать, как выглядит внутреннее представление объектов, с которыми мы работаем. В этой статье я хотел бы поговорить о массивах: как именно они хранятся в памяти, какие IL-команды используются для работы с ними, как выглядит ассемблерный код при обращении к их элементам. Я рассмотрю три вида массивов: single (<code>T[]</code>), rectangular (<code>T[,]</code>), jagged (<code>T[][]</code>). Также будет затронута тема массивов с ненулевой нижней границей (<code>T[*]</code>) и нюансов работы с ними.</p>
-        <a href='/ru/blog/post/arrays-internal-structure/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/arrays-internal-structure/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/arrays-internal-structure/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/cheatsheet-rounding/'>Учимся округлять в C#</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 18 сентября 2013.
@@ -148,10 +146,10 @@
         </span><br /><br />
         <p>А знаете ли вы, что <code>Math.Round(1.5) == Math.Round(2.5) == 2</code>? Можете ли сходу сказать, сколько будет <code>-7%3</code> и <code>7%-3</code>? Помните ли, чем отличаются
 <code>Math.Round</code>, <code>Math.Floor</code>, <code>Math.Ceiling</code>, <code>Math.Truncate</code>? А как происходит округление при использовании <code>string.Format</code>? Давайте немного погрузимся в мир округлений и разберёмся с нюансами, которые не для всех могут быть очевидными.</p>
-        <a href='/ru/blog/post/cheatsheet-rounding/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/cheatsheet-rounding/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/cheatsheet-rounding/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/typehandle/'>Вся правда о TypeHandle в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 14 сентября 2013.
@@ -164,10 +162,10 @@
                 <a href="/ru/blog/tag/typedesc"><span class="badge badge-pill badge-info">TypeDesc</span></a>
         </span><br /><br />
         <p>В разных умных книжках и статьях про .NET я часто наталкивался на упоминания про TypeHandle. Чаще всего пишут, что у каждого .NET-объекта в заголовке находится некоторый TypeHandle, который представляет собой ссылку на тип. Ещё пишут, что TypeHandle — это всегда указатель на таблицу методов типа. А в некоторых местах мне доводилось встречать информацию о том, что TypeHandle указывает на некий TypeDesc. В общем, я устал от неразберихи: давайте вместе разберёмся что к чему. А для этого нам придётся немного подизассемблировать, поизучать дампы памяти и залезть в исходники CLI.</p>
-        <a href='/ru/blog/post/typehandle/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/typehandle/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/typehandle/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/arrays-access-performance/'>Сравнение производительности массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 31 августа 2013.
@@ -183,10 +181,10 @@
 <p>Платформа .NET поддерживает два способа задания многомерных массивов: прямоугольные (rectangular) и изломанные (jagged). Второй способ по сути представляет собой массив массивов. Это обстоятельство создаёт у многих программистов иллюзию того, что jagged-массивы должны работать медленнее, т.к. обращение к их элементам реализуется через многократные переходы по ссылкам в управляемой куче. Но на самом деле jagged-массивы могут работают быстрее (если речь идёт непосредственно о работе с массивами, а не о их инициализации), ведь они представляют собой комбинацию одномерных (single) массивов, работа с которыми в CLR весьма оптимизирована (за счёт IL-команд <code>newarr</code>, <code>ldelem</code>, <code>ldelema</code>, <code>ldlen</code>, <code>stelem</code>). Другим подходом к представлению многомерных данных является использование одномерного массива с ручным преобразованием координат (в массиве размерности N<em>M для обращения к элементу [i,j] будем писать [i</em>M+j]). Если производительности не хватает, то можно использовать неуправляемый код, но этот случай мы сейчас рассматривать не будем, остановимся на трёх вышеозначенных способах. Для замеров времени используется
 <a href="https://github.com/AndreyAkinshin/BenchmarkDotNet">BenchmarkDotNet</a>. Рассмотрим C# код, который замеряет время работы каждого варианта (полный вариант кода:
 <a href="https://github.com/AndreyAkinshin/BenchmarkDotNet/blob/master/Benchmarks/MultidimensionalArrayProgram.cs">MultidimensionalArrayProgram.cs</a>, тестировать следует в <strong>Release mode without debugging</strong>). Данные результаты получены в сборке под x64 для процессора Intel Core i7-3632QM CPU 2.20GHz и параметров N=M=100, IterationCount=100000. Исследование вопроса о влиянии используемой архитектуры и параметров запуска на результат бенчмарка можно найти во второй части статьи.
-        <a href='/ru/blog/post/arrays-access-performance/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/arrays-access-performance/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/arrays-access-performance/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/static-array-iteration/'>Об итерировании статичных массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 29 августа 2013.
@@ -201,10 +199,10 @@
         <h2 id="section">Часть 1</h2>
 <p>Управляемый подход платформы .NET делает жизнь разработчиков достаточно простой, беря на себя многие рутинные операции. Большую часть времени программист может вообще не вспоминать о технической реализации платформы, сосредоточившись исключительно на логике своего приложения. Но иногда попадаются задачи, критичные по производительности. Существует множество различных подходов к оптимизации кода в таких ситуациях вплоть до переписывания наиболее важных частей кода через неуправляемый код. Однако, зачастую для увеличения скорости приложения достаточно понимать, сколько времени тратится на ту или иную операцию. Знание подобных вещей позволит оптимизировать некоторые методы с помощью достаточно простых модификаций исходного кода.</p>
 <p>В этой статье мне хотелось бы поговорить о скорости доступа к массивам, ссылки на которые хранятся в статичных переменных. Дело в том, что в скорость итерирования по ним в зависимости от условий запуска может быть ниже, чем для массива, ссылка на который хранится в обычном поле экземпляра класса или локальной переменной. Рассмотрим пример.
-        <a href='/ru/blog/post/static-array-iteration/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/static-array-iteration/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/static-array-iteration/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/comments/'>Комментировать или не комментировать?</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 28 августа 2013.
@@ -223,10 +221,10 @@
 <li><a href="http://www.ozon.ru/context/detail/id/8466390/">Д. Босуэлл, Т. Фаучер, «Читаемый код, или Программирование как искусство»</a></li>
 </ul>
 </p>
-        <a href='/ru/blog/post/comments/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/comments/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/comments/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/perfect-code-and-real-projects/'>Совершенный код и реальные проекты</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 28 августа 2013.
@@ -238,10 +236,10 @@
   <img src="/img/posts/dev/perfect-code-and-real-projects/front.png" height="200px" />
 </p>
 <p>Но, увы, всё это великолепие разбивается о суровую действительность и реальные проекты. Если мы говорим о продакшн-проекте, то пользователей не волнует, насколько красив ваш код и насколько хороша архитектура, их волнует, чтобы проект хорошо работал. Но я всё равно считаю, что в любом случае нужно стремиться писать правильно, просто при этом фанатизма быть не должно. После чтения различных холиваров на тему правильных подходов к написанию кода мне в глаза бросилась одна тенденция: каждый пытается применить означенные подходы не в целом к программированию, а только к своему опыту разработки, к своим проектам. Многие не осознают, что хорошие практики — это не абсолютные правила, которые должны строго соблюдаться в 100% сценариев, это лишь советы о том, как следовало бы поступать в большинстве ситуаций. На каждую хорошую практику всегда можно придумать несколько дюжин примеров, в которых она работать не будет. Но это вовсе не означает, что хорошая практика не такая уж и хорошая, просто её применили не к месту.</p>
-        <a href='/ru/blog/post/perfect-code-and-real-projects/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/perfect-code-and-real-projects/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/perfect-code-and-real-projects/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/undocumented-keywords-in-cs/'>Недокументированные ключевые слова C# или превращаем объект в тыкву</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 26 августа 2013.
@@ -252,10 +250,10 @@
                 <a href="/ru/blog/tag/benchmarking"><span class="badge badge-pill badge-info">Benchmarking</span></a>
         </span><br /><br />
         <p>Стандартный компилятор C# поддерживает 4 недокументированных ключевых слова: <code>__makeref</code>, <code>__reftype</code>, <code>__refvalue</code>, <code>__arglist</code>. Эти слова даже успешно распознаются в Visual Studio (хотя, ReSharper на них ругается). Они не даром исключены из стандарта — их использование может повлечь серьёзные проблемы с безопасностью. Поэтому не нужно их использовать везде подряд, но в отдельных исключительных случаях они могут пригодиться. В этом посте я обсужу предназначение недокументированных команд, рассмотрю вопросы их производительности и научусь превращать объект в тыкву.</p>
-        <a href='/ru/blog/post/undocumented-keywords-in-cs/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/undocumented-keywords-in-cs/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/undocumented-keywords-in-cs/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/gc-native/'>Неожиданное место для сборки мусора в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 08 августа 2013.
@@ -266,10 +264,10 @@
         </span><br /><br />
         <p>Платформа .NET обеспечивает нас высокоинтеллектуальным сборщиком мусора, который избавляет от рутины ручного управления памятью. И в 95% случаев можно действительно забыть про память и связанные с ней нюансы. Но вот оставшиеся 5% обладают своей спецификой, связанной с неуправляемыми ресурсами, слишком большими объектами и т.д. И тут лучше бы хорошо разбираться в том, как производится сборка мусора. В противном случае вас могут ждать очень неприятные сюрпризы.</p>
 <p>Как вы думаете, может ли GC собрать объект до того, как выполнится последний из его методов? Оказывается, может. Правда, для этого необходимо запустить приложение в Release mode и отдельно от студии (without debugging). В этом случае JIT-компилятор сделает определённые оптимизации, в результате которых такая ситуация возможна. Разумеется, делает он это только тогда, когда в оставшемся теле метода нет ссылок на сам объект или его поля. Казалось бы, достаточно невинная оптимизация. Но она может привести к проблемам, если мы имеем дело с неуправляемыми ресурсами: сборка объекта может произойти <em>до того</em>, как закончится операция над неуправляемым объектом, что вполне вероятно повлечёт падение приложения.</p>
-        <a href='/ru/blog/post/gc-native/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/gc-native/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/gc-native/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/closures/'>Неочевидности в использовании C#-замыканий</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 07 августа 2013.
@@ -303,7 +301,7 @@ private sealed class DisplayClass
 }
 </code></pre>
 </p>
-        <a href='/ru/blog/post/closures/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/closures/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/closures/'>Читать дальше</a><br /><br />
         <hr />
     </div>
 </div>

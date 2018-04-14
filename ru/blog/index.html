@@ -76,8 +76,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Disqus -->
-    <script id="dsq-count-scr" src="//aakinshinnet-ru.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -123,7 +121,7 @@
       <p style="font-size:150%"><a href="/blog/">Последние посты доступны только в английской версии блога</a></p>
 <hr />
 <div class="blog-main">
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/legacyjitx86-and-first-method-call/'>LegacyJIT-x86 и первый вызов метода</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 04 апреля 2016.
@@ -146,10 +144,10 @@ public string Sum()
 </code></pre>
 <p>Интересный факт: если вы вызовете <code>Stopwatch.GetTimestamp()</code> перед первым вызовом метода <code>Sum</code>, то это увеличит скорость работы метода в несколько раз (фокус работает только для LegacyJIT-x86).</p>
 </p>
-        <a href='/ru/blog/post/legacyjitx86-and-first-method-call/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/legacyjitx86-and-first-method-call/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/legacyjitx86-and-first-method-call/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/projecttypeguids/'>Visual Studio и ProjectTypeGuids.cs</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 27 февраля 2016.
@@ -167,10 +165,10 @@ public string Sum()
 error  : The operation could not be completed.
 </code></pre>
 </p>
-        <a href='/ru/blog/post/projecttypeguids/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/projecttypeguids/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/projecttypeguids/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/blittable/'>Blittable-типы</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 26 ноября 2015.
@@ -212,10 +210,10 @@ class Program
 <tr><td>Marshal.OffsetOf(typeof(MyStruct), "UInt128")</td><td>0</td><td>0</td><td>0</td></tr>
 </table>
 <p>Чтобы разобраться с ситуацией, нам необходимо узнать больше про blittable-типы.</p>
-        <a href='/ru/blog/post/blittable/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/blittable/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/blittable/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/ryujit-rc-and-constant-folding/'>RyuJIT RC и свёртка констант</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 12 мая 2015.
@@ -253,10 +251,10 @@ Sqrt13 | 55.40 ns |  0.571 ns |  18050993.06 |
 Sqrt14 |  1.43 ns | 0.0224 ns | 697125029.18 |
 </code></pre></p>
 <p>Как же так? Добавление в выражение одно дополнительного <code>Math.Sqrt</code> ускорило метод в 40 раз! Давайте разберёмся.</p>
-        <a href='/ru/blog/post/ryujit-rc-and-constant-folding/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/ryujit-rc-and-constant-folding/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/ryujit-rc-and-constant-folding/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Размотка маленьких циклов в разных версиях JIT</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 02 марта 2015.
@@ -286,10 +284,10 @@ static void Main()
 </code></pre>
 <p>Правильный ответ: зависит. В JIT-x86 под CLR2 был баг, который портил эту замечательную программу. А проблема кроется в оптимизации, которая назвается раскрутка маленького цикла. Тема интересная, давайте обсудим её подробно.</p>
 </p>
-        <a href='/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/ryujit-ctp5-and-loop-unrolling/'>RyuJIT CTP5 и размотка циклов</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 01 марта 2015.
@@ -315,10 +313,10 @@ static void Main()
 </code></pre>
 <p>Подобный подход может заметно увеличить производительность вашего кода. Итак, как же обстоят дела с раскруткой цикла в .NET?</p>
 </p>
-        <a href='/ru/blog/post/ryujit-ctp5-and-loop-unrolling/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/ryujit-ctp5-and-loop-unrolling/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/ryujit-ctp5-and-loop-unrolling/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/jit-version-determining-in-runtime/'>Определение версии JIT в рантайме</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 28 февраля 2015.
@@ -335,10 +333,10 @@ static void Main()
 </code></pre>
 <p>Я могу легко определить, что работаю под Mono, по наличию класса <code>Mono.Runtime</code>. Если это не так, то можно считать, что мы работаем с JIT от Microsoft. JIT-x86 легко узнать с помощью <code>IntPtr.Size == 4</code>. А вот чтобы отличить старый JIT-x64 от нового RyuJIT необходимо немного призадуматься. Далее я покажу, как это можно сделать с помощью бага JIT-x64, который я описывал в <a href="http://aakinshin.net/ru/blog/dotnet/subexpression-elimination-bug-in-jit-x64/">предыдущем посте</a>.</p>
 </p>
-        <a href='/ru/blog/post/jit-version-determining-in-runtime/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/jit-version-determining-in-runtime/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/jit-version-determining-in-runtime/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/subexpression-elimination-bug-in-jit-x64/'>История про баг в JIT-x64</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 27 февраля 2015.
@@ -360,10 +358,10 @@ static void Main()
 }
 </code></pre>
 <p>Если вы назвали конкретные числа, то ошиблись. Правильный ответ: зависит. Заголовок подсказывает нам, что под x64 программа может вести себя не так, как мы от неё ожидаем.</p>
-        <a href='/ru/blog/post/subexpression-elimination-bug-in-jit-x64/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/subexpression-elimination-bug-in-jit-x64/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/subexpression-elimination-bug-in-jit-x64/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/inlining-and-starg/'>История про инлайнинг под JIT-x86 и starg</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 26 февраля 2015.
@@ -392,10 +390,10 @@ public Decimal(int value) {
 }
 </code></pre>
 <p>В комментарии сказано, что если метод содержит IL-опкод <a href="https://msdn.microsoft.com/library/system.reflection.emit.opcodes.starg.aspx">starg</a>, то он не может быть заинлайнен под x86. Любопытно, не правда ли?</p>
-        <a href='/ru/blog/post/inlining-and-starg/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/inlining-and-starg/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/inlining-and-starg/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/migration-to-pretzel/'>Как я блог на кренделёк переводил</a></h2>
         <span class="blog-post-meta">
           <b>Дата:</b> 26 февраля 2015.
@@ -406,7 +404,7 @@ public Decimal(int value) {
 <p class="center">
   <img src="/img/posts/notes/migration-to-pretzel/pretzel.png" height="100px" />
 </p>
-        <a href='/ru/blog/post/migration-to-pretzel/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/migration-to-pretzel/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/migration-to-pretzel/'>Читать дальше</a><br /><br />
         <hr />
     </div>
 </div>

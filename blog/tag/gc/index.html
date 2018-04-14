@@ -76,8 +76,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Disqus -->
-    <script id="dsq-count-scr" src="//aakinshinnet-en.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -123,7 +121,7 @@
       <div class="blog-main">
 
 <h1 id="gc">Posts about GC</h1>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/mono-gc-collects/'>Analyzing distribution of Mono GC collections</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> February 20, 2018.
@@ -145,10 +143,10 @@ Today I want to share with you my favorite way to quickly get statistics
 of GC pauses in Mono and generate nice plots like this:</p>
 <div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/mono-gc-collects/plot-64.png" /></div>
 </p>
-        <a href='/blog/post/mono-gc-collects/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/mono-gc-collects/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/mono-gc-collects/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/gc-native/'>Unexpected area to collect garbage in .NET</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> August 08, 2013.
@@ -159,7 +157,7 @@ of GC pauses in Mono and generate nice plots like this:</p>
         </span><br /><br />
         <p>The .NET framework provides an intelligent garbage collector that saves us a trouble of manual memory management. And in 95% of cases you can forget about memory and related issues. But the remaining 5% have some specific aspects connected to unmanaged resources, too big objects, etc. And it’s better to know how the garbage is collected. Otherwise, you can get surprises.</p>
 <p>Do you think GC is able to collect an object till its last method is complete? It appears it is. But it is necessary to run an application in release mode without debugging. In this case JIT compiler will perform optimizations that will make this situation possible. Of course, JIT compiler does it when the remaining method body doesn’t contain references to the object or its fields. It should seem a very harmless optimization. But it can lead to the problems if you work with the unmanaged resources: object compilation can be executed before the operation over the unmanaged resource is finished. And most likely it will result in the application crash. </p>
-        <a href='/blog/post/gc-native/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/gc-native/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/gc-native/'>Read more</a><br /><br />
         <hr />
     </div>
 </div>

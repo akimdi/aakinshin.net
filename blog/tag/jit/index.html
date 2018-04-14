@@ -76,8 +76,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Disqus -->
-    <script id="dsq-count-scr" src="//aakinshinnet-en.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -123,7 +121,7 @@
       <div class="blog-main">
 
 <h1 id="jit">Posts about JIT</h1>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/legacyjitx86-and-first-method-call/'>LegacyJIT-x86 and first method call</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> April 04, 2016.
@@ -146,10 +144,10 @@ public string Sum()
 </code></pre>
 <p>An interesting fact: if you call <code>Stopwatch.GetTimestamp()</code> before the first call of the <code>Sum</code> method, you improve <code>Sum</code> performance several times (works only with LegacyJIT-x86).</p>
 </p>
-        <a href='/blog/post/legacyjitx86-and-first-method-call/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/legacyjitx86-and-first-method-call/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/legacyjitx86-and-first-method-call/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/ryujit-rc-and-constant-folding/'>RyuJIT RC and constant folding</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> May 12, 2015.
@@ -188,10 +186,10 @@ Common:  Type=Math_DoubleSqrtAvx  Mode=Throughput  Platform=X64  Jit=RyuJit  .NE
  Sqrt14 |  1.43 ns | 0.0224 ns | 697125029.18 |
 </code></pre>
 <p>How so? If I add one more <code>Math.Sqrt</code> to the expression, the method starts work 40 times faster! Let's examine the situation..</p>
-        <a href='/blog/post/ryujit-rc-and-constant-folding/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/ryujit-rc-and-constant-folding/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/ryujit-rc-and-constant-folding/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Unrolling of small loops in different JIT versions</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> March 02, 2015.
@@ -221,10 +219,10 @@ static void Main()
 </code></pre>
 <p>The right answer: it depends. There is a bug in CLR2 JIT-x86 which spoil this wonderful program. This story is about optimization that called unrolling of small loops. This is a very interesting theme, let's discuss it in detail.</p>
 </p>
-        <a href='/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/unrolling-of-small-loops-in-different-jit-versions/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/unrolling-of-small-loops-in-different-jit-versions/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/ryujit-ctp5-and-loop-unrolling/'>RyuJIT CTP5 and loop unrolling</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> March 01, 2015.
@@ -250,10 +248,10 @@ static void Main()
 </code></pre>
 <p>Such approach can significantly increase performance of your code. So, what's about loop unrolling in .NET?</p>
 </p>
-        <a href='/blog/post/ryujit-ctp5-and-loop-unrolling/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/ryujit-ctp5-and-loop-unrolling/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/ryujit-ctp5-and-loop-unrolling/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/jit-version-determining-in-runtime/'>JIT version determining in runtime</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> February 28, 2015.
@@ -270,10 +268,10 @@ static void Main()
 </code></pre>
 <p>It is easy to detect Mono by existing of the <code>Mono.Runtime</code> class. Otherwise, we can assume that we work with Microsoft JIT implementation. It is easy to detect JIT-x86 with help of <code>IntPtr.Size == 4</code>. The challenge is to distinguish JIT-x64 and RyuJIT. Next, I will show how you can do it with help of the bug from my <a href="http://aakinshin.net/en/blog/dotnet/subexpression-elimination-bug-in-jit-x64/">previous post</a>.</p>
 </p>
-        <a href='/blog/post/jit-version-determining-in-runtime/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/jit-version-determining-in-runtime/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/jit-version-determining-in-runtime/'>Read more</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/blog/post/subexpression-elimination-bug-in-jit-x64/'>A bug story about JIT-x64</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> February 27, 2015.
@@ -295,7 +293,7 @@ static void Main()
 }
 </code></pre>
 <p>If you think about specific numbers, you are wrong. The right answer: it depends. The post title suggests to us, the program can has a strange behavior for x64.</p>
-        <a href='/blog/post/subexpression-elimination-bug-in-jit-x64/'>Read more</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/blog/post/subexpression-elimination-bug-in-jit-x64/#disqus_thread">Comments</a><br /><br />
+        <a href='/blog/post/subexpression-elimination-bug-in-jit-x64/'>Read more</a><br /><br />
         <hr />
     </div>
 </div>

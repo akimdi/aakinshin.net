@@ -76,8 +76,6 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/28700916" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
-    <!-- Disqus -->
-    <script id="dsq-count-scr" src="//aakinshinnet-ru.disqus.com/count.js" async></script>
 
     <!-- jQuery -->
     <script src="/js/jquery-3.2.1.slim.min.js"></script>
@@ -123,7 +121,7 @@
       <div class="blog-main">
 
 <h1 id="arrays">Посты про Arrays</h1>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/arrays-internal-structure/'>Внутреннее устройство массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> 11 октября 2013.
@@ -133,10 +131,10 @@
                 <a href="/ru/blog/tag//arrays"><span class="badge badge-pill badge-info">Arrays</span></a>
         </span><br /><br />
         <p>Иногда бывает полезно понимать, как выглядит внутреннее представление объектов, с которыми мы работаем. В этой статье я хотел бы поговорить о массивах: как именно они хранятся в памяти, какие IL-команды используются для работы с ними, как выглядит ассемблерный код при обращении к их элементам. Я рассмотрю три вида массивов: single (<code>T[]</code>), rectangular (<code>T[,]</code>), jagged (<code>T[][]</code>). Также будет затронута тема массивов с ненулевой нижней границей (<code>T[*]</code>) и нюансов работы с ними.</p>
-        <a href='/ru/blog/post/arrays-internal-structure/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/arrays-internal-structure/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/arrays-internal-structure/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/arrays-access-performance/'>Сравнение производительности массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> 31 августа 2013.
@@ -152,10 +150,10 @@
 <p>Платформа .NET поддерживает два способа задания многомерных массивов: прямоугольные (rectangular) и изломанные (jagged). Второй способ по сути представляет собой массив массивов. Это обстоятельство создаёт у многих программистов иллюзию того, что jagged-массивы должны работать медленнее, т.к. обращение к их элементам реализуется через многократные переходы по ссылкам в управляемой куче. Но на самом деле jagged-массивы могут работают быстрее (если речь идёт непосредственно о работе с массивами, а не о их инициализации), ведь они представляют собой комбинацию одномерных (single) массивов, работа с которыми в CLR весьма оптимизирована (за счёт IL-команд <code>newarr</code>, <code>ldelem</code>, <code>ldelema</code>, <code>ldlen</code>, <code>stelem</code>). Другим подходом к представлению многомерных данных является использование одномерного массива с ручным преобразованием координат (в массиве размерности N<em>M для обращения к элементу [i,j] будем писать [i</em>M+j]). Если производительности не хватает, то можно использовать неуправляемый код, но этот случай мы сейчас рассматривать не будем, остановимся на трёх вышеозначенных способах. Для замеров времени используется
 <a href="https://github.com/AndreyAkinshin/BenchmarkDotNet">BenchmarkDotNet</a>. Рассмотрим C# код, который замеряет время работы каждого варианта (полный вариант кода:
 <a href="https://github.com/AndreyAkinshin/BenchmarkDotNet/blob/master/Benchmarks/MultidimensionalArrayProgram.cs">MultidimensionalArrayProgram.cs</a>, тестировать следует в <strong>Release mode without debugging</strong>). Данные результаты получены в сборке под x64 для процессора Intel Core i7-3632QM CPU 2.20GHz и параметров N=M=100, IterationCount=100000. Исследование вопроса о влиянии используемой архитектуры и параметров запуска на результат бенчмарка можно найти во второй части статьи.
-        <a href='/ru/blog/post/arrays-access-performance/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/arrays-access-performance/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/arrays-access-performance/'>Читать дальше</a><br /><br />
         <hr />
     </div>
-<div class="blog-post">
+    <div class="blog-post">
         <h2 class="blog-post-title"><a href='/ru/blog/post/static-array-iteration/'>Об итерировании статичных массивов в .NET</a></h2>
         <span class="blog-post-meta">
           <b>Date:</b> 29 августа 2013.
@@ -170,7 +168,7 @@
         <h2 id="section">Часть 1</h2>
 <p>Управляемый подход платформы .NET делает жизнь разработчиков достаточно простой, беря на себя многие рутинные операции. Большую часть времени программист может вообще не вспоминать о технической реализации платформы, сосредоточившись исключительно на логике своего приложения. Но иногда попадаются задачи, критичные по производительности. Существует множество различных подходов к оптимизации кода в таких ситуациях вплоть до переписывания наиболее важных частей кода через неуправляемый код. Однако, зачастую для увеличения скорости приложения достаточно понимать, сколько времени тратится на ту или иную операцию. Знание подобных вещей позволит оптимизировать некоторые методы с помощью достаточно простых модификаций исходного кода.</p>
 <p>В этой статье мне хотелось бы поговорить о скорости доступа к массивам, ссылки на которые хранятся в статичных переменных. Дело в том, что в скорость итерирования по ним в зависимости от условий запуска может быть ниже, чем для массива, ссылка на который хранится в обычном поле экземпляра класса или локальной переменной. Рассмотрим пример.
-        <a href='/ru/blog/post/static-array-iteration/'>Читать дальше</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="/ru/blog/post/static-array-iteration/#disqus_thread">Комментарии</a><br /><br />
+        <a href='/ru/blog/post/static-array-iteration/'>Читать дальше</a><br /><br />
         <hr />
     </div>
 </div>
