@@ -32,29 +32,6 @@ namespace OpenSource
                 builder.AppendLine();
             }
 
-            builder.AppendLine("<h5>Timeline</h5>");
-            builder.AppendLine("<ul>");
-            foreach (var activityGroup in activityGroups)
-            {
-                builder.Append("  <li>");
-                builder.Append("<b>");
-                builder.Append(activityGroup.Month);
-                builder.Append(":</b> ");
-                var first = true;
-                foreach (var repo in activityGroup.Repos)
-                {
-                    var href = "https://github.com/" + repo.Url;
-                    var caption = repo.RepoName;
-                    if (first)
-                        first = false;
-                    else
-                        builder.Append(", ");
-                    builder.Append($"<a href=\"{href}\">{caption}</a>");
-                }
-
-                builder.AppendLine("</li>");
-            }
-
             builder.AppendLine("</ul>");
 
             return builder.ToString();
