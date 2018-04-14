@@ -65,3 +65,5 @@ github:
         title: Interactive viewer for '.log' files
       - url: JetBrains/resharper-unity
         title: Unity support for both ReSharper and Rider
+      - url: traff/pty4j
+        title: Pty for Java
