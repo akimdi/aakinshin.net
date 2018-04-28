@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Sat, 14 Apr 2018 06:09:00 GMT</pubDate>
-    <lastBuildDate>Sat, 14 Apr 2018 06:09:00 GMT</lastBuildDate>
+    <pubDate>Sat, 28 Apr 2018 02:03:55 GMT</pubDate>
+    <lastBuildDate>Sat, 28 Apr 2018 02:03:55 GMT</lastBuildDate>
 
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
@@ -123,7 +123,7 @@ If you want to help with the disasm support, &lt;a href=&quot;https://github.com
             <description>&lt;p&gt;BenchmarkDotNet v0.10.14 has been released! This release includes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Per-method parameterization&lt;/strong&gt; (&lt;a href=&quot;http://benchmarkdotnet.org/Advanced/Arguments.htm&quot;&gt;Read more&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Console histograms and multimodal disribution detection&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Console histograms and multimodal disribution detection&lt;/strong&gt; (&lt;a href=&quot;/blog/post/dotnet-crossruntime-disasm/&quot;&gt;Read more&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Many improvements for Mono disassembly support on Windows&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Many bugfixes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;

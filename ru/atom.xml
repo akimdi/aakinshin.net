@@ -3,7 +3,7 @@
     <title>Блог Андрея Акиньшина</title>
     <link href="http://aakinshin.net"/>
     <link type="application/atom+xml" rel="self" href="http://aakinshin.net/ru/atom.xml"/>
-    <updated>2018-04-14T13:09:00.576168Z</updated>
+    <updated>2018-04-28T09:03:55.5642259Z</updated>
     <id>http://aakinshin.net/</id>
     <author>
         <name>Андрей Акиньшин</name>
@@ -130,7 +130,7 @@ If you want to help with the disasm support, &lt;a href=&quot;https://github.com
             <content type="html">&lt;p&gt;BenchmarkDotNet v0.10.14 has been released! This release includes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Per-method parameterization&lt;/strong&gt; (&lt;a href=&quot;http://benchmarkdotnet.org/Advanced/Arguments.htm&quot;&gt;Read more&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Console histograms and multimodal disribution detection&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Console histograms and multimodal disribution detection&lt;/strong&gt; (&lt;a href=&quot;/blog/post/dotnet-crossruntime-disasm/&quot;&gt;Read more&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Many improvements for Mono disassembly support on Windows&lt;/strong&gt; (A blog post is coming soon)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Many bugfixes&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
