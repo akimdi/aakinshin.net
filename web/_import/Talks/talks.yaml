@@ -2,6 +2,16 @@ talks:
   ######################################################################################################################
   # 2018
   ######################################################################################################################
+  - date: 2018-04-19
+    event: Open Day JetBrains Moscow 2018
+    event-type: conference
+    title_ru:  Как мы в Rider производительность улучшаем
+    title_en: How we improve performance in Rider
+    location_en: Moscow, Russia
+    location_ru: г. Москва
+    links:
+      - key: event
+        url: https://jetbrainsuniverse.timepad.ru/event/682524/
   - date: 2018-04-12
     event: Internal JetBrains Conference
     event-type: conference
