@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Tue, 08 May 2018 12:23:40 GMT</pubDate>
-    <lastBuildDate>Tue, 08 May 2018 12:23:40 GMT</lastBuildDate>
+    <pubDate>Tue, 08 May 2018 12:47:27 GMT</pubDate>
+    <lastBuildDate>Tue, 08 May 2018 12:47:27 GMT</lastBuildDate>
 
         <item>
             <title>A story about slow NuGet package browsing</title>
@@ -52,7 +52,7 @@ and &lt;a href=&quot;https://github.com/NuGet/NuGet.Client/blob/release-4.5.0-rt
         try
         {
             var r = await client.GetAsync(
-                &amp;quot;https://api-v2v3search-1.nuget.org:443/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&amp;quot;);
+                &amp;quot;https://api-v2v3search-0.nuget.org:443/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&amp;quot;);
             Console.Write(&amp;quot;OK&amp;quot;);
         }
         catch (Exception e)
@@ -73,12 +73,14 @@ On Windows, it produces the following distribution:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;~1sec&lt;/code&gt;:
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; sends a request;&lt;/li&gt;
 &lt;li&gt;request is finished without any problems;&lt;/li&gt;
 &lt;li&gt;we get the list of packages&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~125sec&lt;/code&gt;:
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; sends a request;&lt;/li&gt;
 &lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
 &lt;li&gt;we get the list of packages&lt;/li&gt;
@@ -86,6 +88,7 @@ On Windows, it produces the following distribution:&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~250sec&lt;/code&gt;:
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; sends a request;&lt;/li&gt;
 &lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
 &lt;li&gt;the server terminates the second request after 2 minutes;&lt;/li&gt;
@@ -95,6 +98,7 @@ On Windows, it produces the following distribution:&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;~375sec&lt;/code&gt;:
 &lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; sends a request;&lt;/li&gt;
 &lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
 &lt;li&gt;the server terminates the second request after 2 minutes;&lt;/li&gt;
@@ -104,8 +108,8 @@ On Windows, it produces the following distribution:&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;A remark: the first attempt uses &lt;code&gt;TLSv1.2&lt;/code&gt;, the second attempt uses &lt;code&gt;TLSv1.1&lt;/code&gt;, the third attempt uses &lt;code&gt;TLSv1&lt;/code&gt;.
-A screenshot from Wireshark for the &lt;code&gt;~250sec&lt;/code&gt; case:&lt;/p&gt;
+&lt;p&gt;A remark: on my machine, the first attempt uses &lt;code&gt;TLSv1.2&lt;/code&gt;, the second attempt uses &lt;code&gt;TLSv1.1&lt;/code&gt;, the third attempt uses &lt;code&gt;TLSv1&lt;/code&gt;.
+A screenshot from &lt;a href=&quot;https://www.wireshark.org/&quot;&gt;Wireshark&lt;/a&gt; for the &lt;code&gt;~250sec&lt;/code&gt; case:&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/wireshark.png&quot; /&gt;&lt;/div&gt;
 &lt;p&gt;We tried it on our local machines and double checked it on an Azure VM:&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/azure.png&quot; /&gt;&lt;/div&gt;
@@ -116,7 +120,8 @@ That&#39;s how it looks in Visual Studio:&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/vs-for-mac.gif&quot; /&gt;&lt;/div&gt;
 &lt;p&gt;It&#39;s hard to reproduce this issue in &lt;a href=&quot;https://www.jetbrains.com/rider/&quot;&gt;Rider&lt;/a&gt; because we are &lt;a href=&quot;https://aakinshin.net/blog/post/rider-nuget-search/&quot;&gt;using a persistent local cache of search results&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/rider.gif&quot; /&gt;&lt;/div&gt;
-&lt;p&gt;Currently, the problem is reproduced on &lt;code&gt;api-v2v3search-0.nuget.org&lt;/code&gt; (&lt;code&gt;52.162.253.198&lt;/code&gt;) and &lt;code&gt;api-v2v3search-1.nuget.org&lt;/code&gt; (&lt;code&gt;13.84.46.37&lt;/code&gt;).&lt;/p&gt;</description>
+&lt;p&gt;Currently, the problem is reproduced on &lt;code&gt;api-v2v3search-0.nuget.org&lt;/code&gt; (&lt;code&gt;52.162.253.198&lt;/code&gt;) and &lt;code&gt;api-v2v3search-1.nuget.org&lt;/code&gt; (&lt;code&gt;13.84.46.37&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Since it&#39;s a server-side problem and we can&#39;t fix it locally, we created an issue on GitHub: &lt;a href=&quot;https://github.com/NuGet/Home/issues/6921&quot;&gt;NuGet/Home#6921&lt;/a&gt;.&lt;/p&gt;</description>
         </item>
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>

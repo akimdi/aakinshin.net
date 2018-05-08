@@ -166,7 +166,7 @@ and <a href="https://github.com/NuGet/NuGet.Client/blob/release-4.5.0-rtm/src/Nu
         try
         {
             var r = await client.GetAsync(
-                &quot;https://api-v2v3search-1.nuget.org:443/query?q=&amp;skip=0&amp;take=10&amp;prerelease=false&amp;semVerLevel=2.0.0&quot;);
+                &quot;https://api-v2v3search-0.nuget.org:443/query?q=&amp;skip=0&amp;take=10&amp;prerelease=false&amp;semVerLevel=2.0.0&quot;);
             Console.Write(&quot;OK&quot;);
         }
         catch (Exception e)
@@ -187,12 +187,14 @@ On Windows, it produces the following distribution:</p>
 <ul>
 <li><code>~1sec</code>:
 <ul>
+<li><code>HttpClient</code> sends a request;</li>
 <li>request is finished without any problems;</li>
 <li>we get the list of packages</li>
 </ul>
 </li>
 <li><code>~125sec</code>:
 <ul>
+<li><code>HttpClient</code> sends a request;</li>
 <li>the server terminates the request after 2 minutes;</li>
 <li><code>HttpClient</code> retries the request;</li>
 <li>we get the list of packages</li>
@@ -200,6 +202,7 @@ On Windows, it produces the following distribution:</p>
 </li>
 <li><code>~250sec</code>:
 <ul>
+<li><code>HttpClient</code> sends a request;</li>
 <li>the server terminates the request after 2 minutes;</li>
 <li><code>HttpClient</code> retries the request;</li>
 <li>the server terminates the second request after 2 minutes;</li>
@@ -209,6 +212,7 @@ On Windows, it produces the following distribution:</p>
 </li>
 <li><code>~375sec</code>:
 <ul>
+<li><code>HttpClient</code> sends a request;</li>
 <li>the server terminates the request after 2 minutes;</li>
 <li><code>HttpClient</code> retries the request;</li>
 <li>the server terminates the second request after 2 minutes;</li>
@@ -218,8 +222,8 @@ On Windows, it produces the following distribution:</p>
 </ul>
 </li>
 </ul>
-<p>A remark: the first attempt uses <code>TLSv1.2</code>, the second attempt uses <code>TLSv1.1</code>, the third attempt uses <code>TLSv1</code>.
-A screenshot from Wireshark for the <code>~250sec</code> case:</p>
+<p>A remark: on my machine, the first attempt uses <code>TLSv1.2</code>, the second attempt uses <code>TLSv1.1</code>, the third attempt uses <code>TLSv1</code>.
+A screenshot from <a href="https://www.wireshark.org/">Wireshark</a> for the <code>~250sec</code> case:</p>
 <div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/nuget-package-browsing/wireshark.png" /></div>
 <p>We tried it on our local machines and double checked it on an Azure VM:</p>
 <div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/nuget-package-browsing/azure.png" /></div>
@@ -231,6 +235,7 @@ That's how it looks in Visual Studio:</p>
 <p>It's hard to reproduce this issue in <a href="https://www.jetbrains.com/rider/">Rider</a> because we are <a href="https://aakinshin.net/blog/post/rider-nuget-search/">using a persistent local cache of search results</a>:</p>
 <div class="mx-auto"><img class="mx-auto d-block" width="600" src="/img/posts/nuget-package-browsing/rider.gif" /></div>
 <p>Currently, the problem is reproduced on <code>api-v2v3search-0.nuget.org</code> (<code>52.162.253.198</code>) and <code>api-v2v3search-1.nuget.org</code> (<code>13.84.46.37</code>).</p>
+<p>Since it's a server-side problem and we can't fix it locally, we created an issue on GitHub: <a href="https://github.com/NuGet/Home/issues/6921">NuGet/Home#6921</a>.</p>
 
 <!-- Share -->
 
