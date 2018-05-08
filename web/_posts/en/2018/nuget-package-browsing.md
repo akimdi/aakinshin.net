@@ -127,4 +127,4 @@ It's hard to reproduce this issue in [Rider](https://www.jetbrains.com/rider/) b
 
 Currently, the problem is reproduced on `api-v2v3search-0.nuget.org` (`52.162.253.198`) and `api-v2v3search-1.nuget.org` (`13.84.46.37`).
 
-Since it's a server-side problem and we can't fix it locally, we created an issue on GitHub: [NuGet/Home#6921](https://github.com/NuGet/Home/issues/6921).
+Since it's a server-side problem and we can't fix it locally, we created an issue on GitHub: [NuGet/Home#6921](https://github.com/NuGet/Home/issues/6921) (moved to [NuGet/NuGetGallery#5899](https://github.com/NuGet/NuGetGallery/issues/5899)).
