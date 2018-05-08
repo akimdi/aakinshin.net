@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Tue, 08 May 2018 12:47:27 GMT</pubDate>
-    <lastBuildDate>Tue, 08 May 2018 12:47:27 GMT</lastBuildDate>
+    <pubDate>Tue, 08 May 2018 15:06:48 GMT</pubDate>
+    <lastBuildDate>Tue, 08 May 2018 15:06:48 GMT</lastBuildDate>
 
         <item>
             <title>A story about slow NuGet package browsing</title>
@@ -121,7 +121,7 @@ That&#39;s how it looks in Visual Studio:&lt;/p&gt;
 &lt;p&gt;It&#39;s hard to reproduce this issue in &lt;a href=&quot;https://www.jetbrains.com/rider/&quot;&gt;Rider&lt;/a&gt; because we are &lt;a href=&quot;https://aakinshin.net/blog/post/rider-nuget-search/&quot;&gt;using a persistent local cache of search results&lt;/a&gt;:&lt;/p&gt;
 &lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/rider.gif&quot; /&gt;&lt;/div&gt;
 &lt;p&gt;Currently, the problem is reproduced on &lt;code&gt;api-v2v3search-0.nuget.org&lt;/code&gt; (&lt;code&gt;52.162.253.198&lt;/code&gt;) and &lt;code&gt;api-v2v3search-1.nuget.org&lt;/code&gt; (&lt;code&gt;13.84.46.37&lt;/code&gt;).&lt;/p&gt;
-&lt;p&gt;Since it&#39;s a server-side problem and we can&#39;t fix it locally, we created an issue on GitHub: &lt;a href=&quot;https://github.com/NuGet/Home/issues/6921&quot;&gt;NuGet/Home#6921&lt;/a&gt;.&lt;/p&gt;</description>
+&lt;p&gt;Since it&#39;s a server-side problem and we can&#39;t fix it locally, we created an issue on GitHub: &lt;a href=&quot;https://github.com/NuGet/Home/issues/6921&quot;&gt;NuGet/Home#6921&lt;/a&gt; (moved to &lt;a href=&quot;https://github.com/NuGet/NuGetGallery/issues/5899&quot;&gt;NuGet/NuGetGallery#5899&lt;/a&gt;).&lt;/p&gt;</description>
         </item>
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
