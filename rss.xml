@@ -6,9 +6,118 @@
     <atom:link href="http://aakinshin.net/en/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Mon, 30 Apr 2018 00:27:33 GMT</pubDate>
-    <lastBuildDate>Mon, 30 Apr 2018 00:27:33 GMT</lastBuildDate>
+    <pubDate>Tue, 08 May 2018 12:23:40 GMT</pubDate>
+    <lastBuildDate>Tue, 08 May 2018 12:23:40 GMT</lastBuildDate>
 
+        <item>
+            <title>A story about slow NuGet package browsing</title>
+            <link>http://aakinshin.net/blog/post/nuget-package-browsing/</link> 
+            <pubDate>Tue, 08 May 2018 00:00:00 GMT</pubDate>
+            <author>Andrey Akinshin</author>
+            <guid>http://aakinshin.net/blog/post/nuget-package-browsing/</guid>
+            <description>&lt;p&gt;In &lt;a href=&quot;https://www.jetbrains.com/rider/&quot;&gt;Rider&lt;/a&gt;, we have integration tests which interact with &lt;a href=&quot;https://api.nuget.org/&quot;&gt;api.nuget.org&lt;/a&gt;.
+Also, we have an internal service which monitors the performance of these tests.
+Two days ago, I noticed that some of these tests sometimes are running for too long.
+For example, &lt;code&gt;nuget_NuGetTest_shouldUpgradeVersionForDotNetCore&lt;/code&gt; usually takes around &lt;code&gt;10 sec&lt;/code&gt;.
+However, in some cases, it takes around &lt;code&gt;110 sec&lt;/code&gt;, &lt;code&gt;210 sec&lt;/code&gt;, or &lt;code&gt;310 sec&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/perf-chart.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;It looks very suspicious and increases the whole test suite duration.
+Also, our dashboard with performance degradations contains only such tests
+and some real degradations (which are introduced by the changes in our codebase) can go unnoticed.
+So, my colleagues and I decided to investigate it.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;First of all, we decided to look at the logs:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Information   GET https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0
+Information An error was encountered when fetching
+  &#39;GET https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&#39;. The request will now be retried.
+The HTTP request to &#39;GET https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&#39;
+  has timed out after 100000ms.
+Information   GET https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0
+Information   OK https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0 1090ms
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this test, we are trying to get TOP 10 NuGet packages from nuget.org.
+The code calls &lt;a href=&quot;https://github.com/NuGet/NuGet.Client&quot;&gt;NuGet.Client API&lt;/a&gt;
+which &lt;a href=&quot;https://github.com/NuGet/NuGet.Client/blob/release-4.5.0-rtm/src/NuGet.Core/NuGet.Protocol/Resources/RawSearchResourceV3.cs#L40&quot;&gt;constructs&lt;/a&gt;
+the &lt;code&gt;https://api-v2v3search-0.nuget.org/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&lt;/code&gt; url
+and send a HTTP request.
+The server doesn&#39;t respond in &lt;code&gt;100&#39;000ms&lt;/code&gt;, NuGet terminates this request by timeout
+and &lt;a href=&quot;https://github.com/NuGet/NuGet.Client/blob/release-4.5.0-rtm/src/NuGet.Core/NuGet.Protocol/HttpSource/HttpRetryHandler.cs#L38&quot;&gt;retries&lt;/a&gt; it.&lt;/p&gt;
+&lt;p&gt;We decided to write a simple small repro based on &lt;code&gt;HttpClient&lt;/code&gt; which reproduces the issue:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;for (int i = 0; i &amp;lt; 100; i++)
+{
+    using (var client = new HttpClient { Timeout = TimeSpan.FromSeconds(10000) })
+    {
+        Console.Write(&amp;quot;Request #&amp;quot; + (i + 1).ToString(&amp;quot;000&amp;quot;) + &amp;quot;: &amp;quot;);
+        var sw = Stopwatch.StartNew();
+        try
+        {
+            var r = await client.GetAsync(
+                &amp;quot;https://api-v2v3search-1.nuget.org:443/query?q=&amp;amp;skip=0&amp;amp;take=10&amp;amp;prerelease=false&amp;amp;semVerLevel=2.0.0&amp;quot;);
+            Console.Write(&amp;quot;OK&amp;quot;);
+        }
+        catch (Exception e)
+        {
+            Console.Write(&amp;quot;FAIL                 .&amp;quot;);
+            Console.WriteLine(e);
+        }
+        sw.Stop();
+        Console.WriteLine($&amp;quot; Time: {sw.Elapsed.TotalSeconds:0.000} sec&amp;quot;);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Surprisingly, with &lt;code&gt;Timeout = TimeSpan.FromSeconds(10000)&lt;/code&gt; almost all of the request are successful.
+On Windows, it produces the following distribution:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/stat.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;It&#39;s very important to create a new instance of &lt;code&gt;HttpClient&lt;/code&gt; for the each iteration: otherwise, the connection will be reused, and we will not get such a picture.&lt;/p&gt;
+&lt;p&gt;In the picture, we have a multimodal distribution with following levels:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;~1sec&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;request is finished without any problems;&lt;/li&gt;
+&lt;li&gt;we get the list of packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~125sec&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
+&lt;li&gt;we get the list of packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~250sec&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
+&lt;li&gt;the server terminates the second request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request again;&lt;/li&gt;
+&lt;li&gt;we get the list of packages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;~375sec&lt;/code&gt;:
+&lt;ul&gt;
+&lt;li&gt;the server terminates the request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request;&lt;/li&gt;
+&lt;li&gt;the server terminates the second request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HttpClient&lt;/code&gt; retries the request again;&lt;/li&gt;
+&lt;li&gt;the server terminates the third request after 2 minutes;&lt;/li&gt;
+&lt;li&gt;we &lt;strong&gt;don&#39;t&lt;/strong&gt; get the list of packages (we get &lt;code&gt;System.Net.Http.WinHttpException: The connection with the server was terminated abnormally&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;A remark: the first attempt uses &lt;code&gt;TLSv1.2&lt;/code&gt;, the second attempt uses &lt;code&gt;TLSv1.1&lt;/code&gt;, the third attempt uses &lt;code&gt;TLSv1&lt;/code&gt;.
+A screenshot from Wireshark for the &lt;code&gt;~250sec&lt;/code&gt; case:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/wireshark.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;We tried it on our local machines and double checked it on an Azure VM:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/azure.png&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;This problem affects (sometimes) different IDEs with NuGet Package Manager: it may take up to several minutes before it displays the search results.
+That&#39;s how it looks in Visual Studio:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/vs.gif&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;That&#39;s how it looks in Visual Studio for Mac:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/vs-for-mac.gif&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;It&#39;s hard to reproduce this issue in &lt;a href=&quot;https://www.jetbrains.com/rider/&quot;&gt;Rider&lt;/a&gt; because we are &lt;a href=&quot;https://aakinshin.net/blog/post/rider-nuget-search/&quot;&gt;using a persistent local cache of search results&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;mx-auto&quot;&gt;&lt;img class=&quot;mx-auto d-block&quot; width=&quot;600&quot; src=&quot;/img/posts/nuget-package-browsing/rider.gif&quot; /&gt;&lt;/div&gt;
+&lt;p&gt;Currently, the problem is reproduced on &lt;code&gt;api-v2v3search-0.nuget.org&lt;/code&gt; (&lt;code&gt;52.162.253.198&lt;/code&gt;) and &lt;code&gt;api-v2v3search-1.nuget.org&lt;/code&gt; (&lt;code&gt;13.84.46.37&lt;/code&gt;).&lt;/p&gt;</description>
+        </item>
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
             <link>http://aakinshin.net/blog/post/dotnet-crossruntime-disasm/</link> 
