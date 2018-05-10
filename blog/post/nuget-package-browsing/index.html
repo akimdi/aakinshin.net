@@ -236,6 +236,15 @@ That's how it looks in Visual Studio:</p>
 <div class="mx-auto"><a href="/img/posts/nuget-package-browsing/rider.gif" target="_blank"><img class="mx-auto d-block" width="600" src="/img/posts/nuget-package-browsing/rider.gif" /></a></div>
 <p>Currently, the problem is reproduced on <code>api-v2v3search-0.nuget.org</code> (<code>52.162.253.198</code>) and <code>api-v2v3search-1.nuget.org</code> (<code>13.84.46.37</code>).</p>
 <p>Since it's a server-side problem and we can't fix it locally, we created an issue on GitHub: <a href="https://github.com/NuGet/Home/issues/6921">NuGet/Home#6921</a> (moved to <a href="https://github.com/NuGet/NuGetGallery/issues/5899">NuGet/NuGetGallery#5899</a>).</p>
+<p><strong>Update.</strong>
+A remark about the code snippet.
+In the first version of the repro, I used a single <code>HttpClient</code> instance for all requests.
+In this case, the first request fails in ~30% cases,
+other requests are successful because the connection is already established.
+From the practical point of view, it means that user can get hanged NuGet Package Manager in VS only once after startup.
+However, in this case, it's hard to investigate the problem because it's very unstable.
+Thus, the code snippet creates a new HttpClient instance each time on purpose.
+So, it's very easy to reproduce the problem.</p>
 
 <!-- Share -->
 
