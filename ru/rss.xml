@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Thu, 10 May 2018 13:30:56 GMT</pubDate>
-    <lastBuildDate>Thu, 10 May 2018 13:30:56 GMT</lastBuildDate>
+    <pubDate>Tue, 15 May 2018 03:35:00 GMT</pubDate>
+    <lastBuildDate>Tue, 15 May 2018 03:35:00 GMT</lastBuildDate>
 
         <item>
             <title>A story about slow NuGet package browsing</title>
@@ -130,7 +130,9 @@ other requests are successful because the connection is already established.
 From the practical point of view, it means that user can get hanged NuGet Package Manager in VS only once after startup.
 However, in this case, it&#39;s hard to investigate the problem because it&#39;s very unstable.
 Thus, the code snippet creates a new HttpClient instance each time on purpose.
-So, it&#39;s very easy to reproduce the problem.&lt;/p&gt;</description>
+So, it&#39;s very easy to reproduce the problem.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Update 2018-05-11.&lt;/strong&gt;
+The issue is &lt;a href=&quot;https://github.com/NuGet/NuGetGallery/issues/5899#issuecomment-388222254&quot;&gt;fixed&lt;/a&gt;.&lt;/p&gt;</description>
         </item>
         <item>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
