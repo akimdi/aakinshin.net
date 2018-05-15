@@ -138,3 +138,6 @@ From the practical point of view, it means that user can get hanged NuGet Packag
 However, in this case, it's hard to investigate the problem because it's very unstable.
 Thus, the code snippet creates a new HttpClient instance each time on purpose.
 So, it's very easy to reproduce the problem.
+
+**Update 2018-05-11.**
+The issue is [fixed](https://github.com/NuGet/NuGetGallery/issues/5899#issuecomment-388222254).
