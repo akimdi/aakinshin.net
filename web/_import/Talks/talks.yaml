@@ -12,6 +12,8 @@ talks:
     links:
       - key: event
         url: https://jetbrainsuniverse.timepad.ru/event/682524/
+      - key: youtube
+        url: https://www.youtube.com/watch?v=ZqBJUXP-lB8
   - date: 2018-04-12
     event: Internal JetBrains Conference
     event-type: conference
