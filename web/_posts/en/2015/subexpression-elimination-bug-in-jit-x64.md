@@ -99,7 +99,7 @@ These conditions (and several tricky additional conditions) allows JIT-x64 to pe
 
 At first, we will look to the assembler code for JIT-x86. We want to make sure that it is a code without any troubles.
 
-```asm
+```x86asm
 ; Optimization, JIT-x86
         for (int i = 0; i < step; i++)                
 008400DA  in          al,dx                           
@@ -163,7 +163,7 @@ NoOptimization:
 
 Now, we will take the JIT-x64 assembler code and start with the `NoOptimization` method:
 
-```asm
+```x86asm
 ; NoOptimization, JIT-x64
         for (int i = 0; i < step; i++)                 
 00007FFCC87202A5  mov         dword ptr [rsp+8],ecx    
@@ -211,7 +211,7 @@ Now, we will take the JIT-x64 assembler code and start with the `NoOptimization`
 
 Ok, it is fine, go to the opimized method:
 
-```asm
+```x86asm
 ; Optimization, JIT-x64
        for (int i = 0; i < step; i++)                 
 00007FFCC87201C2  push        rsi                     
@@ -285,7 +285,7 @@ There is a [bug report](https://connect.microsoft.com/VisualStudio/feedback/deta
 
 Let's download and install RyuJIT CTP5, set the `HKLM\SOFTWARE\Microsoft\.NETFramework\AltJit='*'` key in the regedit, and look to the x64 assembler code:
 
-```asm
+```x86asm
 ; Optimization, RyuJIT
         for (int i = 0; i < step; i++)                 
 00007FFCC86F0160  push        r14                      
