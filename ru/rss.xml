@@ -6,8 +6,8 @@
     <atom:link href="http://aakinshin.net/ru/rss.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>ru-ru</language>
-    <pubDate>Wed, 23 May 2018 00:15:08 GMT</pubDate>
-    <lastBuildDate>Wed, 23 May 2018 00:15:08 GMT</lastBuildDate>
+    <pubDate>Sat, 09 Jun 2018 07:25:09 GMT</pubDate>
+    <lastBuildDate>Sat, 09 Jun 2018 07:25:09 GMT</lastBuildDate>
 
         <item>
             <title>A story about slow NuGet package browsing</title>
@@ -9280,7 +9280,7 @@ NoOptimization:
 &lt;p&gt;These conditions (and several tricky additional conditions) allows JIT-x64 to perform an sub-expression elimination optimization. Unfortunately he does it wrong.&lt;/p&gt;
 &lt;h3 id=&quot;jit-x86&quot;&gt;JIT-x86&lt;/h3&gt;
 &lt;p&gt;At first, we will look to the assembler code for JIT-x86. We want to make sure that it is a code without any troubles.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-asm&quot;&gt;; Optimization, JIT-x86
+&lt;pre&gt;&lt;code class=&quot;language-x86asm&quot;&gt;; Optimization, JIT-x86
         for (int i = 0; i &amp;lt; step; i++)                
 008400DA  in          al,dx                           
 008400DB  push        edi                             
@@ -9337,7 +9337,7 @@ NoOptimization:
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h3 id=&quot;jit-x64&quot;&gt;JIT-x64&lt;/h3&gt;
 &lt;p&gt;Now, we will take the JIT-x64 assembler code and start with the &lt;code&gt;NoOptimization&lt;/code&gt; method:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-asm&quot;&gt;; NoOptimization, JIT-x64
+&lt;pre&gt;&lt;code class=&quot;language-x86asm&quot;&gt;; NoOptimization, JIT-x64
         for (int i = 0; i &amp;lt; step; i++)                 
 00007FFCC87202A5  mov         dword ptr [rsp+8],ecx    
 00007FFCC87202A9  sub         rsp,38h                  
@@ -9382,7 +9382,7 @@ NoOptimization:
 00007FFCC8720327  ret                                  
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ok, it is fine, go to the opimized method:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-asm&quot;&gt;; Optimization, JIT-x64
+&lt;pre&gt;&lt;code class=&quot;language-x86asm&quot;&gt;; Optimization, JIT-x64
        for (int i = 0; i &amp;lt; step; i++)                 
 00007FFCC87201C2  push        rsi                     
 00007FFCC87201C3  push        rdi                     
@@ -9451,7 +9451,7 @@ NoOptimization:
 &lt;/blockquote&gt;
 &lt;h3 id=&quot;ryujit&quot;&gt;RyuJIT&lt;/h3&gt;
 &lt;p&gt;Let&#39;s download and install RyuJIT CTP5, set the &lt;code&gt;HKLM\SOFTWARE\Microsoft\.NETFramework\AltJit=&#39;*&#39;&lt;/code&gt; key in the regedit, and look to the x64 assembler code:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&quot;language-asm&quot;&gt;; Optimization, RyuJIT
+&lt;pre&gt;&lt;code class=&quot;language-x86asm&quot;&gt;; Optimization, RyuJIT
         for (int i = 0; i &amp;lt; step; i++)                 
 00007FFCC86F0160  push        r14                      
 00007FFCC86F0162  push        rdi                      
