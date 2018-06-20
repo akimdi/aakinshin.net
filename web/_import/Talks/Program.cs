@@ -11,9 +11,24 @@ namespace MyTalks
 {
     public class Link
     {
+        private static readonly Dictionary<string, string> faDictionary = new Dictionary<string, string>()
+        {
+            {"youtube", "fab fa-youtube"},
+            {"pdf", "fas fa-file-pdf"},
+            {"slideshare", "fab fa-slideshare"},
+            {"photos", "fas fa-camera-retro"},
+            {"org", "fas fa-building"}
+        };
+
         public string Key { get; set; }
         public string Url { get; set; }
         public string Caption { get; set; }
+
+        public string ToHtml()
+        {
+            var fa = faDictionary.ContainsKey(Key) ? faDictionary[Key] : "fas fa-question";
+            return $"<a href=\"{Url}\"><i class=\"{fa} fa-profile-link\" title=\"{Key}\"></i></a>";
+        }
     }
 
     public class Talk
@@ -136,8 +151,7 @@ namespace MyTalks
                 foreach (var link in talk.Links)
                 {
                     if (link.Key != "event" && link.Key != "talk")
-                        builder.AppendLine(
-                            $"    <a href=\"{link.Url}\"><img src=\"/img/icons/{link.Key}.svg\" width=\"18\" height=\"32\" alt=\"[{link.Key}]\" title=\"{link.Key}\" /></a>");
+                        builder.AppendLine("    " + link.ToHtml());
                 }
 
                 builder.AppendLine("  ,<br />");

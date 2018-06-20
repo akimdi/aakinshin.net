@@ -116,15 +116,6 @@ h6, .h6 {
   margin-bottom: 0;
 }
 
-/*
- * Misc
- */
-
-img.share-button {
-  height: 24px;
-  width: 24px;
-}
-
 /* anchorjs */
 .anchorjs-link {
   transition: all .25s linear;

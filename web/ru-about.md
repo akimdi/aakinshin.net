@@ -6,19 +6,19 @@ permalink: /ru/about/
 @model Pretzel.Logic.Templating.Context.PageContext
 
 <h1>Андрей Акиньшин</h1>
-<div id="profiles">
-  <a href="https://github.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/github.svg" alt="GitHub" /></a>
-  <a href="https://twitter.com/andrey_akinshin"><img class="profile-image" src="/img/icons/twitter.svg" alt="Twitter" /></a>
-  <a href="http://stackoverflow.com/users/184842/AndreyAkinshin"><img class="profile-image" src="/img/icons/stackoverflow.png" alt="StackOverflow" /></a>
-  <a href="http://habrahabr.ru/users/dreamwalker"><img class="profile-image" src="/img/icons/habr.png" alt="Habrahabr" /></a>
-  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><img class="profile-image" src="/img/icons/youtube.svg" alt="YouTube" /></a>
-  <a href="http://www.linkedin.com/in/AndreyAkinshin"><img class="profile-image" src="/img/icons/linkedin.png" alt="LinkedIn" /></a>
-  <a href="http://www.slideshare.net/AndreyAkinshin"><img class="profile-image" src="/img/icons/slideshare.svg" alt="SlideShare" /></a>
-  <a href="http://www.goodreads.com/AndreyAkinshin"><img class="profile-image" src="/img/icons/goodreads.png" alt="GoodReads" /></a>
-  <a href="http://scholar.google.ru/citations?user=rYVl83IAAAAJ"><img class="profile-image" src="/img/icons/google-scholar.png" alt="Google Scholar" /></a>
-  <a href="http://elibrary.ru/author_items.asp?authorid=676806"><img class="profile-image" src="/img/icons/elibrary.png" alt="ELibrary" /></a>
-  <a href="http://www.mathnet.ru/php/person.phtml?personid=79053"><img class="profile-image" src="/img/icons/math-net.png" alt="Math-Net" /></a>
-  <a href="https://www.researchgate.net/profile/Andrey_Akinshin"><img class="profile-image" src="/img/icons/research-gate.png" alt="ResearchGate" /></a>
+<div id="profiles" class="fa-2x">
+  <a href="https://github.com/AndreyAkinshin"><i class="fab fa-github" title="GitHub"></i></a>
+  <a href="https://twitter.com/andrey_akinshin"><i class="fab fa-twitter" title="Twitter"></i></a>
+  <a href="http://stackoverflow.com/users/184842/AndreyAkinshin"><i class="fab fa-stack-overflow" title="StackOverflow"></i></a>
+  <a href="http://habrahabr.ru/users/dreamwalker"><i class="fas fa-hospital-symbol" title="Habrahabr"></i></a>
+  <a href="https://www.youtube.com/channel/UCk25QhN-9_wwkqyeapuCh9w"><i class="fab fa-youtube" title="YouTube"></i></a>
+  <a href="http://www.linkedin.com/in/AndreyAkinshin"><i class="fab fa-linkedin-in" title="LinkedIn"></i></a>
+  <a href="http://www.slideshare.net/AndreyAkinshin"><i class="fab fa-slideshare" title="SlideShare"></i></a>
+  <a href="http://www.goodreads.com/AndreyAkinshin"><i class="fab fa-goodreads" title="GoodReads"></i></a>
+  <a href="http://scholar.google.ru/citations?user=rYVl83IAAAAJ"><i class="fab fa-google" title="Google Scholar"></i></a>
+  <a href="http://elibrary.ru/author_items.asp?authorid=676806"><i class="fas fa-book" title="ELibrary"></i></a>
+  <a href="http://www.mathnet.ru/php/person.phtml?personid=79053"><i class="far fa-clone" title="Math-Net"></i></a>
+  <a href="https://www.researchgate.net/profile/Andrey_Akinshin"><i class="fab fa-researchgate" title="ResearchGate"></i></a>
 </div>
 <a href="mailto:andrey.akinshin@gmail.com">andrey.akinshin@gmail.com</a>
 <hr />
@@ -101,7 +101,7 @@ permalink: /ru/about/
 <section>
   <h3 id="open-source">Open source</h3>
 
-  ![](/img/icons/github.svg)
+  <i class="fab fa-github" title="GitHub"></i>
   **GitHub:**
   [github.com/AndreyAkinshin](https://github.com/AndreyAkinshin/)
   <br /><br />
