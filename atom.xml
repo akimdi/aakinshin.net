@@ -3,7 +3,7 @@
     <title>Andrey Akinshin's blog</title>
     <link href="http://aakinshin.net"/>
     <link type="application/atom+xml" rel="self" href="http://aakinshin.net/en/atom.xml"/>
-    <updated>2018-08-20T09:23:16.4228304Z</updated>
+    <updated>2018-09-26T14:14:23.983803Z</updated>
     <id>http://aakinshin.net/</id>
     <author>
         <name>Andrey Akinshin</name>
@@ -11,8 +11,8 @@
     </author>
 
         <entry>
-            <id>http://aakinshin.net/blog/post/nuget-package-browsing/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/nuget-package-browsing/'/>
+            <id>http://aakinshin.net/posts/nuget-package-browsing/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/nuget-package-browsing/'/>
             <title>A story about slow NuGet package browsing</title>
             <updated>2018-05-08T00:00:00Z</updated>
             <author>
@@ -139,8 +139,8 @@ So, it&#39;s very easy to reproduce the problem.&lt;/p&gt;
 The issue is &lt;a href=&quot;https://github.com/NuGet/NuGetGallery/issues/5899#issuecomment-388222254&quot;&gt;fixed&lt;/a&gt;.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/dotnet-crossruntime-disasm/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/dotnet-crossruntime-disasm/'/>
+            <id>http://aakinshin.net/posts/dotnet-crossruntime-disasm/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/dotnet-crossruntime-disasm/'/>
             <title>Cross-runtime .NET disassembly with BenchmarkDotNet</title>
             <updated>2018-04-10T00:00:00Z</updated>
             <author>
@@ -247,8 +247,8 @@ each version contains many improvements and bug fixes.
 If you want to help with the disasm support, &lt;a href=&quot;https://github.com/dotnet/BenchmarkDotNet#contributions-are-welcome&quot;&gt;contributions are welcome&lt;/a&gt;!&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/bdn-v0_10_14/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/bdn-v0_10_14/'/>
+            <id>http://aakinshin.net/posts/bdn-v0_10_14/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/bdn-v0_10_14/'/>
             <title>BenchmarkDotNet v0.10.14</title>
             <updated>2018-04-09T00:00:00Z</updated>
             <author>
@@ -364,8 +364,8 @@ This release includes 47 commits by 8 contributors.&lt;/p&gt;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/bdn-v0_10_13/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/bdn-v0_10_13/'/>
+            <id>http://aakinshin.net/posts/bdn-v0_10_13/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/bdn-v0_10_13/'/>
             <title>BenchmarkDotNet v0.10.13</title>
             <updated>2018-03-02T00:00:00Z</updated>
             <author>
@@ -506,8 +506,8 @@ This release includes 50 commits by 8 contributors.&lt;/p&gt;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/mono-gc-collects/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/mono-gc-collects/'/>
+            <id>http://aakinshin.net/posts/mono-gc-collects/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/mono-gc-collects/'/>
             <title>Analyzing distribution of Mono GC collections</title>
             <updated>2018-02-20T00:00:00Z</updated>
             <author>
@@ -709,8 +709,8 @@ Data can be processed with a small R script which can be easily modified
 if you want to calculate some advanced statistics.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/bdn-v0_10_12/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/bdn-v0_10_12/'/>
+            <id>http://aakinshin.net/posts/bdn-v0_10_12/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/bdn-v0_10_12/'/>
             <title>BenchmarkDotNet v0.10.12</title>
             <updated>2018-01-15T00:00:00Z</updated>
             <author>
@@ -1017,8 +1017,8 @@ This release includes 42 commits by 9 contributors.&lt;/p&gt;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/bdn-v0_10_10/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/bdn-v0_10_10/'/>
+            <id>http://aakinshin.net/posts/bdn-v0_10_10/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/bdn-v0_10_10/'/>
             <title>BenchmarkDotNet v0.10.10</title>
             <updated>2017-11-03T00:00:00Z</updated>
             <author>
@@ -1238,8 +1238,8 @@ This release includes &lt;strong&gt;95&lt;/strong&gt; commits by &lt;strong&gt;1
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/reflecting-on-performance-testing/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/reflecting-on-performance-testing/'/>
+            <id>http://aakinshin.net/posts/reflecting-on-performance-testing/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/reflecting-on-performance-testing/'/>
             <title>Reflecting on performance testing</title>
             <updated>2017-08-01T00:00:00Z</updated>
             <author>
@@ -1471,8 +1471,8 @@ How do you solve management issues and find trade-offs between new features and 
 What kind of other problems do you have which should be solved in a good performance testing library?&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/stephen-toub-benchmarks-part1/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/stephen-toub-benchmarks-part1/'/>
+            <id>http://aakinshin.net/posts/stephen-toub-benchmarks-part1/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/stephen-toub-benchmarks-part1/'/>
             <title>Measuring Performance Improvements in .NET Core with BenchmarkDotNet (Part 1)</title>
             <updated>2017-06-09T00:00:00Z</updated>
             <author>
@@ -2805,8 +2805,8 @@ If so, I will be happy to explain in detail what happens in each case
 (I hope that these explanations will help people to design correct benchmark for similar cases).&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/bdn-v0_10_7/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/bdn-v0_10_7/'/>
+            <id>http://aakinshin.net/posts/bdn-v0_10_7/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/bdn-v0_10_7/'/>
             <title>BenchmarkDotNet v0.10.7</title>
             <updated>2017-06-05T00:00:00Z</updated>
             <author>
@@ -3078,8 +3078,8 @@ Any feedback is very valuable, don&#39;t hesitate to &lt;a href=&quot;https://gi
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/mono-and-65535interfaces/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/mono-and-65535interfaces/'/>
+            <id>http://aakinshin.net/posts/mono-and-65535interfaces/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/mono-and-65535interfaces/'/>
             <title>65535 interfaces ought to be enough for anybody</title>
             <updated>2017-02-14T00:00:00Z</updated>
             <author>
@@ -3145,8 +3145,8 @@ So, we just cherry-picked this commit, and now all of our tests are green again.
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/namedmutex-on-mono/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/namedmutex-on-mono/'/>
+            <id>http://aakinshin.net/posts/namedmutex-on-mono/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/namedmutex-on-mono/'/>
             <title>A bug story about named mutex on Mono</title>
             <updated>2017-02-13T00:00:00Z</updated>
             <author>
@@ -3416,8 +3416,8 @@ And make sure that your CI build server runs these tests on all target operation
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/invaliddataexception-in-getprocesses/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/invaliddataexception-in-getprocesses/'/>
+            <id>http://aakinshin.net/posts/invaliddataexception-in-getprocesses/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/invaliddataexception-in-getprocesses/'/>
             <title>InvalidDataException in Process.GetProcesses</title>
             <updated>2017-02-10T00:00:00Z</updated>
             <author>
@@ -3538,8 +3538,8 @@ but we still try to do everything to make our users happy regardless of which ve
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/rider-nuget-search/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/rider-nuget-search/'/>
+            <id>http://aakinshin.net/posts/rider-nuget-search/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/rider-nuget-search/'/>
             <title>Why is NuGet search in Rider so fast?</title>
             <updated>2017-02-08T00:00:00Z</updated>
             <author>
@@ -3726,8 +3726,8 @@ If you have any complaints or feature requests, you are welcome on our &lt;a hre
 Your feedback is very important for us.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/nuget2-and-directoryseparatorchar/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/nuget2-and-directoryseparatorchar/'/>
+            <id>http://aakinshin.net/posts/nuget2-and-directoryseparatorchar/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/nuget2-and-directoryseparatorchar/'/>
             <title>NuGet2 and a DirectorySeparatorChar bug</title>
             <updated>2017-02-06T00:00:00Z</updated>
             <author>
@@ -3922,8 +3922,8 @@ For now, we have a significant performance improvement for the solution-wide ana
 (this fix will be included in Rider EAP17).&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/perfex-div/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/perfex-div/'/>
+            <id>http://aakinshin.net/posts/perfex-div/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/perfex-div/'/>
             <title>Performance exercise: Division</title>
             <updated>2016-12-26T00:00:00Z</updated>
             <author>
@@ -4333,8 +4333,8 @@ Main idea of my performance exercises is to show how hard microbenchmarking can 
 If you are trying to measure operations which take nanoseconds, you should think about all the target environments.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/perfex-min/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/perfex-min/'/>
+            <id>http://aakinshin.net/posts/perfex-min/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/perfex-min/'/>
             <title>Performance exercise: Minimum</title>
             <updated>2016-12-20T00:00:00Z</updated>
             <author>
@@ -4676,8 +4676,8 @@ retq
 &lt;p&gt;However, we get a good result: we have shown a part of performance space for target operations, and we have found relevant conditions which could affect the speed of our program. Note that it was just a benchmarking exercise, I wanted to show that there are a lot of troubles with benchmarking even in this simple case. Be careful with your performance measurements.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/stopwatch/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/stopwatch/'/>
+            <id>http://aakinshin.net/posts/stopwatch/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/stopwatch/'/>
             <title>Stopwatch under the hood</title>
             <updated>2016-09-09T00:00:00Z</updated>
             <author>
@@ -6111,8 +6111,8 @@ If I missed something important or wrote something wrong, feel free to leave any
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/datetime/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/datetime/'/>
+            <id>http://aakinshin.net/posts/datetime/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/datetime/'/>
             <title>DateTime under the hood</title>
             <updated>2016-08-19T00:00:00Z</updated>
             <author>
@@ -6661,8 +6661,8 @@ dotnet cli version: 1.0.0-preview2-003121
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/legacyjitx86-and-first-method-call/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/legacyjitx86-and-first-method-call/'/>
+            <id>http://aakinshin.net/posts/legacyjitx86-and-first-method-call/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/legacyjitx86-and-first-method-call/'/>
             <title>LegacyJIT-x86 and first method call</title>
             <updated>2016-04-04T00:00:00Z</updated>
             <author>
@@ -6833,8 +6833,8 @@ Jit=LegacyJit
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/legacyjitx86-and-first-method-call/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/legacyjitx86-and-first-method-call/'/>
+            <id>http://aakinshin.net/ru/posts/legacyjitx86-and-first-method-call/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/legacyjitx86-and-first-method-call/'/>
             <title>LegacyJIT-x86 и первый вызов метода</title>
             <updated>2016-04-04T00:00:00Z</updated>
             <author>
@@ -7005,8 +7005,8 @@ Jit=LegacyJit
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/projecttypeguids/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/projecttypeguids/'/>
+            <id>http://aakinshin.net/posts/projecttypeguids/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/projecttypeguids/'/>
             <title>Visual Studio and ProjectTypeGuids.cs</title>
             <updated>2016-02-27T00:00:00Z</updated>
             <author>
@@ -7055,8 +7055,8 @@ If the case of file name is altered manually in csproj file, the correct file do
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/projecttypeguids/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/projecttypeguids/'/>
+            <id>http://aakinshin.net/ru/posts/projecttypeguids/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/projecttypeguids/'/>
             <title>Visual Studio и ProjectTypeGuids.cs</title>
             <updated>2016-02-27T00:00:00Z</updated>
             <author>
@@ -7105,8 +7105,8 @@ If the case of file name is altered manually in csproj file, the correct file do
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/blittable/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/blittable/'/>
+            <id>http://aakinshin.net/posts/blittable/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/blittable/'/>
             <title>Blittable types</title>
             <updated>2015-11-26T00:00:00Z</updated>
             <author>
@@ -7490,8 +7490,8 @@ Console.WriteLine(BlittableHelper.IsBlittable&amp;lt;MyStruct&amp;gt;()); // Fal
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/blittable/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/blittable/'/>
+            <id>http://aakinshin.net/ru/posts/blittable/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/blittable/'/>
             <title>Blittable-типы</title>
             <updated>2015-11-26T00:00:00Z</updated>
             <author>
@@ -7875,15 +7875,15 @@ Console.WriteLine(BlittableHelper.IsBlittable&amp;lt;MyStruct&amp;gt;()); // Fal
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/ryujit-rc-and-constant-folding/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/ryujit-rc-and-constant-folding/'/>
+            <id>http://aakinshin.net/posts/ryujit-rc-and-constant-folding/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/ryujit-rc-and-constant-folding/'/>
             <title>RyuJIT RC and constant folding</title>
             <updated>2015-05-12T00:00:00Z</updated>
             <author>
                 <name>Andrey Akinshin</name>
                 <uri>http://aakinshin.net/</uri>
             </author>
-            <content type="html">&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The below results are valid for the release version of RyuJIT.&lt;/p&gt;
+            <content type="html">&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; The below results are valid for the release version of RyuJIT in .NET Framework 4.6 without updates.&lt;/p&gt;
 &lt;p&gt;The challenge of the day: which method is faster?&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&quot;language-cs&quot;&gt;public double Sqrt13()
 {
@@ -8084,8 +8084,8 @@ N040 [000042]   =         =&amp;gt; $e2 {DblCns[32.854556]}
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/ryujit-rc-and-constant-folding/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/ryujit-rc-and-constant-folding/'/>
+            <id>http://aakinshin.net/ru/posts/ryujit-rc-and-constant-folding/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/ryujit-rc-and-constant-folding/'/>
             <title>RyuJIT RC и свёртка констант</title>
             <updated>2015-05-12T00:00:00Z</updated>
             <author>
@@ -8292,8 +8292,8 @@ N040 [000042]   =         =&amp;gt; $e2 {DblCns[32.854556]}
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/unrolling-of-small-loops-in-different-jit-versions/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/unrolling-of-small-loops-in-different-jit-versions/'/>
+            <id>http://aakinshin.net/posts/unrolling-of-small-loops-in-different-jit-versions/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/unrolling-of-small-loops-in-different-jit-versions/'/>
             <title>Unrolling of small loops in different JIT versions</title>
             <updated>2015-03-02T00:00:00Z</updated>
             <author>
@@ -8553,8 +8553,8 @@ static void Main()
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/unrolling-of-small-loops-in-different-jit-versions/'/>
+            <id>http://aakinshin.net/ru/posts/unrolling-of-small-loops-in-different-jit-versions/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/unrolling-of-small-loops-in-different-jit-versions/'/>
             <title>Размотка маленьких циклов в разных версиях JIT</title>
             <updated>2015-03-02T00:00:00Z</updated>
             <author>
@@ -8815,8 +8815,8 @@ static void Main()
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/ryujit-ctp5-and-loop-unrolling/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/ryujit-ctp5-and-loop-unrolling/'/>
+            <id>http://aakinshin.net/posts/ryujit-ctp5-and-loop-unrolling/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/ryujit-ctp5-and-loop-unrolling/'/>
             <title>RyuJIT CTP5 and loop unrolling</title>
             <updated>2015-03-01T00:00:00Z</updated>
             <author>
@@ -8935,8 +8935,8 @@ Console.WriteLine(sum);
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/ryujit-ctp5-and-loop-unrolling/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/ryujit-ctp5-and-loop-unrolling/'/>
+            <id>http://aakinshin.net/ru/posts/ryujit-ctp5-and-loop-unrolling/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/ryujit-ctp5-and-loop-unrolling/'/>
             <title>RyuJIT CTP5 и размотка циклов</title>
             <updated>2015-03-01T00:00:00Z</updated>
             <author>
@@ -9056,8 +9056,8 @@ Console.WriteLine(sum);
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/jit-version-determining-in-runtime/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/jit-version-determining-in-runtime/'/>
+            <id>http://aakinshin.net/posts/jit-version-determining-in-runtime/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/jit-version-determining-in-runtime/'/>
             <title>JIT version determining in runtime</title>
             <updated>2015-02-28T00:00:00Z</updated>
             <author>
@@ -9179,8 +9179,8 @@ class Program
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/jit-version-determining-in-runtime/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/jit-version-determining-in-runtime/'/>
+            <id>http://aakinshin.net/ru/posts/jit-version-determining-in-runtime/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/jit-version-determining-in-runtime/'/>
             <title>Определение версии JIT в рантайме</title>
             <updated>2015-02-28T00:00:00Z</updated>
             <author>
@@ -9302,8 +9302,8 @@ class Program
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/subexpression-elimination-bug-in-jit-x64/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/subexpression-elimination-bug-in-jit-x64/'/>
+            <id>http://aakinshin.net/posts/subexpression-elimination-bug-in-jit-x64/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/subexpression-elimination-bug-in-jit-x64/'/>
             <title>A bug story about JIT-x64</title>
             <updated>2015-02-27T00:00:00Z</updated>
             <author>
@@ -9611,8 +9611,8 @@ NoOptimization:
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/subexpression-elimination-bug-in-jit-x64/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/subexpression-elimination-bug-in-jit-x64/'/>
+            <id>http://aakinshin.net/ru/posts/subexpression-elimination-bug-in-jit-x64/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/subexpression-elimination-bug-in-jit-x64/'/>
             <title>История про баг в JIT-x64</title>
             <updated>2015-02-27T00:00:00Z</updated>
             <author>
@@ -9920,8 +9920,8 @@ NoOptimization:
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/inlining-and-starg/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/inlining-and-starg/'/>
+            <id>http://aakinshin.net/posts/inlining-and-starg/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/inlining-and-starg/'/>
             <title>A story about JIT-x86 inlining and starg</title>
             <updated>2015-02-26T00:00:00Z</updated>
             <author>
@@ -10268,8 +10268,8 @@ class Program
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/inlining-and-starg/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/inlining-and-starg/'/>
+            <id>http://aakinshin.net/ru/posts/inlining-and-starg/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/inlining-and-starg/'/>
             <title>История про инлайнинг под JIT-x86 и starg</title>
             <updated>2015-02-26T00:00:00Z</updated>
             <author>
@@ -10616,8 +10616,8 @@ class Program
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/migration-to-pretzel/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/migration-to-pretzel/'/>
+            <id>http://aakinshin.net/ru/posts/migration-to-pretzel/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/migration-to-pretzel/'/>
             <title>Как я блог на кренделёк переводил</title>
             <updated>2015-02-26T00:00:00Z</updated>
             <author>
@@ -10660,8 +10660,8 @@ class Program
 &lt;p&gt;Ещё немного поиска в интернете — и я нашёл его! Отличный проект под названием &lt;a href=&quot;https://github.com/Code52/pretzel&quot;&gt;pretzel&lt;/a&gt;. Совместим с Jekyll, можно писать функционал на C# и верстать шаблоны на Razor. Увы, проект немного сыроват, многие нужные штуки не работали. Пришлось чутка &lt;a href=&quot;https://github.com/Code52/pretzel/commits/master?author=AndreyAkinshin&quot;&gt;поконтрибьютить&lt;/a&gt; в проект, чтобы мой Jekyll-блог на нём завёлся. Затем ушло какое-то время, чтобы сделать нормальный мультиленг и сверстать всё так, чтобы выглядело хотя бы более или менее вменяемо. С базовой частью я наконец-то справился, блог завёлся и опубликовался в интернете. Остался, правда, небольшой набор тикетов (например, пагинатор, странички для тегов и категорий, косяки в вёрстке и т. п.), но я надеюсь решить их в рабочем режиме. Главное — теперь есть удобный инструмент для написания постов. За последние месяцы у меня накопилось много интересных заметок, планирую оформить их в обозримом будущем в письменном виде. Надеюсь, моя писанина окажется полезной для других разработчиков.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/static-field-in-generic-type/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/static-field-in-generic-type/'/>
+            <id>http://aakinshin.net/ru/posts/static-field-in-generic-type/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/static-field-in-generic-type/'/>
             <title>Статические поля в generic-классах</title>
             <updated>2015-01-21T00:00:00Z</updated>
             <author>
@@ -10691,8 +10691,8 @@ void Main()
 &lt;p&gt;Приведённая задачка доступна в &lt;a href=&quot;http://problembook.net/&quot;&gt;ProblemBookt.NET&lt;/a&gt; &lt;a href=&quot;http://problembook.net/content/ru/Oop/StaticFieldInGenericType-P.html&quot;&gt;на русском&lt;/a&gt; и &lt;a href=&quot;http://problembook.net/content/en/Oop/StaticFieldInGenericType-P.html&quot;&gt;на английском&lt;/a&gt;.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/listforeach-net-45/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/listforeach-net-45/'/>
+            <id>http://aakinshin.net/ru/posts/listforeach-net-45/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/listforeach-net-45/'/>
             <title>List.ForEach в .NET 4.5</title>
             <updated>2014-11-24T00:00:00Z</updated>
             <author>
@@ -10779,8 +10779,8 @@ Actual Results (Mono 2.10):
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/list-version-side-effect/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/list-version-side-effect/'/>
+            <id>http://aakinshin.net/ru/posts/list-version-side-effect/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/list-version-side-effect/'/>
             <title>Сайд-эффект внутренней реализации List</title>
             <updated>2014-11-19T00:00:00Z</updated>
             <author>
@@ -10818,8 +10818,8 @@ foreach(var x in list)
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/uri-escaping/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/uri-escaping/'/>
+            <id>http://aakinshin.net/ru/posts/uri-escaping/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/uri-escaping/'/>
             <title>Об экранировании URI в .NET</title>
             <updated>2014-11-13T00:00:00Z</updated>
             <author>
@@ -11002,8 +11002,8 @@ ToString: http://localhost/a?b=c%3Fd%3De
 &lt;p&gt;Если вы работаете с URI, в который могут попасть разные спецсимволы в экранированном или явном виде, то лучше бы вам не полагаться на стандартную реализацию по обработке исходной строчки: результат работы &lt;code&gt;AbsoluteUri&lt;/code&gt; и &lt;code&gt;ToString()&lt;/code&gt; могут вас неприятно удивить. Если вы уверены, что у вас повсеместно используется MS.NET 4.5+ или Mono 3.10+, то скорее всего у вас всё будет нормально, но при поддержке старых версий .NET лучше бы написать свою логику по работе с URI.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/cheatsheet-nullable/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/cheatsheet-nullable/'/>
+            <id>http://aakinshin.net/ru/posts/cheatsheet-nullable/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/cheatsheet-nullable/'/>
             <title>Nullable-арифметика</title>
             <updated>2014-11-11T00:00:00Z</updated>
             <author>
@@ -11078,8 +11078,8 @@ ToString: http://localhost/a?b=c%3Fd%3De
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/mono-utf8-conversions/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/mono-utf8-conversions/'/>
+            <id>http://aakinshin.net/posts/mono-utf8-conversions/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/mono-utf8-conversions/'/>
             <title>About UTF-8 conversions in Mono</title>
             <updated>2014-11-10T00:00:00Z</updated>
             <author>
@@ -11218,8 +11218,8 @@ The argument to the ‘ConditionalAttribute’ attribute must be a valid identif
 &lt;p&gt;Encodings are hard.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/mono-utf8-conversions/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/mono-utf8-conversions/'/>
+            <id>http://aakinshin.net/ru/posts/mono-utf8-conversions/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/mono-utf8-conversions/'/>
             <title>Об UTF-8-преобразованиях в Mono</title>
             <updated>2014-11-10T00:00:00Z</updated>
             <author>
@@ -11358,8 +11358,8 @@ The argument to the ‘ConditionalAttribute’ attribute must be a valid identif
 &lt;p&gt;Encodings are hard.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/endianness/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/endianness/'/>
+            <id>http://aakinshin.net/ru/posts/endianness/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/endianness/'/>
             <title>Endianness в .NET</title>
             <updated>2014-10-29T00:00:00Z</updated>
             <author>
@@ -11542,8 +11542,8 @@ Console.WriteLine(BitConverter.ToString(bytes));
 &lt;p&gt;Всегда нужно помнить, что в разных местах для хранения чисел может использоваться разный порядок байт. А если вам доводится работать с памятью в бинарном виде, хранить числа в бинарном виде, передавать их по сети в бинарном виде или ещё что-нибудь делать с числами в бинарном виде, то к нюансу с порядком байт следует отнестись очень внимательно.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/cultureinfo/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/cultureinfo/'/>
+            <id>http://aakinshin.net/ru/posts/cultureinfo/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/cultureinfo/'/>
             <title>Эти занимательные региональные настройки</title>
             <updated>2014-09-21T00:00:00Z</updated>
             <author>
@@ -11687,8 +11687,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/happy-monday/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/happy-monday/'/>
+            <id>http://aakinshin.net/posts/happy-monday/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/happy-monday/'/>
             <title>Happy Monday!</title>
             <updated>2014-08-11T00:00:00Z</updated>
             <author>
@@ -11725,8 +11725,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;p&gt;It was a valuable lesson for me, and I hope you also find this story enlightening.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/happy-monday/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/happy-monday/'/>
+            <id>http://aakinshin.net/ru/posts/happy-monday/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/happy-monday/'/>
             <title>Happy Monday!</title>
             <updated>2014-08-11T00:00:00Z</updated>
             <author>
@@ -11764,8 +11764,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;p&gt;Мне сложно сформировать какую-то конкретную мораль этой истории. Скажу только то, что она научила меня шире смотреть на проблемы, которые могу возникнуть. А ещё, если студия плюётся в вас какими-то непонятными ошибками, то в первую очередь нужно не думать о проблеме и о возможных причинах её возникновения, а сразу смотреть лог от MSBUILD-а. А ещё я выяснил, что за последние несколько месяцев никто в нашей команде не отлаживал приложение по понедельникам =)&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/ms-mcp/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/ms-mcp/'/>
+            <id>http://aakinshin.net/ru/posts/ms-mcp/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/ms-mcp/'/>
             <title>Получение MCP: личный опыт</title>
             <updated>2014-07-24T00:00:00Z</updated>
             <author>
@@ -11811,8 +11811,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;p&gt;Впечатления от мероприятия сугубо положительные, опыт полезный. Если вы в себе ощущаете силы пройти подобную сертификацию, а также у вас есть на это время и возможности ($80 или ваучер), то я бы посоветовал озадачиться. Как минимум, это достаточно интересно, а бумажка от MS тоже лишней не будет, можно будет включить в резюме.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/refactoring/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/refactoring/'/>
+            <id>http://aakinshin.net/posts/refactoring/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/refactoring/'/>
             <title>To Refactor Or Not To Refactor?</title>
             <updated>2014-07-19T00:00:00Z</updated>
             <author>
@@ -11857,8 +11857,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/refactoring/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/refactoring/'/>
+            <id>http://aakinshin.net/ru/posts/refactoring/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/refactoring/'/>
             <title>Рефакторить или не рефакторить?</title>
             <updated>2014-07-19T00:00:00Z</updated>
             <author>
@@ -11909,8 +11909,8 @@ SELECT * FROM Foo WHERE BarValue = 1 OR 1=1 OR 1=10
 &lt;p&gt;&lt;a href=&quot;http://habrahabr.ru/company/enterra/blog/229051/&quot;&gt;Оригинал на Хабрахабре&lt;/a&gt;&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-colorout/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-colorout/'/>
+            <id>http://aakinshin.net/ru/posts/r-colorout/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-colorout/'/>
             <title>Раскрашиваем R в терминале: пакет colorout</title>
             <updated>2014-07-11T00:00:00Z</updated>
             <author>
@@ -11985,8 +11985,8 @@ txtcurve(sin(pi*x),from=0,to=2)
 &lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/findelementsinhostcoordinates/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/findelementsinhostcoordinates/'/>
+            <id>http://aakinshin.net/posts/findelementsinhostcoordinates/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/findelementsinhostcoordinates/'/>
             <title>Strange behavior of FindElementsInHostCoordinates in WinRT</title>
             <updated>2014-04-29T00:00:00Z</updated>
             <author>
@@ -12071,8 +12071,8 @@ public static IEnumerable FindElementsInHostCoordinates(
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/findelementsinhostcoordinates/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/findelementsinhostcoordinates/'/>
+            <id>http://aakinshin.net/ru/posts/findelementsinhostcoordinates/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/findelementsinhostcoordinates/'/>
             <title>Странное поведение FindElementsInHostCoordinates в WinRT</title>
             <updated>2014-04-29T00:00:00Z</updated>
             <author>
@@ -12153,8 +12153,8 @@ public static IEnumerable FindElementsInHostCoordinates(
 &lt;p&gt;Вот это поворот! Недолгое кликанье по приложению быстро подведёт нас к выводу: точечный HitTest работает точно также, как и в Silverlight, а вот HitTest по прямоугольнику для Path-фигур работает не по самой фигуре, а по её BoundingBox-у (ограничивающему прямоугольнику). WinRT-приложения делаются по принципу Touch First, так что наиболее интересна именно Rect-версия метода. В большинстве случаев этот момент скорее всего будет не особо принципиален, но вот если приложение ориентировано на взаимодействие с различными изогнутыми элементами, то на особенность такого поведения &lt;code&gt;FindElementsInHostCoordinates&lt;/code&gt; лучше бы обратить особое внимание.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/codefest-2014/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/codefest-2014/'/>
+            <id>http://aakinshin.net/ru/posts/codefest-2014/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/codefest-2014/'/>
             <title>CodeFest 2014: Отчёт</title>
             <updated>2014-04-01T00:00:00Z</updated>
             <author>
@@ -12187,8 +12187,8 @@ public static IEnumerable FindElementsInHostCoordinates(
 &lt;p&gt;Рассказ у меня получился очень сумбурным, но это просто от переполняющих меня впечатлений. Я просто хотел сказать, что CodeFest — это просто прекрасно, исключительно положительные ощущения. Много полезных знаний в голове, много новых интересных знакомств, много бесценного общения. Побольше было бы таких конференций. В следующем году однозначно нужно опять идти.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/system-drawing-color-equals/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/system-drawing-color-equals/'/>
+            <id>http://aakinshin.net/posts/system-drawing-color-equals/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/system-drawing-color-equals/'/>
             <title>About System.Drawing.Color and operator ==</title>
             <updated>2014-02-21T00:00:00Z</updated>
             <author>
@@ -12240,8 +12240,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/system-drawing-color-equals/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/system-drawing-color-equals/'/>
+            <id>http://aakinshin.net/ru/posts/system-drawing-color-equals/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/system-drawing-color-equals/'/>
             <title>Про System.Drawing.Color и оператор ==</title>
             <updated>2014-02-21T00:00:00Z</updated>
             <author>
@@ -12289,8 +12289,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;p&gt;Я думаю, не следует полагаться на догадки о логике работы стандартных методов сравнения, которые изначально могут показаться вам очевидными. Если вы пользуетесь оператором == или методом Equals для значимых типов, то неплохо было бы сначала заглянуть в документацию и проверить, что именно будет сравниваться.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/msbuild-configurations/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/msbuild-configurations/'/>
+            <id>http://aakinshin.net/posts/msbuild-configurations/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/msbuild-configurations/'/>
             <title>Setting up build configuration in .NET</title>
             <updated>2014-02-08T00:00:00Z</updated>
             <author>
@@ -12540,8 +12540,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/msbuild-configurations/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/msbuild-configurations/'/>
+            <id>http://aakinshin.net/ru/posts/msbuild-configurations/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/msbuild-configurations/'/>
             <title>Настраиваем конфигурации сборок в .NET</title>
             <updated>2014-02-08T00:00:00Z</updated>
             <author>
@@ -12788,8 +12788,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/government-decree-842/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/government-decree-842/'/>
+            <id>http://aakinshin.net/ru/posts/government-decree-842/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/government-decree-842/'/>
             <title>Изменения в правилах защиты диссертаций от 1 января 2014</title>
             <updated>2014-01-19T00:00:00Z</updated>
             <author>
@@ -12839,8 +12839,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;p&gt;Для тех, кто собирается писать диссертацию по ГОСТ-у на LaTeX могу посоветовать специальный шаблон: &lt;a href=&quot;https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template&quot;&gt;Russian-Phd-LaTeX-Dissertation-Template&lt;/a&gt;.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/cache-conscious-binary-search/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/cache-conscious-binary-search/'/>
+            <id>http://aakinshin.net/ru/posts/cache-conscious-binary-search/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/cache-conscious-binary-search/'/>
             <title>Cache-Conscious Binary Search</title>
             <updated>2013-11-20T00:00:00Z</updated>
             <author>
@@ -12943,8 +12943,8 @@ Console.WriteLine(redArgb.Name); // ffff0000
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/git-rewrite-commiter-list/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/git-rewrite-commiter-list/'/>
+            <id>http://aakinshin.net/ru/posts/git-rewrite-commiter-list/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/git-rewrite-commiter-list/'/>
             <title>Переписываем список коммитеров в Git</title>
             <updated>2013-11-10T00:00:00Z</updated>
             <author>
@@ -13009,8 +13009,8 @@ Vanya &amp;lt;ivan.ivanov＠gmail.com&amp;gt;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/jon-skeet-quiz/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/jon-skeet-quiz/'/>
+            <id>http://aakinshin.net/posts/jon-skeet-quiz/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/jon-skeet-quiz/'/>
             <title>Jon Skeet&#39;s Quiz</title>
             <updated>2013-11-03T00:00:00Z</updated>
             <author>
@@ -13112,8 +13112,8 @@ Type type = x.GetType(); // Bang!
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/jon-skeet-quiz/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/jon-skeet-quiz/'/>
+            <id>http://aakinshin.net/ru/posts/jon-skeet-quiz/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/jon-skeet-quiz/'/>
             <title>Jon Skeet&#39;s Quiz</title>
             <updated>2013-11-03T00:00:00Z</updated>
             <author>
@@ -13210,8 +13210,8 @@ Type type = x.GetType(); // Bang!
 &lt;p&gt;Не забываем, что при очень большом желании через неуправляемый код мы всегда можем долезть до таблицы методов и ручками подменить ссылку на &lt;code&gt;GetType()&lt;/code&gt;, но сегодня нас просили не хитрить =).&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/arrays-internal-structure/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/arrays-internal-structure/'/>
+            <id>http://aakinshin.net/ru/posts/arrays-internal-structure/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/arrays-internal-structure/'/>
             <title>Внутреннее устройство массивов в .NET</title>
             <updated>2013-10-11T00:00:00Z</updated>
             <author>
@@ -13475,8 +13475,8 @@ Element Methodtable: 61b9c480
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/cheatsheet-rounding/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/cheatsheet-rounding/'/>
+            <id>http://aakinshin.net/ru/posts/cheatsheet-rounding/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/cheatsheet-rounding/'/>
             <title>Учимся округлять в C#</title>
             <updated>2013-09-18T00:00:00Z</updated>
             <author>
@@ -13569,8 +13569,8 @@ Truncate            |   -2 |    0 |   0 |   1 |   2 |
 &lt;p&gt;На приведённую тему есть две задачки в &lt;a href=&quot;http://problembook.net&quot;&gt;ProblemBook.NET&lt;/a&gt;: &lt;a href=&quot;http://problembook.net/content/ru/Math/Rounding1-P.html&quot;&gt;Rounding1&lt;/a&gt;, &lt;a href=&quot;http://problembook.net/content/ru/Math/Rounding2-P.html&quot;&gt;Rounding2&lt;/a&gt;.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/typehandle/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/typehandle/'/>
+            <id>http://aakinshin.net/ru/posts/typehandle/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/typehandle/'/>
             <title>Вся правда о TypeHandle в .NET</title>
             <updated>2013-09-14T00:00:00Z</updated>
             <author>
@@ -13789,8 +13789,8 @@ Object[]  : 65854D7A =&amp;gt; TypeDesc
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/arrays-access-performance/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/arrays-access-performance/'/>
+            <id>http://aakinshin.net/ru/posts/arrays-access-performance/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/arrays-access-performance/'/>
             <title>Сравнение производительности массивов в .NET</title>
             <updated>2013-08-31T00:00:00Z</updated>
             <author>
@@ -14335,8 +14335,8 @@ Rectangular : 1050ms
 &lt;p&gt;&lt;code&gt;Single&lt;/code&gt;-метод (&lt;code&gt;single[i*M+j]&lt;/code&gt;) &lt;em&gt;обычно&lt;/em&gt; работает медленнее, чем &lt;code&gt;Jagged&lt;/code&gt; (&lt;code&gt;jagged[i][j]&lt;/code&gt;), т.к. вычисление индекса &lt;code&gt;i*N+j&lt;/code&gt; на каждой итерации является более затратной операцией, чем явный переход по двум ссылкам. Однако, они &lt;em&gt;могут сравняться&lt;/em&gt; по времени работы, если JIT нужным образом соптимизирует &lt;code&gt;Single&lt;/code&gt; версию. Если же говорить о непосредственном доступе к элементу без расчёта индекса, то &lt;code&gt;single[i]&lt;/code&gt; будет лидировать в скорости по сравнению с &lt;code&gt;jagged[i][j]&lt;/code&gt;.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/static-array-iteration/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/static-array-iteration/'/>
+            <id>http://aakinshin.net/ru/posts/static-array-iteration/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/static-array-iteration/'/>
             <title>Об итерировании статичных массивов в .NET</title>
             <updated>2013-08-29T00:00:00Z</updated>
             <author>
@@ -14668,8 +14668,8 @@ Static     : 719ms
 &lt;p&gt;Всем хороших бенчмарков =)&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/comments/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/comments/'/>
+            <id>http://aakinshin.net/posts/comments/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/comments/'/>
             <title>To Add Comments or Not to Add?</title>
             <updated>2013-08-28T00:00:00Z</updated>
             <author>
@@ -14833,8 +14833,8 @@ public int Sum(int a, int b)
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/perfect-code-and-real-projects/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/perfect-code-and-real-projects/'/>
+            <id>http://aakinshin.net/posts/perfect-code-and-real-projects/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/perfect-code-and-real-projects/'/>
             <title>Perfect code and real projects</title>
             <updated>2013-08-28T00:00:00Z</updated>
             <author>
@@ -14891,8 +14891,8 @@ public int Sum(int a, int b)
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/comments/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/comments/'/>
+            <id>http://aakinshin.net/ru/posts/comments/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/comments/'/>
             <title>Комментировать или не комментировать?</title>
             <updated>2013-08-28T00:00:00Z</updated>
             <author>
@@ -15059,8 +15059,8 @@ public int Sum(int a, int b)
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/perfect-code-and-real-projects/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/perfect-code-and-real-projects/'/>
+            <id>http://aakinshin.net/ru/posts/perfect-code-and-real-projects/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/perfect-code-and-real-projects/'/>
             <title>Совершенный код и реальные проекты</title>
             <updated>2013-08-28T00:00:00Z</updated>
             <author>
@@ -15121,8 +15121,8 @@ public int Sum(int a, int b)
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/undocumented-keywords-in-cs/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/undocumented-keywords-in-cs/'/>
+            <id>http://aakinshin.net/ru/posts/undocumented-keywords-in-cs/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/undocumented-keywords-in-cs/'/>
             <title>Недокументированные ключевые слова C# или превращаем объект в тыкву</title>
             <updated>2013-08-26T00:00:00Z</updated>
             <author>
@@ -15297,8 +15297,8 @@ Boxing  :  34ms
 &lt;p&gt;&lt;strong&gt;P.S. Приведённый пример имеет чисто академическое предназначение, он приведён как демонстрация использования заявленных ключевых слов. В продакшн-коде нужно несколько раз подумать, прежде чем решить, что вам действительно необходимы подобные конструкции.&lt;/strong&gt;&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/gc-native/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/gc-native/'/>
+            <id>http://aakinshin.net/posts/gc-native/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/gc-native/'/>
             <title>Unexpected area to collect garbage in .NET</title>
             <updated>2013-08-08T00:00:00Z</updated>
             <author>
@@ -15419,8 +15419,8 @@ Gc.Collect();
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/gc-native/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/gc-native/'/>
+            <id>http://aakinshin.net/ru/posts/gc-native/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/gc-native/'/>
             <title>Неожиданное место для сборки мусора в .NET</title>
             <updated>2013-08-08T00:00:00Z</updated>
             <author>
@@ -15537,8 +15537,8 @@ Gc.Collect();
 &lt;p&gt;Собственно говоря, не так важно, как именно вы исправите ситуацию, главное — понимать нюансы работы сборщика мусора, чтобы предвидеть подобные проблемы, ведь их очень сложно обнаружить: падение приложения в примере возникает только при определённой конфигурации запуска в случае, если сборщику мусора доведётся запуститься во время исполнения какого-то достаточно продолжительного выполнения неуправляемого метода. И если вы случайно натолкнётесь на такое падение приложения, то потом будете ещё долго ломать голову над тем, как же его теперь воспроизвести. Для избежания таких ситуаций необходимо тщательно проектировать взаимодействие с любыми нативными объектами, стараясь предвидеть возможные проблемы до этапа написания кода.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/closures/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/closures/'/>
+            <id>http://aakinshin.net/posts/closures/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/closures/'/>
             <title>Unobviousness in use of C# closures</title>
             <updated>2013-08-07T00:00:00Z</updated>
             <author>
@@ -15749,8 +15749,8 @@ private sealed class DisplayClass
 &lt;p&gt;It’s very convenient to use the following utility: &lt;a href=&quot;http://www.jetbrains.com/decompiler/&quot;&gt;dotPeek&lt;/a&gt; from &lt;a href=&quot;http://www.jetbrains.com/&quot;&gt;JetBrains&lt;/a&gt; with enabled option &lt;em&gt;Show compiler-generated code&lt;/em&gt;. Code included in the article is simplified in comparison with the disassembled version to make it easy to read.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/closures/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/closures/'/>
+            <id>http://aakinshin.net/ru/posts/closures/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/closures/'/>
             <title>Неочевидности в использовании C#-замыканий</title>
             <updated>2013-08-07T00:00:00Z</updated>
             <author>
@@ -15965,8 +15965,8 @@ private sealed class DisplayClass
 с включённой опцией &lt;code&gt;Show compiler-generated code&lt;/code&gt;. Приведённый в статье код немного причёсан по сравнению с дизассемблированной версией для повышения читаемости.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/delphi-fpu-issue/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/delphi-fpu-issue/'/>
+            <id>http://aakinshin.net/ru/posts/delphi-fpu-issue/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/delphi-fpu-issue/'/>
             <title>Проблема с FPU при вызове .NET-логики из Delphi</title>
             <updated>2013-08-06T00:00:00Z</updated>
             <author>
@@ -16022,8 +16022,8 @@ public Foo()
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/fastcoloredtextbox/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/fastcoloredtextbox/'/>
+            <id>http://aakinshin.net/ru/posts/fastcoloredtextbox/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/fastcoloredtextbox/'/>
             <title>FastColoredTextBox — божественный RichTextBox для .NET</title>
             <updated>2013-07-17T00:00:00Z</updated>
             <author>
@@ -16059,8 +16059,8 @@ public Foo()
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/git-links/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/git-links/'/>
+            <id>http://aakinshin.net/ru/posts/git-links/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/git-links/'/>
             <title>Материалы по Git</title>
             <updated>2013-06-19T00:00:00Z</updated>
             <author>
@@ -16177,8 +16177,8 @@ GitHub
 --&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/git-log/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/git-log/'/>
+            <id>http://aakinshin.net/ru/posts/git-log/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/git-log/'/>
             <title>Просмотр истории коммитов в Git</title>
             <updated>2013-06-18T17:38:00Z</updated>
             <author>
@@ -16311,8 +16311,8 @@ GitHub
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/mutable-structures-as-property/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/mutable-structures-as-property/'/>
+            <id>http://aakinshin.net/ru/posts/mutable-structures-as-property/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/mutable-structures-as-property/'/>
             <title>Использование изменяемых структур в свойствах классов</title>
             <updated>2013-06-06T00:00:00Z</updated>
             <author>
@@ -16391,8 +16391,8 @@ image.Bounds = bounds;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/blog/post/wrap-cs-in-com/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/blog/post/wrap-cs-in-com/'/>
+            <id>http://aakinshin.net/posts/wrap-cs-in-com/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/posts/wrap-cs-in-com/'/>
             <title>Wrapping C# class for use in COM</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -16475,8 +16475,8 @@ end;
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/dotnet-fonts/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/dotnet-fonts/'/>
+            <id>http://aakinshin.net/ru/posts/dotnet-fonts/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/dotnet-fonts/'/>
             <title>Занимательное о шрифтах в .NET</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -16518,8 +16518,8 @@ exists &amp;amp;= fontFamily.IsStyleAvailable(fontStyle);
 &lt;/code&gt;&lt;/pre&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/phd-template/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/phd-template/'/>
+            <id>http://aakinshin.net/ru/posts/phd-template/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/phd-template/'/>
             <title>Шаблон диссертации в LaTeX</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -16529,8 +16529,8 @@ exists &amp;amp;= fontFamily.IsStyleAvailable(fontStyle);
             <content type="html">&lt;p&gt;Написать диссертацию — дело нелёгкое. А оформить её ещё сложнее. Благо, есть LaTeX, который может нам в этом помочь. Но для начала было бы здорово обзавестись шаблоном, на основе которого можно было бы сразу приступить к написанию научной работы. Я такого шаблона не нашёл, поэтому решил сделать его сам, возможно кому-то пригодится: &lt;a href=&quot;https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template&quot;&gt;https://github.com/AndreyAkinshin/Russian-Phd-LaTeX-Dissertation-Template&lt;/a&gt;. В шаблоне используется моя любимая кодировка UTF-8. Список литературы генерируется BibTeX-ом, а в отдельной папке аккуратно сложены всевозможные библиографические UTF-8-стили. Используются красивые PSCyr-шрифты, все наиболее часто используемые пакеты подключены. Помимо шаблона диссертации, проект также включает шаблоны автореферата, презентации и черновика для промежуточных наработок.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-cairo/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-cairo/'/>
+            <id>http://aakinshin.net/ru/posts/r-cairo/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-cairo/'/>
             <title>Cairo — делаем графики гладкими</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -16568,8 +16568,8 @@ dev.off() # Завершаем формирование файла
 &lt;p&gt;В Cairo-функциях можно указывать множество дополнительных параметров, таких как ширина и высота изображения, тип файла, его качество, цвет фона и многое другое. Конечно, для рабочего процесса Cairo не так уж и нужен, но при формировании отчётов о проделанной работе он поможет сделать ваши графики более привлекательными.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-compound-assignment/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-compound-assignment/'/>
+            <id>http://aakinshin.net/ru/posts/r-compound-assignment/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-compound-assignment/'/>
             <title>Операторы +=, -= в R</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -16605,8 +16605,8 @@ a # 4
 &lt;p&gt;Разумеется, ничего не мешает определить по аналогии %*=%, %/=% и тому подобные замечательные операторы.&lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-functions/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-functions/'/>
+            <id>http://aakinshin.net/ru/posts/r-functions/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-functions/'/>
             <title>Функции в R</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17018,8 +17018,8 @@ a # 4
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-links/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-links/'/>
+            <id>http://aakinshin.net/ru/posts/r-links/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-links/'/>
             <title>R-ссылки</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17095,8 +17095,8 @@ a # 4
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-multiple-assignment/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-multiple-assignment/'/>
+            <id>http://aakinshin.net/ru/posts/r-multiple-assignment/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-multiple-assignment/'/>
             <title>Множественное присваивание в R</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17138,8 +17138,8 @@ list(u10, u11, u12) %=% list(7, &amp;quot;second&amp;quot;, c(8, 9))
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-progress-bar/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-progress-bar/'/>
+            <id>http://aakinshin.net/ru/posts/r-progress-bar/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-progress-bar/'/>
             <title>Progress bar в R</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17211,8 +17211,8 @@ close(pb)  # Закрываем progress bar
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-rprofile/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-rprofile/'/>
+            <id>http://aakinshin.net/ru/posts/r-rprofile/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-rprofile/'/>
             <title>Rprofile — кастомизируем рабочее окружение</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17263,8 +17263,8 @@ options(prompt=&amp;quot;R&amp;gt; &amp;quot;, digits=4, show.signif.stars=FALSE
 &lt;/code&gt;&lt;/pre&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-string-concatenation/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-string-concatenation/'/>
+            <id>http://aakinshin.net/ru/posts/r-string-concatenation/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-string-concatenation/'/>
             <title>Конкатенация строк в R</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17300,8 +17300,8 @@ paste0(&amp;quot;a&amp;quot;, &amp;quot;b&amp;quot;, &amp;quot;c&amp;quot;) # &a
 &lt;/ul&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-terminal-arguments/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-terminal-arguments/'/>
+            <id>http://aakinshin.net/ru/posts/r-terminal-arguments/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-terminal-arguments/'/>
             <title>Вызов R-скрипта с аргументами из консоли</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17466,8 +17466,8 @@ or options to R, in addition to --slave --no-restore, such as
 &lt;/code&gt;&lt;/pre&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/r-xkcd/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/r-xkcd/'/>
+            <id>http://aakinshin.net/ru/posts/r-xkcd/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/r-xkcd/'/>
             <title>Рисуем комиксы в стиле xkcd</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
@@ -17591,8 +17591,8 @@ xkcdTree(tree,file=&amp;quot;herpetology.pdf&amp;quot;,lwd=2,color=&amp;quot;bla
 &lt;/p&gt;</content>
         </entry>
         <entry>
-            <id>http://aakinshin.net/ru/blog/post/wrap-cs-in-com/</id>
-            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/blog/post/wrap-cs-in-com/'/>
+            <id>http://aakinshin.net/ru/posts/wrap-cs-in-com/</id>
+            <link type="text/html" rel="alternate" href='http://aakinshin.net/ru/posts/wrap-cs-in-com/'/>
             <title>Заворачиваем C#-класс в COM</title>
             <updated>2013-06-03T00:00:00Z</updated>
             <author>
