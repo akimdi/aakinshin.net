@@ -2,6 +2,17 @@ talks:
   ######################################################################################################################
   # 2018
   ######################################################################################################################
+  - date: 2018-11-05
+    event: Dotnetos
+    event-type: conference
+    title: Powerful benchmarking in .NET
+    location_en: Warsaw, Poland
+    location_ru: Польша, Варшава
+    abstract: "Performance is a feature. But it's hard to measure it right, especially when it comes to micro-benchmarking. BenchmarkDotNet has become the most popular .NET benchmarking library. But how does it actually work? What problems does it solve? Why do the most respected .NET performance experts trust it? Join the authors to learn about all the features, advantages and limitations."
+    lang: en
+    links:
+      - key: event
+        url: https://dotnetos.org/
   - date: 2018-06-28
     event: Presentation at Citi Innovation Lab TLV
     event-type: meeting
